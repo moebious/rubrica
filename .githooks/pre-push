@@ -1,0 +1,10 @@
+#!/bin/sh
+# The design-submission repo (frontier-lab10-rubrica) is frozen: its files are
+# linked from the hackathon platform. Refuse any push to it.
+# Git passes the remote name and URL as arguments.
+case "$2" in
+  *frontier-lab10-rubrica*)
+    echo "pre-push: frontier-lab10-rubrica is frozen (submitted design links). Push to 'origin' (rubrica) instead."
+    exit 1 ;;
+esac
+exit 0

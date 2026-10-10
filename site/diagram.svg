@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 612" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Rubrica: architecture</title>
+  <desc id="d">System 2 (a person and a model, offline) sends gated probes to the original service, records every response in the experiment log, and turns evidence into candidate rules. Approved rules go into the service ontology, the shared memory. The ontology compiles into the rule table that System 1, the deployed replica, executes, and it generates the spec and the tests. A verification harness replays the tests against the replica, and a drift canary watches the original service.</desc>
+  <style>
+    :root { --bg:#ffffff; --fg:#14161a; --muted:#5b6370; --line:#9aa3af; --box:#f4f6f9; --stroke:#c9d0da; --accent:#0b6bcb; --accentbg:#e8f1fb; --warn:#b35c00; --warnbg:#fdf1e4; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0f1115; --fg:#e8eaee; --muted:#9aa3af; --line:#6b7380; --box:#181b21; --stroke:#2c313a; --accent:#6cb0ff; --accentbg:#13233a; --warn:#ffb15c; --warnbg:#2c1e0e; }
+    }
+    .bg { fill: var(--bg); }
+    .group { fill: none; stroke: var(--stroke); stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .glabel { fill: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .box { fill: var(--box); stroke: var(--stroke); stroke-width: 1.2; }
+    .core { fill: var(--accentbg); stroke: var(--accent); stroke-width: 1.5; }
+    .onto { fill: var(--accentbg); stroke: var(--accent); stroke-width: 2.5; }
+    .ext { fill: var(--warnbg); stroke: var(--warn); stroke-width: 1.5; }
+    .h { fill: var(--fg); font-size: 14px; font-weight: 650; }
+    .hl { fill: var(--fg); font-size: 16px; font-weight: 700; }
+    .s { fill: var(--muted); font-size: 12px; }
+    .xs { fill: var(--muted); font-size: 11px; }
+    .em { fill: var(--fg); font-size: 12px; font-weight: 650; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .edge { fill: none; stroke: var(--line); stroke-width: 1.5; }
+    .edge.hot { stroke: var(--accent); stroke-width: 2; }
+    .elabel { fill: var(--muted); font-size: 11px; font-style: italic; }
+    .cap { fill: var(--muted); font-size: 13px; }
+    .klabel { fill: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+    .capb { fill: var(--fg); font-weight: 700; }
+    .arrow { fill: var(--line); }
+    .arrow.hot { fill: var(--accent); }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="arrow hot" d="M0,0 L10,5 L0,10 z"/></marker>
+  </defs>
+  <rect class="bg" width="1250" height="612"/>
+  <g transform="translate(5,10)">
+
+  <!-- External systems -->
+  <rect class="ext" x="463" y="12" width="260" height="74" rx="8"/>
+  <text class="h" x="593" y="43" text-anchor="middle">Original service</text>
+  <text class="s" x="593" y="63" text-anchor="middle">the black box · POST /msg</text>
+
+  <rect class="ext" x="790" y="12" width="280" height="74" rx="8"/>
+  <text class="h" x="930" y="43" text-anchor="middle">Evaluator</text>
+  <text class="s" x="930" y="63" text-anchor="middle">hidden test set</text>
+
+  <!-- System 2 group -->
+  <rect class="group" x="20" y="118" width="430" height="262" rx="10"/>
+  <text class="glabel" x="36" y="374">SYSTEM 2 · DISCOVERY · OFFLINE</text>
+
+  <rect class="box" x="40" y="155" width="180" height="56" rx="7"/>
+  <text class="h" x="130" y="179" text-anchor="middle">Probe gate</text>
+  <text class="s" x="130" y="198" text-anchor="middle">no prediction, no request</text>
+
+  <rect class="box" x="40" y="230" width="180" height="56" rx="7"/>
+  <text class="h" x="130" y="254" text-anchor="middle">Stateful fuzzer</text>
+  <text class="s" x="130" y="273" text-anchor="middle">targeted sequences</text>
+
+  <rect class="box" x="40" y="305" width="180" height="56" rx="7"/>
+  <text class="h" x="130" y="329" text-anchor="middle">Shrinker</text>
+  <text class="s" x="130" y="348" text-anchor="middle">divergence → minimal case</text>
+
+  <rect class="box" x="250" y="155" width="180" height="56" rx="7"/>
+  <text class="h" x="340" y="179" text-anchor="middle">Experiment log</text>
+  <text class="s" x="340" y="198" text-anchor="middle">every request + hypothesis</text>
+
+  <rect class="box" x="250" y="230" width="180" height="56" rx="7"/>
+  <text class="h" x="340" y="254" text-anchor="middle">Person + model</text>
+  <text class="s" x="340" y="273" text-anchor="middle">propose rules</text>
+
+  <rect class="box" x="250" y="305" width="180" height="56" rx="7"/>
+  <text class="h" x="340" y="329" text-anchor="middle">Candidate rules</text>
+  <text class="s" x="340" y="348" text-anchor="middle">hypotheses under test</text>
+
+  <!-- Ontology: the bridge between System 2 and System 1 -->
+  <text class="glabel" x="593" y="146" text-anchor="middle">SHARED MEMORY</text>
+  <rect class="onto" x="478" y="155" width="230" height="206" rx="9"/>
+  <text class="hl" x="593" y="180" text-anchor="middle">Service ontology</text>
+  <text class="em" x="593" y="199" text-anchor="middle">versioned model of the black box</text>
+  <text class="klabel" x="593" y="226" text-anchor="middle">HOLDS</text>
+  <text class="s" x="593" y="243" text-anchor="middle">operations · fields · state</text>
+  <text class="s" x="593" y="260" text-anchor="middle">rules · errors · evidence</text>
+  <text class="klabel" x="593" y="287" text-anchor="middle">USED TO</text>
+  <text class="s" x="593" y="304" text-anchor="middle">run the replica · write SPEC.md</text>
+  <text class="s" x="593" y="321" text-anchor="middle">build tests · find gaps</text>
+  <text class="s" x="593" y="338" text-anchor="middle">compare versions</text>
+
+  <!-- System 1 group -->
+  <rect class="group" x="760" y="118" width="460" height="262" rx="10"/>
+  <text class="glabel" x="1204" y="374" text-anchor="end">SYSTEM 1 · REPLICA · DEPLOYED</text>
+
+  <rect class="box" x="780" y="155" width="200" height="56" rx="7"/>
+  <text class="h" x="880" y="179" text-anchor="middle">HTTP adapter</text>
+  <text class="s" x="880" y="198" text-anchor="middle">token auth · exact bodies</text>
+
+  <rect class="box" x="780" y="230" width="200" height="56" rx="7"/>
+  <text class="h" x="880" y="254" text-anchor="middle">Serial queue</text>
+  <text class="s" x="880" y="273" text-anchor="middle">one request at a time</text>
+
+  <rect class="box" x="780" y="305" width="200" height="56" rx="7"/>
+  <text class="h" x="880" y="329" text-anchor="middle">Compiled rule table</text>
+  <text class="s" x="880" y="348" text-anchor="middle">from the current version</text>
+
+  <rect class="core" x="1005" y="155" width="195" height="131" rx="7"/>
+  <text class="h" x="1102" y="196" text-anchor="middle">Decision core</text>
+  <text class="s" x="1102" y="219" text-anchor="middle">first matching rule decides</text>
+  <text class="s" x="1102" y="238" text-anchor="middle">order learned from evidence</text>
+  <text class="s" x="1102" y="257" text-anchor="middle">no match → documented default</text>
+
+  <rect class="box" x="1005" y="305" width="195" height="56" rx="7"/>
+  <text class="h" x="1102" y="329" text-anchor="middle">In-memory state</text>
+  <text class="xs" x="1102" y="348" text-anchor="middle">one state per token</text>
+
+  <!-- Verification harness -->
+  <rect class="group" x="20" y="410" width="1200" height="150" rx="10"/>
+  <text class="glabel" x="36" y="432">VERIFICATION</text>
+
+  <rect class="box" x="40" y="450" width="380" height="88" rx="7"/>
+  <text class="h" x="230" y="476" text-anchor="middle">Results</text>
+  <text class="s" x="230" y="497" text-anchor="middle">exact-match rate · detected changes</text>
+  <text class="s" x="230" y="516" text-anchor="middle">held-out tests are never used to fix code</text>
+
+  <rect class="core" x="780" y="450" width="200" height="88" rx="7"/>
+  <text class="h" x="880" y="476" text-anchor="middle">Differential test</text>
+  <text class="s" x="880" y="497" text-anchor="middle">replays recorded tests</text>
+  <text class="s" x="880" y="516" text-anchor="middle">compares status and body</text>
+
+  <rect class="core" x="1005" y="450" width="195" height="88" rx="7"/>
+  <text class="h" x="1102" y="476" text-anchor="middle">Drift canary</text>
+  <text class="s" x="1102" y="497" text-anchor="middle">re-checks the original</text>
+  <text class="s" x="1102" y="516" text-anchor="middle">alerts on any change</text>
+
+  <!-- Edges: System 2 -->
+  <path class="edge" d="M130,155 V49 H461" marker-end="url(#a)"/>
+  <text class="elabel" x="140" y="42">probes</text>
+  <path class="edge" d="M560,86 V100 H340 V153" marker-end="url(#a)"/>
+  <text class="elabel" x="350" y="95">responses</text>
+  <path class="edge" d="M130,230 V213" marker-end="url(#a)"/>
+  <path class="edge" d="M220,345 H248" marker-end="url(#a)"/>
+  <path class="edge" d="M250,320 H235 V198 H222" marker-end="url(#a)"/>
+  <path class="edge" d="M340,211 V228" marker-end="url(#a)"/>
+  <path class="edge" d="M340,286 V303" marker-end="url(#a)"/>
+  <path class="edge hot" d="M430,333 H476" marker-end="url(#ah)"/>
+  <path class="edge" d="M130,286 V303" marker-end="url(#a)"/>
+  <path class="edge" d="M340,450 V363" marker-end="url(#a)"/>
+  <text class="elabel" x="348" y="402">reopen rules</text>
+
+  <!-- Edges: ontology to System 1 and to the harness -->
+  <path class="edge hot" d="M593,361 V395 H830 V363" marker-end="url(#ah)"/>
+  <text class="elabel" x="640" y="390">compiles into</text>
+  <path class="edge" d="M540,361 V494 H778" marker-end="url(#a)"/>
+  <text class="elabel" x="548" y="455">tests</text>
+
+  <!-- Edges: System 1 -->
+  <path class="edge" d="M880,86 V153" marker-end="url(#a)"/>
+  <path class="edge" d="M880,211 V228" marker-end="url(#a)"/>
+  <path class="edge" d="M980,258 H1003" marker-end="url(#a)"/>
+  <path class="edge" d="M980,322 L1003,290" marker-end="url(#a)"/>
+  <path class="edge" d="M1102,286 V303" marker-end="url(#a)"/>
+
+  <!-- Edges: harness -->
+  <path class="edge hot" d="M900,450 V382" marker-end="url(#ah)"/>
+  <text class="elabel" x="908" y="424">via HTTP</text>
+  <path class="edge" d="M778,515 H422" marker-end="url(#a)"/>
+  <path class="edge hot" d="M1102,538 V553 H230 V540" marker-end="url(#ah)"/>
+  <text class="elabel" x="600" y="548">changes</text>
+  <path class="edge hot" d="M1200,494 H1232 V4 H650 V10" marker-end="url(#ah)"/>
+
+  <!-- Caption -->
+  <text class="cap" x="620" y="586" text-anchor="middle"><tspan class="capb">Rubrica</tspan> maintains a model of the black box, not a fixed copy: System 2 learns it · the ontology versions it · System 1 runs the current version</text>
+  </g>
+</svg>
