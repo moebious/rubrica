@@ -26,3 +26,13 @@ class ChecksumTests(unittest.TestCase):
         result=control("A" * 100000)
         self.assertTrue(2 <= result <= 98)
         with self.assertRaises(TypeError): control(None)
+
+    def test_only_ascii_letters_are_uppercased(self):
+        # Recorded: traces/probe_unicode_upper.jsonl. The original accepted control 85 (= the control of
+        # "ALTA;" alone) for each of these names and rejected the full-Unicode-uppercase control.
+        for char in ("\u00df", "\u0131", "\u017f", "\ufb01", "\u0149"):
+            with self.subTest(char=hex(ord(char))):
+                self.assertEqual(control("ALTA;" + char), 85)
+                self.assertEqual(control("ALTA;" + char), control("ALTA;"))
+        self.assertEqual(control("alta;ss"), control("ALTA;SS"))
+

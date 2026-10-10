@@ -53,7 +53,8 @@ class BankingReplayTests(unittest.TestCase):
     def test_current_version_incident_corpus(self):
         names=("incident_uncovered_limits", "incident_transfer_limit", "incident_lockout",
                "incident_lock_recovery", "incident_body_boundary", "incident_confirm", "spec_confirmations", "spec_text_edges",
-               "probe_owner", "probe_e506", "probe_e506b", "fuzz_seed11", "heldout_seed7")
+               "probe_owner", "probe_e506", "probe_e506b", "fuzz_seed11", "heldout_seed7", "fuzz_seed12",
+               "probe_unicode_upper", "probe_unicode_command", "fuzz_seed13")
         for name in names:
             state=initial_state()
             for index,line in enumerate(Path("traces",name+".jsonl").read_text().splitlines(),1):
