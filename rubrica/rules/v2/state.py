@@ -22,6 +22,12 @@ class LedgerState:
     def failure_count(self, account_id: str) -> int:
         return next((count for key, count in self.transfer_failures if key == account_id), 0)
 
+    def owner(self, account_id: str) -> str | None:
+        for key, name, _ in self.accounts:
+            if key == account_id:
+                return name
+        return None
+
     def balance(self, account_id: str) -> int | None:
         for key, name, balance in self.accounts:
             if key == account_id:

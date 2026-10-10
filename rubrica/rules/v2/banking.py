@@ -31,7 +31,10 @@ def validate(state: LedgerState, parsed: Parsed, policy: Policy = V2) -> Problem
         count = state.failure_count(args[0])
         if policy.lock_after_failures is not None and count >= policy.lock_after_failures:
             return Problem("E510", 423, attempts=count - policy.lock_after_failures + 1)
-        if value > policy.transfer_limit:
+        # Observed (traces/probe_owner.jsonl): the ceiling does not apply when both accounts have
+        # exactly the same owner name; name comparison is exact (case and spaces matter).
+        same_owner = state.owner(args[0]) == state.owner(args[1])
+        if value > policy.transfer_limit and not same_owner:
             return Problem("E506", 422)
         balance = state.balance(args[0])
         assert balance is not None
