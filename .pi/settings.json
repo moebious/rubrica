@@ -1,5 +1,4 @@
 {
   "defaultProvider": "openrouter",
-  "defaultModel": "anthropic/claude-sonnet-5.5",
   "defaultThinkingLevel": "high"
 }

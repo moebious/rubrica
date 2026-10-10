@@ -15,8 +15,14 @@ Build hiring-loop-grade, production-ready software evaluated against **hidden te
    - For every feature implemented, write adversarial test cases covering edge and boundary conditions.
 
 ## Model Strategy in Pi (`Ctrl + P` to switch)
-- `openrouter/anthropic/claude-sonnet-5.5`: Core feature implementation & daily coding.
-- `openrouter/anthropic/claude-opus-5.5`: Top-level system design & complex refactors.
 - `openrouter/openai/o3-mini-high`: Cracking failing edge-case tests & algorithmic logic.
 - `openrouter/google/gemini-3.1-pro-preview`: Ingesting entire specs, docs, and whole-repo audits.
 - `openrouter/x-ai/grok-4.7`: Generating adversarial test suites to uncover hidden bugs.
+
+## Rubrica implementation rules
+- Follow `docs/process/ROADMAP.md` for active scope and acceptance gates.
+- Keep learned service behavior in versioned rules. Cite recorded evidence and label untested defaults as assumptions.
+- Preserve exact statuses, bodies and observed validation order. Expected test outputs come from original recordings.
+- Keep the pure core free of I/O; perform original-service requests only through recorded discovery tools.
+- Keep credentials out of Git, logs and Docker images. Preserve frozen design and diagram artifacts.
+- Verify changes with `python3 -m unittest discover -s tests -v`; replay the corpus before deployment and smoke-test the public endpoint afterward.

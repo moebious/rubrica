@@ -37,3 +37,48 @@ The design doc and diagram are identical to the versions submitted at 12:00; `py
 cp .env.example .env    # then set ORIGINAL_TOKEN; .env is git-ignored
 git config core.hooksPath .githooks   # blocks committed secrets
 ```
+
+## Bootstrap scaffold
+
+The runtime scaffold currently implements only the observed `PING;64` example.
+Health/reset, common route errors and missing/invalid/lowercase auth responses
+now have recorded evidence. Unimplemented message responses and transport
+safeguards remain **unverified assumptions**; this is not a faithful replacement yet. No hidden-set
+validation should be spent on this bootstrap.
+
+Run locally (the server reads the process environment, not `.env` automatically):
+
+```bash
+set -a
+source .env
+set +a
+python3 -m rubrica.engine.server --host 127.0.0.1 --port 8080
+```
+
+Verify:
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 tools/seq.py bootstrap material/pruebas/ejemplos.jsonl --target replica
+```
+
+The second command records a local replica replay and exposes unimplemented
+cases. It is not expected to pass all 20 examples yet. The bootstrap uses an
+explicit 501 default rather than pretending unknown behavior is confirmed.
+
+The Docker image copies only `rubrica/` and runs as a non-root user. Supply
+`TEAM_TOKEN` at runtime. Rule versions are selected at startup in
+`rubrica/rules/current.py`; there is no live rule mutation.
+
+## Recorded discovery and drift detection
+
+Use `python3 -m tools.canary --capture` once to establish a reset-based baseline.
+Use `python3 -m tools.canary --watch` to compare it periodically. The monitor
+records every call, enforces rate/phase/daily budgets and locks complete sequences
+against other callers using `tools.harness.Harness`. Results are in
+`traces/canary-results.jsonl`; the watcher stops on a mismatch or failure for
+investigation. Legacy request/sweep tools bypass this coordination and must not
+access the original while the monitoring session is active.
+
+The Fly CLI supports `flyctl deploy --remote-only`; local Docker is not required.
+Deployment still requires account access, app configuration and runtime secrets.
