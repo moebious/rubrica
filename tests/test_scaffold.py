@@ -95,6 +95,17 @@ class HTTPTests(unittest.TestCase):
             self.assertEqual(self.request(method, "/missing")[2], "v1.route")
         self.assertEqual(self.request("POST", "/msg", b'{"m":"PING;64"}')[2], "v2.PING")
 
+    def test_query_string_does_not_change_route(self):
+        # Recorded: traces/edge_probes.jsonl. The original ignores the query on /health and /msg.
+        self.assertEqual(self.request("GET", "/health?probe=1")[:2], (200, b'{"ok":true}'))
+        status, body, rule = self.request("POST", "/msg?test=1", b'{"m":"PING;64"}')
+        self.assertEqual((status, body, rule), (200, b'{"pong":true}', "v2.PING"))
+        # Recorded: a trailing slash is a different path and stays unknown.
+        self.assertEqual(self.request("GET", "/health/")[2], "v1.route")
+        self.assertEqual(self.request("POST", "/msg/", b'{"m":"PING;64"}')[2], "v1.route")
+        # Auth is still enforced when a query is present.
+        self.assertEqual(self.request("GET", "/health?x=1", headers={"X-Probe": "1"})[0], 401)
+
     def test_size_bad_length_and_recovery(self):
         self.assertEqual(self.request("POST", "/msg", b"x" * 129)[0], 413)
         self.assertEqual(self.request("POST", "/msg", headers={"Content-Length": "-1"})[0], 400)
