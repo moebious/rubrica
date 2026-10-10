@@ -11,8 +11,8 @@ from .registry import RuleSet
 from .state import StateT
 
 def route_path(target: str) -> str:
-    """The original routes on the path only; a query string never changes the route."""
-    return target.split("?", 1)[0]
+    """The original routes on the path only; a query string or fragment never changes the route."""
+    return target.split("?", 1)[0].split("#", 1)[0]
 
 class ReplicaServer(HTTPServer, Generic[StateT]):
     def __init__(self, address: tuple[str, int], rules: RuleSet[StateT], *,
