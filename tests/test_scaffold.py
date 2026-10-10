@@ -100,6 +100,9 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request("GET", "/health?probe=1")[:2], (200, b'{"ok":true}'))
         status, body, rule = self.request("POST", "/msg?test=1", b'{"m":"PING;64"}')
         self.assertEqual((status, body, rule), (200, b'{"pong":true}', "v2.PING"))
+        # Recorded: traces/probe_urls.jsonl. Query and fragment on /__reset still reset (200).
+        self.assertEqual(self.request("POST", "/__reset?test=1")[:2], (200, b'{"ok":true}'))
+        self.assertEqual(self.request("POST", "/__reset#frag")[:2], (200, b'{"ok":true}'))
         # Recorded: a trailing slash is a different path and stays unknown.
         self.assertEqual(self.request("GET", "/health/")[2], "v1.route")
         self.assertEqual(self.request("POST", "/msg/", b'{"m":"PING;64"}')[2], "v1.route")
