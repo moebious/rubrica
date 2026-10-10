@@ -35230,12 +35230,2124 @@
       "infra": false,
       "failure": null,
       "raw_seq": "canary-1791669486434472000"
+    },
+    {
+      "id": 1383,
+      "source": "traces/canary.jsonl:352",
+      "record_sha256": "a20e639a6c45475a498251a7cd6ece13fa6312ab5eb9448bd61cd32becaad0cf",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:14.652468+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1384,
+      "source": "traces/canary.jsonl:353",
+      "record_sha256": "d9519d36865069ebd9845be43579c441eb406399bc11f04b93afb9350d24a425",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:14.958003+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1385,
+      "source": "traces/canary.jsonl:354",
+      "record_sha256": "bb6fcf7464d695c0d9281f1bba57d2e43d6df274cfdd35f8dc6e135fbd832222",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:15.285520+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlBJTkc7NjQifQ==",
+      "response_body_b64": "eyJwb25nIjp0cnVlfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1386,
+      "source": "traces/canary.jsonl:355",
+      "record_sha256": "f6e6bfa3a12a1dd0ca300600638d2ce1cdbffa39bb3535d11d857a01901ea6cb",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:15.598968+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODMifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1387,
+      "source": "traces/canary.jsonl:356",
+      "record_sha256": "e22d103d4e7f5e2e82f86c2647d5dec5e3d58581fef8dc6f1e342787ab924d40",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:15.922594+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1388,
+      "source": "traces/canary.jsonl:357",
+      "record_sha256": "593bd2155b0f86db81055dc182bfc8e9b64834c5d2493aceccd728818fe85aa4",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:16.256667+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TWF0ZW87MyJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1389,
+      "source": "traces/canary.jsonl:358",
+      "record_sha256": "1735af73168425b03fd267817723562624d03cdc13f826a5eecc0ea13d5e5697",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:16.533712+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1390,
+      "source": "traces/canary.jsonl:359",
+      "record_sha256": "bedb7a132aad4233618eaed2488ddabf51bdb34ce182abf72baf6108c5be4824",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:16.832216+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MjUwMDAwOzg2In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1391,
+      "source": "traces/canary.jsonl:360",
+      "record_sha256": "18dff02b4b173cf0beb4a1a15e5347f1c8142da6589caa837fb4f8f2bb2f603a",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:17.125478+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs0MDAwMDs4NiJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1392,
+      "source": "traces/canary.jsonl:361",
+      "record_sha256": "2535bad3e5ffdf87c46b475f2561ea0b1549fe37486fef3de080e1ef67ca16f2",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:17.419416+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiI0MDAuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1393,
+      "source": "traces/canary.jsonl:362",
+      "record_sha256": "c97fb9927e6c55642f7bd78ca426d0c6740946ad275216c0190730df87ca5ad6",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:17.709465+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMjAwMDA7NTUifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1394,
+      "source": "traces/canary.jsonl:363",
+      "record_sha256": "f00278c5aba90d657d867f414a59274e3bc3caa73cb6e9e02405a5948114f894",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:17.998496+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwMDA7MTIifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1395,
+      "source": "traces/canary.jsonl:364",
+      "record_sha256": "c136f090699b3af7a1964fef2fbd291c8d2aa4a42b5648a421868afd8df3d5d4",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:18.281329+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRhO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1396,
+      "source": "traces/canary.jsonl:365",
+      "record_sha256": "cba91fc77406f79bab4b825580a233b6d0cc8aab4923d0c4f9b09942022cfff9",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:18.574859+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlNBTERPUztBQy0wMDAxOzM4In0=",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDEiLCJtZW5zYWplIjoiY29tYW5kbyBkZXNjb25vY2lkbyAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1397,
+      "source": "traces/canary.jsonl:366",
+      "record_sha256": "1da0d6a3b2f01456ec24b06f21be5d39d308ebce5fccdda2562f443505ebd6f9",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:18.867606+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1398,
+      "source": "traces/canary.jsonl:367",
+      "record_sha256": "9cc03b7837200c66bfe286af878a192e51af413582be3900c165af4a521925cc",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:19.170968+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1399,
+      "source": "traces/canary.jsonl:368",
+      "record_sha256": "c40b91f3da1715190c6f627caa8f61835d3baef056f1cfb1efb6700cdc6ef09a",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:19.448415+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDk7ODcifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1400,
+      "source": "traces/canary.jsonl:369",
+      "record_sha256": "552d66b43ccb0537dca9fcb68c20b4d33bb1dbc42e4d10bdecb5a62d8e9f4ebe",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:19.752665+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMDsyMyJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1401,
+      "source": "traces/canary.jsonl:370",
+      "record_sha256": "7d8ff5ef8851c777524d9d6d6cee23f774b844d5c68889cb93c7fcf593302f92",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:20.042894+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzVYIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1402,
+      "source": "traces/canary.jsonl:371",
+      "record_sha256": "71460ab130134b6c36567b44250c9ba3becc21c276cb8734562ef2f4f532348b",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:20.339685+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzM1In0=",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1403,
+      "source": "traces/canary.jsonl:372",
+      "record_sha256": "35f12fe0a8b8cba09736ee8fe2c5ac708d2b10b9aac497b8946a6cf4bce813d0",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:20.632822+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1404,
+      "source": "traces/canary.jsonl:373",
+      "record_sha256": "bfbfe8d1b9babb145ff22f97bd17824c25fd1367821d160b7e490eafed4ea0e8",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:20.941616+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7R29tZXo7MTEifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1405,
+      "source": "traces/canary.jsonl:374",
+      "record_sha256": "703e25dc9a5909358e8deb7a1bd3984e0681c13834f75d8b78175a1ece38889e",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:21.241919+00:00",
+      "method": "GET",
+      "path": "/rubrica-missing",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1406,
+      "source": "traces/canary.jsonl:375",
+      "record_sha256": "9022784cb12720ac2a5d7f764209bf5607d2bafa9653525bda512be5059fa300",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:21.538496+00:00",
+      "method": "GET",
+      "path": "/",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1407,
+      "source": "traces/canary.jsonl:376",
+      "record_sha256": "70c758c9fd614a3a4dc89156eba2594e3ce9ec1fda11d2275cfdd0ad464e9d3a",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:21.837952+00:00",
+      "method": "GET",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1408,
+      "source": "traces/canary.jsonl:377",
+      "record_sha256": "45a9e9d71d7db0533228cfb0a397a5d75ddf7628baa329f43e851fd569874978",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:22.119960+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1409,
+      "source": "traces/canary.jsonl:378",
+      "record_sha256": "19b7c5a259e8c14b8e9b4629cdc1181e55bd12887457f27c9f661b3ac3826287",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:08:22.408055+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer invalid-token"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791670094649844000"
+    },
+    {
+      "id": 1410,
+      "source": "traces/edge_probes.jsonl:1",
+      "record_sha256": "d2eb23a955b0cc5b6f19fe293b49e7adb3e9d54a65d83ec4bbf35451e78d1709",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:13:57.353840+00:00",
+      "method": "GET",
+      "path": "/health?probe=1",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes-1791670437351471000"
+    },
+    {
+      "id": 1411,
+      "source": "traces/edge_probes.jsonl:2",
+      "record_sha256": "a99bc331c426913e842a97bbc0cb95b6f626d9f27fbd251a2730457f1d686776",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:06.137118+00:00",
+      "method": "GET",
+      "path": "/health?probe=1",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes-1791670446135542000"
+    },
+    {
+      "id": 1412,
+      "source": "traces/edge_probes.jsonl:3",
+      "record_sha256": "c5a600f9aac5d6751a79cc017e86ba3a7033575c76ae5e5e5f88822422b2a1bc",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:06.447931+00:00",
+      "method": "POST",
+      "path": "/msg?test=1",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjoiUElORzs2NCJ9",
+      "response_body_b64": "eyJwb25nIjp0cnVlfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes-1791670446135542000"
+    },
+    {
+      "id": 1413,
+      "source": "traces/edge_probes.jsonl:4",
+      "record_sha256": "516182c7dcb88ca61d5d90930dcc53064fc95bd60ccff9b75171bd212d61252f",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:06.714046+00:00",
+      "method": "GET",
+      "path": "/health/",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes-1791670446135542000"
+    },
+    {
+      "id": 1414,
+      "source": "traces/edge_probes.jsonl:5",
+      "record_sha256": "ed0223be93264a3ef6d31ce2d2eb8c474b4bdd8c0d34aa5c05ab23d5ae702e0d",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:07.039976+00:00",
+      "method": "POST",
+      "path": "/msg/",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjoiUElORzs2NCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes-1791670446135542000"
+    },
+    {
+      "id": 1415,
+      "source": "traces/edge_probes_2.jsonl:1",
+      "record_sha256": "01eba4fe230046a3fc7e898487fa3aeb50c78bcf8b911fcf79b32a7a5267f379",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:13.216809+00:00",
+      "method": "HEAD",
+      "path": "/health",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes_2-1791670453215448000"
+    },
+    {
+      "id": 1416,
+      "source": "traces/edge_probes_2.jsonl:2",
+      "record_sha256": "90d9e394a11dbd73b59a3b7a1749afef4750c331262aba0ef75a7f8d892a3ed1",
+      "seq": "s-8c46d25e4355",
+      "reset_source": "traces/canary.jsonl:352",
+      "recorded_at": "2026-10-10T22:14:13.503486+00:00",
+      "method": "OPTIONS",
+      "path": "/health",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "edge_probes_2-1791670453215448000"
+    },
+    {
+      "id": 1417,
+      "source": "traces/drift_confirm_2208.jsonl:1",
+      "record_sha256": "17150f908eedce322e239a7c1547933872f2bf265aa0705fd7ff40fbd61bf9bf",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:19.843126+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1418,
+      "source": "traces/drift_confirm_2208.jsonl:2",
+      "record_sha256": "b94384cb52ad4932327eb07952bf00aca69739b4e14550cebdebd7ffb5935423",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:20.155952+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1419,
+      "source": "traces/drift_confirm_2208.jsonl:3",
+      "record_sha256": "1e24de7e87294b41f61618bcada99987026c2f5c9e5e6a9cc23ce19befaeb0e9",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:20.444038+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlBJTkc7NjQifQ==",
+      "response_body_b64": "eyJwb25nIjp0cnVlfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1420,
+      "source": "traces/drift_confirm_2208.jsonl:4",
+      "record_sha256": "e63f89752df910a6682116a367fa8f493c2d901bdb053535e315f4ab2910ca06",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:20.737267+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODMifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1421,
+      "source": "traces/drift_confirm_2208.jsonl:5",
+      "record_sha256": "e3193ae4facbb2c3d4da8d344ebc333c1b776b25251603267f82008ac9ef5254",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:21.070107+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1422,
+      "source": "traces/drift_confirm_2208.jsonl:6",
+      "record_sha256": "701b945bd4774a7b49cbf49d7f74d4246d5889bd1b59207d051ba4dacfb81c04",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:21.398475+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TWF0ZW87MyJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1423,
+      "source": "traces/drift_confirm_2208.jsonl:7",
+      "record_sha256": "a1dd561924c867e1bc40bb56a244f13d3edb3a62487693994ac7676364c6c8ed",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:21.692111+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1424,
+      "source": "traces/drift_confirm_2208.jsonl:8",
+      "record_sha256": "1deb30e1fde5657943f273ab8aca8a3504a2a5abf47fc3b9d97a8a39fadf6f09",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:21.996225+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MjUwMDAwOzg2In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1425,
+      "source": "traces/drift_confirm_2208.jsonl:9",
+      "record_sha256": "748a99ced158399613f7681db39098aecb00f0342ce2b686fe36be83fcbac8f2",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:22.309250+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs0MDAwMDs4NiJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1426,
+      "source": "traces/drift_confirm_2208.jsonl:10",
+      "record_sha256": "9f19db6fc2fdfd0ad663233a0b628a00cada070ccd1a726aca285e58c988eaba",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:22.599620+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiI0MDAuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1427,
+      "source": "traces/drift_confirm_2208.jsonl:11",
+      "record_sha256": "1c4abdfbb2f982fed898713dff03ea980ee8e4b8a16014530d26b26dfaae3019",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:22.883748+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMjAwMDA7NTUifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1428,
+      "source": "traces/drift_confirm_2208.jsonl:12",
+      "record_sha256": "99c91c6d965f5608199a9065242e3102b6447707bfd4ae544982df405721be0d",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:23.192030+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwMDA7MTIifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1429,
+      "source": "traces/drift_confirm_2208.jsonl:13",
+      "record_sha256": "1349a61f47483055ffd38e9fa27184bd0707461b132e409dd273d14275c245d0",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:23.470807+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRhO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIyMTAwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1430,
+      "source": "traces/drift_confirm_2208.jsonl:14",
+      "record_sha256": "5b337a3879653a6bcf8b730c25230257375f6fbd56b9a27eb0f58651ad6ead4d",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:23.767386+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlNBTERPUztBQy0wMDAxOzM4In0=",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDEiLCJtZW5zYWplIjoiY29tYW5kbyBkZXNjb25vY2lkbyAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1431,
+      "source": "traces/drift_confirm_2208.jsonl:15",
+      "record_sha256": "eb81bbc43103bebe14a4b5cf194881657479211971c1595149a5b7fdb3c47334",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:24.067194+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1432,
+      "source": "traces/drift_confirm_2208.jsonl:16",
+      "record_sha256": "4d0efc98ae8719309ff6914ed00701b2626e7492cb0ec31b1c80334fbdb943e2",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:24.342118+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1433,
+      "source": "traces/drift_confirm_2208.jsonl:17",
+      "record_sha256": "7cbfdfd939b6c85daa7ff57b0cbcef4f6bc08f08aae2a5b1fba16f22863afaf7",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:24.636726+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDk7ODcifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1434,
+      "source": "traces/drift_confirm_2208.jsonl:18",
+      "record_sha256": "8ea93c8559ded3c0b42ff5f704a77d4dd74fc15ca919f2e787639fde117a2523",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:24.927388+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMDsyMyJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1435,
+      "source": "traces/drift_confirm_2208.jsonl:19",
+      "record_sha256": "e67245acef08aac973b6dd18fe0b799bf6232bbcc2d347a96fbd4fd18dd892e9",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:25.222652+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzVYIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1436,
+      "source": "traces/drift_confirm_2208.jsonl:20",
+      "record_sha256": "36d1ada0c7ce6e48c76ab2db415eabff361c7f1bdad16e6deb567b024cebc109",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:25.533930+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzM1In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1437,
+      "source": "traces/drift_confirm_2208.jsonl:21",
+      "record_sha256": "d0e65e94145c076b1eaddf08909542ac3414d1db99dae65398e0a8ecb7033ecb",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:25.820842+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiI0MDcuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1438,
+      "source": "traces/drift_confirm_2208.jsonl:22",
+      "record_sha256": "386ff93ea5e7847c34e9e6649a59ac46ef3715e1d5d7ba1a7f158917c6aef867",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:26.087514+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7R29tZXo7MTEifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1439,
+      "source": "traces/drift_confirm_2208.jsonl:23",
+      "record_sha256": "3aaf89dfc69d4b6271355d772c3fe23d22f65092b9d18312b7e2d5715964d1af",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:26.373773+00:00",
+      "method": "GET",
+      "path": "/rubrica-missing",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1440,
+      "source": "traces/drift_confirm_2208.jsonl:24",
+      "record_sha256": "7cdc620c80cd9daf011f0e59ecbfac4b585216385c71041cfb6390600b7de20e",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:26.685161+00:00",
+      "method": "GET",
+      "path": "/",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1441,
+      "source": "traces/drift_confirm_2208.jsonl:25",
+      "record_sha256": "3394fd8754e8b0ba49bde35acd5b933ac8b93cb5eed3fb6989bae49ba5642114",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:26.965171+00:00",
+      "method": "GET",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1442,
+      "source": "traces/drift_confirm_2208.jsonl:26",
+      "record_sha256": "ccab3d190623dbc798195b7937e48ba48bd68935d91bf0012cc572608478dd92",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:27.257047+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1443,
+      "source": "traces/drift_confirm_2208.jsonl:27",
+      "record_sha256": "651116f75cd2b02ed594e22baec307206601ed89a73da1617f452482dcac1e09",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:15:27.553671+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer invalid-token"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "drift_confirm_2208-1791670519840110000"
+    },
+    {
+      "id": 1444,
+      "source": "traces/probe_e303_e304.jsonl:1",
+      "record_sha256": "80d8106efb5576c9068d57c3d6a58c1a6c8c9991910a86ac20bc840d3c0f2395",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:16:02.116996+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMTswOzc0In0=",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDMiLCJtZW5zYWplIjoibW9udG8gaW52w6FsaWRvIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_e303_e304-1791670562113357000"
+    },
+    {
+      "id": 1445,
+      "source": "traces/probe_anula_ac.jsonl:1",
+      "record_sha256": "8b8f3942cb45f55790f92d530d613affd11c9b20bc07d5583e75c49c81317ec0",
+      "seq": "s-07907b8d76f4",
+      "reset_source": "traces/drift_confirm_2208.jsonl:1",
+      "recorded_at": "2026-10-10T22:16:47.266898+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO0FDLTAwMDE7NTkifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_anula_ac-1791670607263601000"
+    },
+    {
+      "id": 1446,
+      "source": "traces/probe_lock_consulta.jsonl:1",
+      "record_sha256": "708c85034a4fec1bf1fb9c0278ba40aaf5196a698c45a5f79d17cf9bda88d9a9",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:01.779141+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1447,
+      "source": "traces/probe_lock_consulta.jsonl:2",
+      "record_sha256": "9ae33f5402e0d425cc6b227bd7f6c01cc096b774b3bdf6db638eafda556bf9fa",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:02.073436+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QTs2MiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1448,
+      "source": "traces/probe_lock_consulta.jsonl:3",
+      "record_sha256": "e6cd2740db0369cf65c5dab92199da2e86c2c3b431faf3f99a7eaf370de077b2",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:02.369150+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Qjs1OSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1449,
+      "source": "traces/probe_lock_consulta.jsonl:4",
+      "record_sha256": "e7e63f0b370f8791f43d3e6fb4cc0cb794605514b4ff67b76d1a44ff863268ca",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:02.670748+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1450,
+      "source": "traces/probe_lock_consulta.jsonl:5",
+      "record_sha256": "e82fa25336d385ae4985a7ec28910807173941aaa3efad6e8154dc25a5ed07c7",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:02.985908+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1451,
+      "source": "traces/probe_lock_consulta.jsonl:6",
+      "record_sha256": "9a62c591076fda80d41d1570f754968c8008570f4c5141db673e332b558318f1",
+      "seq": "s-6a701cefcdc1",
+      "reset_source": "traces/probe_lock_consulta.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:03.283293+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta-1791670621777827000"
+    },
+    {
+      "id": 1452,
+      "source": "traces/probe_lock_consulta_2.jsonl:1",
+      "record_sha256": "02f6fbf49e83d8808c1286f0c2dc9641c934496d80f67fae541a86a1e04950ef",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:09.483557+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1453,
+      "source": "traces/probe_lock_consulta_2.jsonl:2",
+      "record_sha256": "af8dc11271c175a0c8c35e91da43572023d2eb1660cc44a0bba26c48f54feec1",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:09.802505+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QTs2MiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1454,
+      "source": "traces/probe_lock_consulta_2.jsonl:3",
+      "record_sha256": "a2e4b74a3ce9da367b836db0673b3492220c581e480be6eeae9bd12606a916d1",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:10.110449+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Qjs1OSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1455,
+      "source": "traces/probe_lock_consulta_2.jsonl:4",
+      "record_sha256": "173b5656abde204501a2c80c14f0dbd5b1c7e69d2695badc5bd585cd67263a5a",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:10.406243+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1456,
+      "source": "traces/probe_lock_consulta_2.jsonl:5",
+      "record_sha256": "a5604954d696c714eae32bf53b8753fd1a861d22c016e46959a3175b0f1eb489",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:10.693670+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1457,
+      "source": "traces/probe_lock_consulta_2.jsonl:6",
+      "record_sha256": "357e44f80e956719ce82f70a795483437e8ac704ae9affa87e2d283cb93d7b4a",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:11.009377+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1458,
+      "source": "traces/probe_lock_consulta_2.jsonl:7",
+      "record_sha256": "f08abc0cd39eac9fcf0f3f4bad1c21de0837773817919365f861a594799ad997",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:11.331276+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1459,
+      "source": "traces/probe_lock_consulta_2.jsonl:8",
+      "record_sha256": "243fedf796183ee50da9d5d2a5504fb674e1d42f2da4bb26080532b51ae565a2",
+      "seq": "s-343fa9c471a4",
+      "reset_source": "traces/probe_lock_consulta_2.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:11.690737+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxOzQxIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MTAiLCJtZW5zYWplIjoiY3VlbnRhIGJsb3F1ZWFkYSIsImludGVudG9zIjoxfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_lock_consulta_2-1791670629480887000"
+    },
+    {
+      "id": 1460,
+      "source": "traces/probe_dest_lock.jsonl:1",
+      "record_sha256": "f0138769c22ac97df321c57a686665a3169a9c61f58f915cbae3947147a374b9",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:19.127528+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1461,
+      "source": "traces/probe_dest_lock.jsonl:2",
+      "record_sha256": "d06448181cff47fd16da2b0eb3f77417526f90b4d41dc71cca840badb6958762",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:19.509595+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QTs2MiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1462,
+      "source": "traces/probe_dest_lock.jsonl:3",
+      "record_sha256": "33f540092dfcb6d342c77bb62b5bbf8f870cccc4906947ca7171c525061909c6",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:19.808666+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Qjs1OSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1463,
+      "source": "traces/probe_dest_lock.jsonl:4",
+      "record_sha256": "effac0c2ff12ae3d55b09b45a2713e1581135fc27fd7612703bbc12c17420d69",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:20.109368+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1464,
+      "source": "traces/probe_dest_lock.jsonl:5",
+      "record_sha256": "19ddf796b80263719c4ad0234f89a737d34bf598ec5fb3778eb922ee016ea4f5",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:20.397327+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1465,
+      "source": "traces/probe_dest_lock.jsonl:6",
+      "record_sha256": "1d891164026f7bdde032420be3d7502cd3d3c359d720353d20cc817bb9e45c30",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:20.701174+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1466,
+      "source": "traces/probe_dest_lock.jsonl:7",
+      "record_sha256": "5a0b6ad03d1f774cdc6a95aca8a9fab60f6f897579dbc94765840f2be2aa26d4",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:20.985577+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
+    },
+    {
+      "id": 1467,
+      "source": "traces/probe_dest_lock.jsonl:8",
+      "record_sha256": "ab80be7634948f477d8d4505ef7410f7f815425f7d0416d37b9738a8c51fcc2d",
+      "seq": "s-a34b08f1d7d0",
+      "reset_source": "traces/probe_dest_lock.jsonl:1",
+      "recorded_at": "2026-10-10T22:17:21.297339+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTsxMDs3MCJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "probe_dest_lock-1791670639125233000"
     }
   ],
   "summary": {
-    "original_exchanges": 1382,
+    "original_exchanges": 1467,
     "missing_hypotheses": 29,
-    "missing_x_req": 152,
+    "missing_x_req": 175,
     "missing_responses": 0,
     "before_first_recorded_reset": 1
   }

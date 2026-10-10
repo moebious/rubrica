@@ -119,3 +119,18 @@ sequence. Median 511 ms per case (limit 5 s). Entrypoint check at 16:56: health 
 (`rubrica/`) was unchanged since commit `690e213`. Next: locate the failures from the
 coverage gaps (never-observed cells, thin v2 cells, 6–12-step sequences) before any new
 probe. Two runs remain. Details and the working agreement: `docs/process/WORKFLOW.md`.
+
+## Post-validation findings (2026-10-10, ~17:15 Bogotá)
+
+- **Query string (fixed on `fix/query-string`).** Recorded probes (`traces/edge_probes*.jsonl`)
+  show the original answers `GET /health?probe=1` and `POST /msg?test=1` with 200, while a trailing
+  slash (`/health/`, `/msg/`) stays 404. The replica 404'd the query forms. Now routes on the path
+  only. This is one concrete status-mismatch source; validation #1 may have hit it. Not proven.
+- **Unexplained canary cycle (22:08Z).** Steps 12–21 returned E401 "cuenta inexistente": the accounts
+  created in steps 5–6 vanished between steps 11 and 12 (x-req stayed continuous 448→467). A
+  confirmation replay at 22:15Z matched the pinned baseline on all 27 cases, so it is not a new
+  version. No recorded harness access ran in that window, so either an unrecorded caller reset
+  this token mid-sequence or the original evicts state. Not established. The cycle stays in the
+  traces and the log; `tools/coverage.py` quarantines steps 12+ of that sequence, by name.
+  Watcher stopped by design on the alert, confirmed transient, restarted.
+- Replica deployed on Fly is still the pre-fix image until Kevin redeploys.
