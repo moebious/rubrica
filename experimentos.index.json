@@ -38055,12 +38055,1145 @@
       "infra": false,
       "failure": null,
       "raw_seq": "probe_urls-1791670735136547000"
+    },
+    {
+      "id": 1497,
+      "source": "traces/canary.jsonl:406",
+      "record_sha256": "d2fabe053f32d87578562da6877e094e2d4e419f47437ea628f9f3c6385c0680",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:55.198842+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1498,
+      "source": "traces/canary.jsonl:407",
+      "record_sha256": "68ac454bd0d8d00dc1c2972229169f34b9c4dccee4dbd91589ce82f494883925",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:55.683343+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1499,
+      "source": "traces/canary.jsonl:408",
+      "record_sha256": "c72bfbbf8596abda1bcb9a71d24f5eac337568b3fd9a5181fb85b88a5f79c8b9",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:55.972111+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlBJTkc7NjQifQ==",
+      "response_body_b64": "eyJwb25nIjp0cnVlfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1500,
+      "source": "traces/canary.jsonl:409",
+      "record_sha256": "4e739f9420f31f5142d282bf1fa8a2c116226bc6ac40bdb7db781d3622b7bb23",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:56.251809+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODMifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1501,
+      "source": "traces/canary.jsonl:410",
+      "record_sha256": "03ceac790a18af10a83948e7d8b766aa9a46bae122949d3a426145b7e08c7216",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:56.531434+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1502,
+      "source": "traces/canary.jsonl:411",
+      "record_sha256": "2e5d6f2f934eb032b8b589ffaf87d9b5c5ffdf945b363625798279e05f4c4bcb",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:56.830780+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TWF0ZW87MyJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1503,
+      "source": "traces/canary.jsonl:412",
+      "record_sha256": "2869a41232ee8a41a3753df22b165c0a84e4dc52a3e310e39faf45caead3bd0d",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:57.099312+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1504,
+      "source": "traces/canary.jsonl:413",
+      "record_sha256": "48cecff8e83e81218248f408d13a0702953d4b331b87d113897744fada40021b",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:57.378670+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MjUwMDAwOzg2In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1505,
+      "source": "traces/canary.jsonl:414",
+      "record_sha256": "9548b852ba4718c77f2b73148187cc2213898558f994d9735d6ae3a6465fd5c3",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:57.644121+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs0MDAwMDs4NiJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1506,
+      "source": "traces/canary.jsonl:415",
+      "record_sha256": "02ac67f901ed1fdaefb830a4254c04ec05b0115eeb98d0977c2d1668eb2c06c6",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:57.946564+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiI0MDAuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1507,
+      "source": "traces/canary.jsonl:416",
+      "record_sha256": "9f65cc273c3d3bb4ce53caa372a929a30cae1f30b8c8e9b49d152f3b586f4465",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:58.226874+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMjAwMDA7NTUifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1508,
+      "source": "traces/canary.jsonl:417",
+      "record_sha256": "b771518dd8767a27594201f5db0bd67f5bd345cb93da92680b3e742e92827f1f",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:58.482812+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwMDA7MTIifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1509,
+      "source": "traces/canary.jsonl:418",
+      "record_sha256": "15f074cf17149b4ae9e5dd8070f41daad4355eee45aaf12bd5152fd09dff4886",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:58.758601+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRhO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIyMTAwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1510,
+      "source": "traces/canary.jsonl:419",
+      "record_sha256": "6a8ee77bc48ff08323f319051022f84385ccf34e8cec934925fc7ad049b1f817",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:59.035932+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlNBTERPUztBQy0wMDAxOzM4In0=",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDEiLCJtZW5zYWplIjoiY29tYW5kbyBkZXNjb25vY2lkbyAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1511,
+      "source": "traces/canary.jsonl:420",
+      "record_sha256": "f3fc85ad15400ccf0fd8eea4f33faab40500aec303bb2514ca3f24eb1c9e8406",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:59.319501+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1512,
+      "source": "traces/canary.jsonl:421",
+      "record_sha256": "846cda8eea8bffa1ab4a6a450c7b5eb3d7a4574d12f436d74008e63610d621f5",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:28:59.718066+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1513,
+      "source": "traces/canary.jsonl:422",
+      "record_sha256": "706f93a053fbd6a39306709f1c5306531dc4498e04f6dd3a14f7c9828faa4f83",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:00.063694+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDk7ODcifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1514,
+      "source": "traces/canary.jsonl:423",
+      "record_sha256": "e10356aa7eba7c1280f11644f62a38f50f0e46483b80c0c23ee8ab1c3f868dd5",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:00.335362+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMDsyMyJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1515,
+      "source": "traces/canary.jsonl:424",
+      "record_sha256": "a7e83468bf97afe89c39ca1a2aef612f96d94e77ddc1cf368c838302ab56595f",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:00.650832+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzVYIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1516,
+      "source": "traces/canary.jsonl:425",
+      "record_sha256": "a0aaed9d4d7f6215131b5b4e8543cc2df68ecb4b60e282105c13e80863a25d5f",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:00.936389+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NzAwOzM1In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1517,
+      "source": "traces/canary.jsonl:426",
+      "record_sha256": "7614a5a5560ed96bcca033e37c4a43e0a4fca24338db9f44b57a814e08835646",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:01.195038+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiI0MDcuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1518,
+      "source": "traces/canary.jsonl:427",
+      "record_sha256": "f69da65cf9cca36ed26164554a44fdafa6b0213e293fb9e62bead955f3ae1249",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:01.472792+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7R29tZXo7MTEifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1519,
+      "source": "traces/canary.jsonl:428",
+      "record_sha256": "081baf8f975c63dd42914a825b8541c06dd65e6274c45f21962ce8f24b053933",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:01.775572+00:00",
+      "method": "GET",
+      "path": "/rubrica-missing",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1520,
+      "source": "traces/canary.jsonl:429",
+      "record_sha256": "66ec97ab852f7e91faff9e347ebe0bfe0dc371c5a1df46ba805448b0f8ee5eaf",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:02.062256+00:00",
+      "method": "GET",
+      "path": "/",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1521,
+      "source": "traces/canary.jsonl:430",
+      "record_sha256": "fa194d50d8b552bcea3352aeece1169b29ba81cddf7895a9b1e5454e3fbd4247",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:02.411038+00:00",
+      "method": "GET",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDQiLCJtZW5zYWplIjoicnV0YSBkZXNjb25vY2lkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1522,
+      "source": "traces/canary.jsonl:431",
+      "record_sha256": "92a557a9b8eeb003c4831446e9b0ca045a38b68eee3f70386d66b7f19ffc9fa6",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:02.678733+00:00",
+      "method": "GET",
+      "path": "/health",
+      "request_headers": [],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1523,
+      "source": "traces/canary.jsonl:432",
+      "record_sha256": "c1ee3e4aa593f186e1154d5d686c4d443a4d2a107a0e73a739f407438bd19721",
+      "seq": "s-cd1cd3646677",
+      "reset_source": "traces/canary.jsonl:406",
+      "recorded_at": "2026-10-10T22:29:02.964788+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer invalid-token"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJlcnJvciI6IkUwMDEiLCJtZW5zYWplIjoibm8gYXV0b3JpemFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "canary-1791671335196488000"
+    },
+    {
+      "id": 1524,
+      "source": "traces/v2_gap_probes.jsonl:1",
+      "record_sha256": "ee38c8315059bec02f60443ff781e7ee2f0a98d8ecf0fb1927aa95ad4bacd9a6",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:07.628214+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1525,
+      "source": "traces/v2_gap_probes.jsonl:2",
+      "record_sha256": "c2836d1fec4c67025c6afe84be2b2ff30a71455ec6e00351774103bee321c9fd",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:08.017333+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlBJTkc7RVhUUkE7ODgifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1526,
+      "source": "traces/v2_gap_probes.jsonl:3",
+      "record_sha256": "4a6313190423b2baa2b6fa4fe5e5a5f09332a1241fdb4be71633800fcbf7cffe",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:08.297437+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7WFgifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1527,
+      "source": "traces/v2_gap_probes.jsonl:4",
+      "record_sha256": "ee2d41a241206f921b03833302f76163944519e77ee47217901f915730804ba0",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:08.580101+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1528,
+      "source": "traces/v2_gap_probes.jsonl:5",
+      "record_sha256": "7f326935d2910c63025c937c5fe5644de276d03445ff812ea65b95a2e29afc01",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:08.839451+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TWF0ZW87MyJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1529,
+      "source": "traces/v2_gap_probes.jsonl:6",
+      "record_sha256": "ae669e5ae399b1cca528d058c2aa018723a996266ecb721ee896d76f15c60d2b",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:09.119425+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7RVhUUkE7MTUifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1530,
+      "source": "traces/v2_gap_probes.jsonl:7",
+      "record_sha256": "651198a5fb66acb1352e1e31e80de8d0f4196429c3013a395b4b91495ef40054",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:09.398305+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTk5OTk7MTAwMDs0MCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDEiLCJtZW5zYWplIjoiY3VlbnRhIGluZXhpc3RlbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1531,
+      "source": "traces/v2_gap_probes.jsonl:8",
+      "record_sha256": "02db51f5156a0d7e233541cf7c02491fc34868293ed49c6765abdddf4a11ba12",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:09.696294+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MTAwMDswMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1532,
+      "source": "traces/v2_gap_probes.jsonl:9",
+      "record_sha256": "34187f61103026726e03755bca3213c64d73578aa9856504164e99300f39bdf9",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:09.965688+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MTAwMDtFWFRSQTs2NyJ9",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1533,
+      "source": "traces/v2_gap_probes.jsonl:10",
+      "record_sha256": "687414c0afaeb3483e789af8b404d8d4698acff01c2da1cf29ae5823e9216bc8",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:10.245433+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MTAwMDA7NTAifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1534,
+      "source": "traces/v2_gap_probes.jsonl:11",
+      "record_sha256": "35a7360dec1eda51f56595df58dad425b61af94df84b9771b6cc8456f9008d9a",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:10.500232+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwO1hYIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1535,
+      "source": "traces/v2_gap_probes.jsonl:12",
+      "record_sha256": "73bf8601b72ca39142cacb2c92ccca3b21a7cdedeed7f7eb3ad6407bb56716ef",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:10.778663+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7MTAwMDs2NyJ9",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1536,
+      "source": "traces/v2_gap_probes.jsonl:13",
+      "record_sha256": "1507517a839e9491377dc43d136932e73f89bb052037fbeb8f9f92387ebc50fc",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:11.111343+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwOzM3In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1537,
+      "source": "traces/v2_gap_probes.jsonl:14",
+      "record_sha256": "905145ca5e762bcbef0896d71419c73c494f823aaaff9412ac9232a12ba0d552",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:11.375311+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7WFgifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1538,
+      "source": "traces/v2_gap_probes.jsonl:15",
+      "record_sha256": "17b1003e66f77cf5c885f8e0dd10df13befba554bc672d61535d8dc659d21a94",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:11.691198+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7MDAifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1539,
+      "source": "traces/v2_gap_probes.jsonl:16",
+      "record_sha256": "9271540667bc9b660c749c7c28e798b4156684325df9078915291d0b5d628242",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:11.974473+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7RVhUUkE7OCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1540,
+      "source": "traces/v2_gap_probes.jsonl:17",
+      "record_sha256": "364bb5e0e89fe7f815e2399cbce0bff276adc2c69af119243ae45cdeadf9808b",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:12.264934+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
+    },
+    {
+      "id": 1541,
+      "source": "traces/v2_gap_probes.jsonl:18",
+      "record_sha256": "c7f7f03efbbb57968b435b367749fcda7f80650fb5510f10bb3a3524ccab1e98",
+      "seq": "s-74ba7225e7d0",
+      "reset_source": "traces/v2_gap_probes.jsonl:1",
+      "recorded_at": "2026-10-10T22:31:12.546015+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "v2_gap_probes-1791671467626553000"
     }
   ],
   "summary": {
-    "original_exchanges": 1496,
+    "original_exchanges": 1541,
     "missing_hypotheses": 29,
-    "missing_x_req": 184,
+    "missing_x_req": 192,
     "missing_responses": 0,
     "before_first_recorded_reset": 1
   }
