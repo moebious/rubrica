@@ -1022,6 +1022,11 @@
           "source": "probe_owner",
           "prefix": "TRANSFER;AC-0001;AC-0002;50001;",
           "status": 200
+        },
+        {
+          "source": "probe_owner",
+          "prefix": "TRANSFER;AC-0001;AC-0002;60000;",
+          "error": "E506"
         }
       ],
       "confidence": "confirmado",
@@ -1046,11 +1051,24 @@
           "ids": [
             2547
           ]
+        },
+        {
+          "query": {
+            "source": "probe_owner",
+            "prefix": "TRANSFER;AC-0001;AC-0002;60000;",
+            "error": "E506"
+          },
+          "ids": [
+            2557,
+            2562
+          ]
         }
       ],
       "evidence": [
         2542,
-        2547
+        2547,
+        2557,
+        2562
       ]
     },
     {

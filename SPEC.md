@@ -65,7 +65,7 @@ Los valores ausentes del registro no se inventan: X-Req ausente es null; hipóte
 | ID | Comportamiento | Evidencia | Confianza |
 | --- | --- | --- | --- |
 | CMD-TRANSFER | TRANSFER;origen;destino;monto;control debita/acredita el monto y crea OP-NNNN; éxito 200 con "recieved". Máximo 50000 inclusive. | 1026, 1027, 1032 | confirmado |
-| CMD-TRANSFER-OWNER | Transferencia entre cuentas con el mismo titular exacto (sensible a mayúsculas y espacios) no aplica el límite de 50000; solo valida fondos. | 2542, 2547 | confirmado |
+| CMD-TRANSFER-OWNER | Transferencia entre cuentas con el mismo titular exacto (sensible a mayúsculas y espacios) no aplica el límite de 50000; solo valida fondos. | 2542, 2547, 2557, 2562 | confirmado |
 
 ### ANULA
 

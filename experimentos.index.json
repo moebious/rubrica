@@ -78126,12 +78126,3232 @@
       "infra": false,
       "failure": null,
       "raw_seq": "canary-1791672552922873000"
+    },
+    {
+      "id": 3070,
+      "source": "traces/fuzz_seed13.jsonl:1",
+      "record_sha256": "1d6461d4eb28db9c2ffa55d57d8e5f2ee9fc2832b61f86b350a1e075c8d0e806",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:06.634332+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3071,
+      "source": "traces/fuzz_seed13.jsonl:2",
+      "record_sha256": "97c775dd3380ecb520ed0f0e15d97183a7034c36c8b4d277cae57db0c327c670",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:07.031832+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MDs2NSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3072,
+      "source": "traces/fuzz_seed13.jsonl:3",
+      "record_sha256": "b30d2d6f1599d128a35c789bf4450678bcc35e15dd90bbaf220cd29c324842fb",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:07.311233+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7bHVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3073,
+      "source": "traces/fuzz_seed13.jsonl:4",
+      "record_sha256": "e240748ddc93019db8f6092065d3abb8c8537ad85c5971a3d106159a68aa5cf0",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:07.608570+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7ICAgOzg1In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3074,
+      "source": "traces/fuzz_seed13.jsonl:5",
+      "record_sha256": "24745a11cb870333bd1c0ecb86e831651b10a791a088127ccb32f25e87510c93",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:07.935347+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3075,
+      "source": "traces/fuzz_seed13.jsonl:6",
+      "record_sha256": "357d753e2f686dad483d84235964133435de4ecc85bf9489195571f0ab4523a0",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:08.225518+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7ODAwMDA7OTcifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3076,
+      "source": "traces/fuzz_seed13.jsonl:7",
+      "record_sha256": "9f3f10fc15d20d1f540b8aece492bde4029cdec572b18555cdb1fa330df203b1",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:08.505753+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDI7MTIifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3077,
+      "source": "traces/fuzz_seed13.jsonl:8",
+      "record_sha256": "261a4fc176f4573e6b38ef779e07b9fb9605a1a1b122ce1ac7d349872c671ac0",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:08.866440+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxOzQxIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3078,
+      "source": "traces/fuzz_seed13.jsonl:9",
+      "record_sha256": "95f4f552ac8fc3af3289944ff4537c6171604bcc35ba4e7bf2cc6b588508ffcb",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:09.178191+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxOzQxIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3079,
+      "source": "traces/fuzz_seed13.jsonl:10",
+      "record_sha256": "0313dbfb43c47c072d5f36f01cc74b4e823268d27b9da07a60f75324914634a5",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:09.470597+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxOzQxIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3080,
+      "source": "traces/fuzz_seed13.jsonl:11",
+      "record_sha256": "23bcbb679b4b03c171ef3066ef544647f54c37919f015e353be7c6d52a30ac4b",
+      "seq": "s-9c24d9d6cc13",
+      "reset_source": "traces/fuzz_seed13.jsonl:1",
+      "recorded_at": "2026-10-10T22:57:09.791652+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxOzQxIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MTAiLCJtZW5zYWplIjoiY3VlbnRhIGJsb3F1ZWFkYSIsImludGVudG9zIjoxfQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673026632374000"
+    },
+    {
+      "id": 3081,
+      "source": "traces/fuzz_seed13.jsonl:12",
+      "record_sha256": "df74a59b99716c988f5e64ff81e35e989b2fbb8769e9eea2808ccea45244aa64",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:10.102680+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3082,
+      "source": "traces/fuzz_seed13.jsonl:13",
+      "record_sha256": "d28b2d7872652403120b6f956ff8e2f5ebbecba7f63b7d43bbbe246624cad08c",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:10.403826+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QUxUQTsyNSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3083,
+      "source": "traces/fuzz_seed13.jsonl:14",
+      "record_sha256": "7aef6d0bbe9e0ae3678602f3401728b8f2e6d45d765ef1527f18da166ec2cf25",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:10.701627+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TydCcmllbjsyNiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3084,
+      "source": "traces/fuzz_seed13.jsonl:15",
+      "record_sha256": "f4306cd45d2bda2dd2d77758dd6be8615968e483dc4b569bf25d68d636dc1fe9",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:10.997126+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TydCcmllbjsyNiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3085,
+      "source": "traces/fuzz_seed13.jsonl:16",
+      "record_sha256": "42f99630ecb0ea30647eea92af647cbfb60db3c402e3425d5a9df21085239bdd",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:11.311524+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7ODAwMDA7NTUifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3086,
+      "source": "traces/fuzz_seed13.jsonl:17",
+      "record_sha256": "1d8422aa19ad39e5a80d0974d08a9c5c44d6ce99cd19e28e00ec8d9610231ec6",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:11.605380+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3087,
+      "source": "traces/fuzz_seed13.jsonl:18",
+      "record_sha256": "4b905ba6657213b8e4e717e9e4d6dda6e8cefb34f9563569b13c5c39a5cfd912",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:11.907592+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7NTAwMDA7ODEifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3088,
+      "source": "traces/fuzz_seed13.jsonl:19",
+      "record_sha256": "8693fa4cf2550d1771e21944c262dadc815fa78c24e86eaaad23d025a4eeb3fb",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:12.207177+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwOzM3In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNCJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3089,
+      "source": "traces/fuzz_seed13.jsonl:20",
+      "record_sha256": "397c33fb09c3accab2b577c6878bf1835badda0d46904873cb50426ef6f944f2",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:12.531299+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMzs2MDAwMDszOCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3090,
+      "source": "traces/fuzz_seed13.jsonl:21",
+      "record_sha256": "3a4bfda4009a701287d51d0d9bb00eb4ffd5ac1e6889a07c2d81cb5e744fcd07",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:12.855953+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMzs2MDAwMDszOCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3091,
+      "source": "traces/fuzz_seed13.jsonl:22",
+      "record_sha256": "1acd1d6d80f7166cb046cb00a24d2545df526ca898dfef3b0d8a28d128649a59",
+      "seq": "s-3b2cf9cd92db",
+      "reset_source": "traces/fuzz_seed13.jsonl:12",
+      "recorded_at": "2026-10-10T22:57:13.184295+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673030101527000"
+    },
+    {
+      "id": 3092,
+      "source": "traces/fuzz_seed13.jsonl:23",
+      "record_sha256": "e0c04e51d9e193db69e2a0d662e41d23f145a44fdc4dd1a1681a9366d0adc22a",
+      "seq": "s-1142dff77168",
+      "reset_source": "traces/fuzz_seed13.jsonl:23",
+      "recorded_at": "2026-10-10T22:57:13.513986+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673033512113000"
+    },
+    {
+      "id": 3093,
+      "source": "traces/fuzz_seed13.jsonl:24",
+      "record_sha256": "b9b1b78735ddd7b0e3584b28111d2070a29a7ef7c808252ae2013d57132eb776",
+      "seq": "s-1142dff77168",
+      "reset_source": "traces/fuzz_seed13.jsonl:23",
+      "recorded_at": "2026-10-10T22:57:13.830292+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7w587NDQifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673033512113000"
+    },
+    {
+      "id": 3094,
+      "source": "traces/fuzz_seed13.jsonl:25",
+      "record_sha256": "194422c39c2c756d3900a28e0689fe31b1d97f5a84e1d2a5200b7c2064e31bfb",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:14.240434+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3095,
+      "source": "traces/fuzz_seed13.jsonl:26",
+      "record_sha256": "73539f7e486f95bfbecabb27f26993c77b5a6c81b728b99d11caf60004305247",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:14.547452+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Tk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTjs1OSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3096,
+      "source": "traces/fuzz_seed13.jsonl:27",
+      "record_sha256": "bb2e4b212de11db92c4c9b021bf28c6cc1466e69b70da26941974e40fc5432c5",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:14.872825+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7TydCcmllbjsyNiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3097,
+      "source": "traces/fuzz_seed13.jsonl:28",
+      "record_sha256": "c690553ca78a26a71c681c02eea821acd43bcdb8424705d7a0e26e0595cc515b",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:15.159316+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NTAwMDA7NjAifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3098,
+      "source": "traces/fuzz_seed13.jsonl:29",
+      "record_sha256": "9eec740549c731344e147494278bfe79c340b9176a0ce6049c65bc566057887f",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:15.451838+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFuVWxBO09QLTAwMDE7NzIifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3099,
+      "source": "traces/fuzz_seed13.jsonl:30",
+      "record_sha256": "2aed1141072ef76d0ef427c4da588b88127be38166efc64ccedb68f9111f41ad",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:15.756288+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3100,
+      "source": "traces/fuzz_seed13.jsonl:31",
+      "record_sha256": "38132360f39bdd10ad006851e1c3c0d2a45288fd2906adb2f43252fbb7e37be7",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:16.045459+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNvbnN1bHRhO0FDLTAwMDI7MTEifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAyIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3101,
+      "source": "traces/fuzz_seed13.jsonl:32",
+      "record_sha256": "810471f0a15541e10f13ce67d3e387592b79d648f64552fe4b55a1d7e75fe198",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:16.340313+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs3Nzc7MTgifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3102,
+      "source": "traces/fuzz_seed13.jsonl:33",
+      "record_sha256": "383696282a2e93993dc1b261fc953c95a2073086cf0b0ada019f9fcf126284a8",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:16.657630+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIwLjAwIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3103,
+      "source": "traces/fuzz_seed13.jsonl:34",
+      "record_sha256": "48fa608f24d431c158e066ed4fe8f781f3fb15170910d191934c7099d4f92540",
+      "seq": "s-6616951e69a7",
+      "reset_source": "traces/fuzz_seed13.jsonl:25",
+      "recorded_at": "2026-10-10T22:57:17.028463+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673034238942000"
+    },
+    {
+      "id": 3104,
+      "source": "traces/fuzz_seed13.jsonl:35",
+      "record_sha256": "dd77485c4cc711939eb9b5279612395ee873e447a8b937831837ad39ef9a44f8",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:17.344322+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3105,
+      "source": "traces/fuzz_seed13.jsonl:36",
+      "record_sha256": "b485fde6ea7d6c7f3d7adb28de0f31e5e05fa2c00013f932618509d95f9da134",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:17.653763+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7PGI+OzU5In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3106,
+      "source": "traces/fuzz_seed13.jsonl:37",
+      "record_sha256": "744e221d2cc823eb5efe57007218a5e2923153cf5d0fb7e4f76d650afc42684b",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:17.976653+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7IEx1Y2lhOzgyIn0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3107,
+      "source": "traces/fuzz_seed13.jsonl:38",
+      "record_sha256": "abde70a95d5954129fdffe22955b64322e50b73b03dfc2a05860deeba0056324",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:18.265620+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MDs2NSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3108,
+      "source": "traces/fuzz_seed13.jsonl:39",
+      "record_sha256": "b6b2b1fc8bfefbd27cdf492318773c21be389d06d3d0c2d7a328f3026b768906",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:18.564860+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7NTAwMDA7MzkifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3109,
+      "source": "traces/fuzz_seed13.jsonl:40",
+      "record_sha256": "363c7fa3997ec113d1d853c103f32868664f2a0e540ee257f43f4cebe01b45fa",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:18.866955+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3110,
+      "source": "traces/fuzz_seed13.jsonl:41",
+      "record_sha256": "3d76cbd9c6bb700be4e3405f6da66a1c8ee69564dce85e7edd3f63170b95a2e3",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:19.160850+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7MjAwMDA7NjUifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3111,
+      "source": "traces/fuzz_seed13.jsonl:42",
+      "record_sha256": "5ec25c173bb72729ef5741c903339d8c4b7fb0d11c83c879237ca2f6030186e0",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:19.454074+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDE7NzIifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3112,
+      "source": "traces/fuzz_seed13.jsonl:43",
+      "record_sha256": "1ef0c68ffd47757cb882887433c946225e7e1754221909f2e7563af1093bdaa6",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:19.737189+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDE7NzIifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3113,
+      "source": "traces/fuzz_seed13.jsonl:44",
+      "record_sha256": "4a54ac85b59aa3435f7f9e8813d5fd2098595e23155c6b813bbfc3bb9674af55",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:20.063378+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3114,
+      "source": "traces/fuzz_seed13.jsonl:45",
+      "record_sha256": "4aaec855c4741e0d8e0f04ad0a680bb855492610d82999fdc33213e1029f29fa",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:20.345514+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3115,
+      "source": "traces/fuzz_seed13.jsonl:46",
+      "record_sha256": "5120e284b29932ce79ced02799a62f1eda7413c7b92b0d43d0035b21a810c426",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:20.637958+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3116,
+      "source": "traces/fuzz_seed13.jsonl:47",
+      "record_sha256": "35b53ac6e27c3f14b8666b62307fdb5c487da3dcc183a23fbb46a0dec3daece1",
+      "seq": "s-ca2d1301eee5",
+      "reset_source": "traces/fuzz_seed13.jsonl:35",
+      "recorded_at": "2026-10-10T22:57:20.924390+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs2MDAwMDszMiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673037343213000"
+    },
+    {
+      "id": 3117,
+      "source": "traces/fuzz_seed13.jsonl:48",
+      "record_sha256": "d2b8fc8661bd87dbb9efa75f8fccfe572713c4a021aa43e22065c08b3025f999",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:21.206710+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3118,
+      "source": "traces/fuzz_seed13.jsonl:49",
+      "record_sha256": "9436bd1ab9f226ae9324b1cb9d546bf5e876e32457f446f5a9f185fc3a430ffc",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:21.492560+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Sm9zw6k7NjEifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3119,
+      "source": "traces/fuzz_seed13.jsonl:50",
+      "record_sha256": "3597bb10060439205edebc10e44cae278961b0ed63ba54868e42c1ac055ab722",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:21.792278+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3120,
+      "source": "traces/fuzz_seed13.jsonl:51",
+      "record_sha256": "00de4ca4f174bab87c06b2441470deaabfae0719e3ce7367bedc91bbf6b2c059",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:22.143666+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MjAwMDA7MjMifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3121,
+      "source": "traces/fuzz_seed13.jsonl:52",
+      "record_sha256": "7efe149f1cf6b5abf27d845580ca0f7c4666fab6e48222d1e093626fe658ed05",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:22.464017+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NTAwMDA7NjAifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3122,
+      "source": "traces/fuzz_seed13.jsonl:53",
+      "record_sha256": "f833bac90a2f8033440132c7364a016ba279b31f2ea0bf2b3bf83b8b2e52fa52",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:22.778581+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMTsyMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3123,
+      "source": "traces/fuzz_seed13.jsonl:54",
+      "record_sha256": "d661320a4b4ba5eb764fa892f4390b4a513631260ceef3786d610c32e12a8600",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:23.121721+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMTsyMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3124,
+      "source": "traces/fuzz_seed13.jsonl:55",
+      "record_sha256": "960f383735d3a9c47ca9e3d060816ea57e056ae2bc6752c5e93afbb738fe35bd",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:23.449991+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MTAwMDszNSJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3125,
+      "source": "traces/fuzz_seed13.jsonl:56",
+      "record_sha256": "28ca2bcc8c4904c499c30b8cb925692cfac80670f6b532523fe25c801ac4697b",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:23.768025+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDAwOzM3In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNCJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3126,
+      "source": "traces/fuzz_seed13.jsonl:57",
+      "record_sha256": "9088ee10cd9f3bc23a6e6a7c7ffe7c74fd28e99aacd51bd6821344f0f2e7b273",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:24.082245+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3127,
+      "source": "traces/fuzz_seed13.jsonl:58",
+      "record_sha256": "151e12812f8336b91e3cc5ad84b35391c261cb1e9b6181869d55c196fdfb8cb9",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:24.381414+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiIxOTAuMDAifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3128,
+      "source": "traces/fuzz_seed13.jsonl:59",
+      "record_sha256": "35874005912074b7537d0d8dd6d51fd0a80b0a08727f602fa7f2041bb486e4bf",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:24.684813+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3129,
+      "source": "traces/fuzz_seed13.jsonl:60",
+      "record_sha256": "6044c590c52faa72028b2f65149c0f049a2d7584bd672f7d061d1e1fe7b77458",
+      "seq": "s-f6b23576c689",
+      "reset_source": "traces/fuzz_seed13.jsonl:48",
+      "recorded_at": "2026-10-10T22:57:24.968705+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673041205743000"
+    },
+    {
+      "id": 3130,
+      "source": "traces/fuzz_seed13.jsonl:61",
+      "record_sha256": "fbe3409551437663185d581de9aea6b45659df714d7bd4044098d72c53f72fd4",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:25.253863+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3131,
+      "source": "traces/fuzz_seed13.jsonl:62",
+      "record_sha256": "84e098c0d8338e3441f29208fa43a7e33f351de93194ebc21d5951278c2dfcfb",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:25.554694+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE75ZCN5YmNOzg1In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3132,
+      "source": "traces/fuzz_seed13.jsonl:63",
+      "record_sha256": "9e98f43a7acf89aeac90b4a0fe4b1faf0e583197c637d2539bbbd10b771ab06c",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:25.854967+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE75ZCN5YmNOzg1In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3133,
+      "source": "traces/fuzz_seed13.jsonl:64",
+      "record_sha256": "88771f2a8786f736e959ba79c9963a60ebf407d0ed4acd3d02d03b622b0aaf50",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:26.137919+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7ODAwMDA7NTUifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3134,
+      "source": "traces/fuzz_seed13.jsonl:65",
+      "record_sha256": "2b881f5b8c1b3ad09dd7b8bd2771254236ff0ddaf9af5f1d4dbbc95de4cbb168",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:26.480860+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMTsyMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3135,
+      "source": "traces/fuzz_seed13.jsonl:66",
+      "record_sha256": "1d5512012bb4718052ec2094f3234edc27ccf41ab7afd3a97ec894a038d5b921",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:26.763527+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMTsyMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3136,
+      "source": "traces/fuzz_seed13.jsonl:67",
+      "record_sha256": "1df5df7e15a6ab927dee22ba469b33f7ddf84c486c713dee6bdf980664773b15",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:27.058450+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDAwMTsyMCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3137,
+      "source": "traces/fuzz_seed13.jsonl:68",
+      "record_sha256": "8f3ab55bcefe6efdd035f91cb9f5d758173926336a623472d1cbeffab3e210ca",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:27.384520+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs3Nzc7MzAifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3138,
+      "source": "traces/fuzz_seed13.jsonl:69",
+      "record_sha256": "e33b83184876181161ee551dd6ea9695c204d6f2d960d56c1b32f816b61264f0",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:27.711058+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7MTAwOzgyIn0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3139,
+      "source": "traces/fuzz_seed13.jsonl:70",
+      "record_sha256": "a4257190657344fc3824a100e56132649bbaa6fa174d94a486fb1ab9d0852081",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:28.016804+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjsxMDA7MjQifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNCJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3140,
+      "source": "traces/fuzz_seed13.jsonl:71",
+      "record_sha256": "89c047624952231b4cf434e68acd338f8600d6df77d5505173d9168eed999e29",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:28.352250+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDM7NjYifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3141,
+      "source": "traces/fuzz_seed13.jsonl:72",
+      "record_sha256": "865cab2a2e1d5e26813e7e13393d07e72414d456078c4d70bf428b0e311b3513",
+      "seq": "s-d49c5cfdbbc0",
+      "reset_source": "traces/fuzz_seed13.jsonl:61",
+      "recorded_at": "2026-10-10T22:57:28.655370+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7MTQifQ==",
+      "response_body_b64": "eyJjdWVudGFfaWQiOiJBQy0wMDAxIiwic2FsZG8iOiI3OTEuMjMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673045252749000"
+    },
+    {
+      "id": 3142,
+      "source": "traces/fuzz_seed13.jsonl:73",
+      "record_sha256": "ad1fca6cb566c3abe1a250c42539c69345baf2d1b1dc126c1f6372527da354be",
+      "seq": "s-53284e2679f5",
+      "reset_source": "traces/fuzz_seed13.jsonl:73",
+      "recorded_at": "2026-10-10T22:57:28.945243+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673048943867000"
+    },
+    {
+      "id": 3143,
+      "source": "traces/fuzz_seed13.jsonl:74",
+      "record_sha256": "4153ab2787050984feff21aef2d288a35d34824f83e5c39cbae2857f79daad00",
+      "seq": "s-53284e2679f5",
+      "reset_source": "traces/fuzz_seed13.jsonl:73",
+      "recorded_at": "2026-10-10T22:57:29.239378+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7w587NDQifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673048943867000"
+    },
+    {
+      "id": 3144,
+      "source": "traces/fuzz_seed13.jsonl:75",
+      "record_sha256": "24721d021768fb13dfb5ebb1c93bfe404c1e02050452c05b0c1a88032961197d",
+      "seq": "s-f25d6b420030",
+      "reset_source": "traces/fuzz_seed13.jsonl:75",
+      "recorded_at": "2026-10-10T22:57:29.524858+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673049523951000"
+    },
+    {
+      "id": 3145,
+      "source": "traces/fuzz_seed13.jsonl:76",
+      "record_sha256": "23bb5576cf802c693418d0ff7c8ffd13dfab2945b340bdd404b20e51c625ccb0",
+      "seq": "s-f25d6b420030",
+      "reset_source": "traces/fuzz_seed13.jsonl:75",
+      "recorded_at": "2026-10-10T22:57:29.798958+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7w587NDQifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673049523951000"
+    },
+    {
+      "id": 3146,
+      "source": "traces/fuzz_seed13.jsonl:77",
+      "record_sha256": "8c1fce313e63bacaceaca20441e27588bd8098a09f7654bdc7228b1447ae0cc1",
+      "seq": "s-a1a0b8dc47fa",
+      "reset_source": "traces/fuzz_seed13.jsonl:77",
+      "recorded_at": "2026-10-10T22:57:30.102819+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673050101851000"
+    },
+    {
+      "id": 3147,
+      "source": "traces/fuzz_seed13.jsonl:78",
+      "record_sha256": "af92cca8b49a861292db1c51787ff21ea818510ed8e45dd2690563d6bee0a002",
+      "seq": "s-a1a0b8dc47fa",
+      "reset_source": "traces/fuzz_seed13.jsonl:77",
+      "recorded_at": "2026-10-10T22:57:30.404526+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MTIzOzE4In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673050101851000"
+    },
+    {
+      "id": 3148,
+      "source": "traces/fuzz_seed13.jsonl:79",
+      "record_sha256": "0f505eb6c37dcfc0f5542e8e8b476a02d9a4b909cc695d16b2bc6382f8b76e06",
+      "seq": "s-a1a0b8dc47fa",
+      "reset_source": "traces/fuzz_seed13.jsonl:77",
+      "recorded_at": "2026-10-10T22:57:30.691456+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MTIzOzE4In0=",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673050101851000"
+    },
+    {
+      "id": 3149,
+      "source": "traces/fuzz_seed13.jsonl:80",
+      "record_sha256": "e6d74e8f8255b11031bfa00e24d1403845518378d037833bb17d592b4b283385",
+      "seq": "s-a1a0b8dc47fa",
+      "reset_source": "traces/fuzz_seed13.jsonl:77",
+      "recorded_at": "2026-10-10T22:57:30.991426+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7w587NDQifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDIiLCJtZW5zYWplIjoiY29udHJvbCBpbnbDoWxpZG8ifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673050101851000"
+    },
+    {
+      "id": 3150,
+      "source": "traces/fuzz_seed13.jsonl:81",
+      "record_sha256": "dc5d8d0cffdedc9cef8ea60f84fd10211425ffb445b6c74abf950aeabdc82101",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:31.290835+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3151,
+      "source": "traces/fuzz_seed13.jsonl:82",
+      "record_sha256": "346173bfaee034455b07cdca316165e63d3c092630f44eab99d5bfe05ea031b3",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:31.596993+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7T1AtMDAwMTsxNCJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3152,
+      "source": "traces/fuzz_seed13.jsonl:83",
+      "record_sha256": "ee58cfcada7eaefa3f2bbc924b253472ed3dc17e38eb3ba719ef441e7eab1df2",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:31.952393+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7T1AtMDAwMTsxNCJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3153,
+      "source": "traces/fuzz_seed13.jsonl:84",
+      "record_sha256": "12fe8574d537afeb31c7078532e3f4f6799b004338289717e72a2343615bca46",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:32.368488+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QUMtMDAwMTs3MiJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3154,
+      "source": "traces/fuzz_seed13.jsonl:85",
+      "record_sha256": "ff708ac9c974042372d6eef8c3a3de0866985082dfcf73e063193c6cbd96a7d8",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:32.699259+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7ODAwMDA7NTUifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3155,
+      "source": "traces/fuzz_seed13.jsonl:86",
+      "record_sha256": "aca55cdda6a38b78fb2901ba7e175320a14e03cf3fac9fed5efa99902cd51cc5",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:33.038932+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7NTAwMDA7NjAifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3156,
+      "source": "traces/fuzz_seed13.jsonl:87",
+      "record_sha256": "02b80124a123d3284d1b15e520ce47fb4cd6d4ed374ffe0bfb427fadcae2eff0",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:33.370598+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDE7NzIifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3157,
+      "source": "traces/fuzz_seed13.jsonl:88",
+      "record_sha256": "0a02e94f136b0461a95f8ef531cbb553dcee40b91183cc8c32584173f1bbb501",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:33.653727+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRyYW5zZmVyO0FDLTAwMDM7QUMtMDAwMzsxOzQwIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDQiLCJtZW5zYWplIjoib3JpZ2VuIHkgZGVzdGlubyBpZ3VhbGVzIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3158,
+      "source": "traces/fuzz_seed13.jsonl:89",
+      "record_sha256": "45e45107a68a7573b72e9373ef88552a67f65012994bffcf9e31c05ef0fd12d0",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:33.956465+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTszNCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkUzMDIiLCJtZW5zYWplIjoiYXJpZGFkIGludsOhbGlkYSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3159,
+      "source": "traces/fuzz_seed13.jsonl:90",
+      "record_sha256": "bb98ff1d7ccbb976c65d62f4d73cd9ff573fa72b79c975ecd6f186ad1f420b48",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:34.278514+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMzs5OTk5OTk7MjYifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDYiLCJtZW5zYWplIjoibMOtbWl0ZSBleGNlZGlkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3160,
+      "source": "traces/fuzz_seed13.jsonl:91",
+      "record_sha256": "05ec71b7eafa464e229f2b8d01f2cbb721c722ba04117636b5c09eb873575506",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:34.579362+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMzsxMDAwOzEwIn0=",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3161,
+      "source": "traces/fuzz_seed13.jsonl:92",
+      "record_sha256": "7bfbf9ffd99bc20b50126ecac92067bccac44a6ed5a645fc0a021c5c8297b456",
+      "seq": "s-90ce6e340032",
+      "reset_source": "traces/fuzz_seed13.jsonl:81",
+      "recorded_at": "2026-10-10T22:57:34.880986+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDE7NzIifQ==",
+      "response_body_b64": "eyJvayI6ZmFsc2UsIm1vdGl2byI6InlhIGFudWxhZGEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673051289432000"
+    },
+    {
+      "id": 3162,
+      "source": "traces/fuzz_seed13.jsonl:93",
+      "record_sha256": "65ff92b04b62736c0fd6aec2d3ed7637ad524aee7b34c9818683f88058c61799",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:35.173625+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3163,
+      "source": "traces/fuzz_seed13.jsonl:94",
+      "record_sha256": "bcc11ade49645069cb40bf0a5f6decab53b2f0fdb57946406995d62f4c77e64a",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:35.476271+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7U1M7NDQifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3164,
+      "source": "traces/fuzz_seed13.jsonl:95",
+      "record_sha256": "43052b1387b3bcfdae7f0387bdd5bee352f1bd8930be9147ff61d0f01a79b6bb",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:35.752009+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7XFw7ODUifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3165,
+      "source": "traces/fuzz_seed13.jsonl:96",
+      "record_sha256": "6c4461abc2375e7922d152deef5065e8ee1e4ff8f1ea5ee3f4671c90d1820d22",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:36.064008+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7XCI7ODUifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3166,
+      "source": "traces/fuzz_seed13.jsonl:97",
+      "record_sha256": "a186b019bacaa31a92b7dc24b599b46bc491537ad8ac5251399cea4914275b2d",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:36.355713+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7NTAwMDA7MzkifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3167,
+      "source": "traces/fuzz_seed13.jsonl:98",
+      "record_sha256": "69933b418494e145fc958b4978772a387367a1ce1670cb8dffc38cb3a48d4074",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:36.639640+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MjAwMDA7NDQifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3168,
+      "source": "traces/fuzz_seed13.jsonl:99",
+      "record_sha256": "bb8b2efc2d29bd3abb00aa5f1ca6399a10856e3cd9f09e0fae1075b7aa2af9b6",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:36.974440+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7NTAwOzYwIn0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3169,
+      "source": "traces/fuzz_seed13.jsonl:100",
+      "record_sha256": "27153db1001db6568630ba44b098c0492fa840491017f15a6c1633ce0f00f90c",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:37.315683+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwMDI7NjkifQ==",
+      "response_body_b64": "eyJvayI6dHJ1ZSwiYW51bGFkYSI6Ik9QLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3170,
+      "source": "traces/fuzz_seed13.jsonl:101",
+      "record_sha256": "4463b37507e15df400c63d7e5d57f171c03ba658f999d20eaed61889240abaf4",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:37.615086+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPOzsxMDA7MzMifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUxMDQiLCJtZW5zYWplIjoic2VnbWVudG8gdmFjw61vIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3171,
+      "source": "traces/fuzz_seed13.jsonl:102",
+      "record_sha256": "4520c51e6d71e4d4d9d4d414c6b52fa82b9dd6abdc87a442a146d729a77496e7",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:37.963032+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs5OTszNyJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNCJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3172,
+      "source": "traces/fuzz_seed13.jsonl:103",
+      "record_sha256": "f23dd72ef8bc3843b022a62f030a5b282c115a0d440855e461e74d27b288ac84",
+      "seq": "s-d5bd104b62fe",
+      "reset_source": "traces/fuzz_seed13.jsonl:93",
+      "recorded_at": "2026-10-10T22:57:38.287048+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7QUxUQTsyNSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDQifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673055172379000"
+    },
+    {
+      "id": 3173,
+      "source": "traces/fuzz_seed13.jsonl:104",
+      "record_sha256": "b7b08b1dc97488c4e2ac38b8936f52db47578c3ce77674b420e849590d2f617f",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:38.594945+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3174,
+      "source": "traces/fuzz_seed13.jsonl:105",
+      "record_sha256": "f1b2e11cc26efa9000d52d4dfab7e48eecdba390fa237918c84f858f1434f3f9",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:38.951216+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3175,
+      "source": "traces/fuzz_seed13.jsonl:106",
+      "record_sha256": "52c0b6d92ccd7a55de2b8ade20a9c97d8e983fab2222c5a3f4f490befa31dce9",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:39.263373+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7THVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3176,
+      "source": "traces/fuzz_seed13.jsonl:107",
+      "record_sha256": "09c456bce32a15bd3762319119293f7b0ae057d2618a0b97baedee46fa211543",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:39.555320+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7Wm/Dqzs5MCJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3177,
+      "source": "traces/fuzz_seed13.jsonl:108",
+      "record_sha256": "b8bf7a48dbd463f3fa2ad03ab164c923f9b2f0e2bc77fcdad21b0c1c72afa0c5",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:39.844854+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDI7MTAwMDs4In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3178,
+      "source": "traces/fuzz_seed13.jsonl:109",
+      "record_sha256": "dc366bbdb992e7b5d47d62e855883c8dddd43b1a317726aacb076579df63245e",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:40.161120+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7NTAwOzYwIn0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3179,
+      "source": "traces/fuzz_seed13.jsonl:110",
+      "record_sha256": "246f4689028993bdf030ac35b59a846a7ffef4782f9c6df126e92d3973ed22d0",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:40.444460+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkNPTlNVTFRBO0FDLTAwMDE7LTEifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkUyMDEiLCJtZW5zYWplIjoiY29udHJvbCBtYWwgZm9ybWFkbyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3180,
+      "source": "traces/fuzz_seed13.jsonl:111",
+      "record_sha256": "bd0420b40579fec44ed850750b9ca3756505135070bec4125fff6eaabe1db511",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:40.734771+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMTs1MDA7NzMifQ==",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3181,
+      "source": "traces/fuzz_seed13.jsonl:112",
+      "record_sha256": "684da984e29168393148a4a03aeea9154ed4c32f5d9191478163d13777cc1638",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:41.024015+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7bHVjaWE7ODIifQ==",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDQifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3182,
+      "source": "traces/fuzz_seed13.jsonl:113",
+      "record_sha256": "15f11672727c96c9ec832fb135033679e6943f73dbdc8a54fbdbd283d1b2a424",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:41.327970+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDQ7QUMtMDAwMjsxMDs2MCJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3183,
+      "source": "traces/fuzz_seed13.jsonl:114",
+      "record_sha256": "3b145e9d0cea4c2d987c662b013ca31d3dc8d8756fe9be14bcef9e771a805a6e",
+      "seq": "s-bdbefd63ee2c",
+      "reset_source": "traces/fuzz_seed13.jsonl:104",
+      "recorded_at": "2026-10-10T22:57:41.646333+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDM7QUMtMDAwMjs1MDE7NzIifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673058593693000"
+    },
+    {
+      "id": 3184,
+      "source": "traces/fuzz_seed13.jsonl:115",
+      "record_sha256": "81878db2f6496732dc67341aac840294bf3ebfb9fcf658de3426798e051d6b3d",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:41.993973+00:00",
+      "method": "POST",
+      "path": "/__reset",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ]
+      ],
+      "request_body_b64": "",
+      "response_body_b64": "eyJvayI6dHJ1ZX0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3185,
+      "source": "traces/fuzz_seed13.jsonl:116",
+      "record_sha256": "2b164431abd8a06a04395ce7125cc1a49b5b35fb162a5a35dd8669fa4ecb75b9",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:42.280236+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MDs2NSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDEifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3186,
+      "source": "traces/fuzz_seed13.jsonl:117",
+      "record_sha256": "03d3810d0cf3be7c155c506d98ac1eba3c34716380e8d47e65cd5718cdf04ff7",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:42.635564+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MDs2NSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDIifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3187,
+      "source": "traces/fuzz_seed13.jsonl:118",
+      "record_sha256": "b4f93c838b0b6e523ffb422cf374dc29685d75440e264403650de5de18b69144",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:42.921183+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFMVEE7MDs2NSJ9",
+      "response_body_b64": "eyJjdWVudGFJZCI6IkFDLTAwMDMifQ==",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3188,
+      "source": "traces/fuzz_seed13.jsonl:119",
+      "record_sha256": "19b0898efc0bb5310eaf13f84533cd76a65a541b3df7839abc222a0304ff823e",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:43.204796+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7NTAwOzQ2In0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3189,
+      "source": "traces/fuzz_seed13.jsonl:120",
+      "record_sha256": "6e6919bcffd1bd3cadb4aee0f2f2ee883ef1c0e07d964de4c855192659211a9c",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:43.520338+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7MTAwMDs3OCJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMiJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3190,
+      "source": "traces/fuzz_seed13.jsonl:121",
+      "record_sha256": "666e17d617409e83ad55b9e2ac18a0dfb0663da2bbf3883fb2ec5752461a6546",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:43.816162+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDI7QUMtMDAwMzs5OTs3NiJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3191,
+      "source": "traces/fuzz_seed13.jsonl:122",
+      "record_sha256": "9802db046d5a1c39d12ee5e9924e5e05fb879a41d1323309036d98a9e47d3b84",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:44.089871+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDM7QUMtMDAwMjs1MDAwMDsyOSJ9",
+      "response_body_b64": "eyJlcnJvciI6IkU1MDciLCJtZW5zYWplIjoic2FsZG8gaW5zdWZpY2llbnRlIn0=",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3192,
+      "source": "traces/fuzz_seed13.jsonl:123",
+      "record_sha256": "fbf8d20767a3426d2df4acee1d0848fe72d9cdbfbbedafeb4604708938553070",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:44.393342+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkFOVUxBO09QLTAwOTk7NjkifQ==",
+      "response_body_b64": "eyJlcnJvciI6IkU0MDIiLCJtZW5zYWplIjoib3BlcmFjacOzbiBpbmV4aXN0ZW50ZSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3193,
+      "source": "traces/fuzz_seed13.jsonl:124",
+      "record_sha256": "ae27e91b26e22e355aea9a8b6728fc6dfd526f3f23abf9679fc804387c06873d",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:44.673747+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDE7NDI5NDk2NzI5Njs0MyJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwMyJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3194,
+      "source": "traces/fuzz_seed13.jsonl:125",
+      "record_sha256": "084f2627f331f4566deeba872ca5bd5554570a2d39ae7758284a640f9ad390dc",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:45.029433+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIkRFUE9TSVRPO0FDLTAwMDM7MTAwMDs3OCJ9",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNCJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
+    },
+    {
+      "id": 3195,
+      "source": "traces/fuzz_seed13.jsonl:126",
+      "record_sha256": "d980f7d5c8bb9ba0c1372327cc020e500a1ba8d1f79a4b5f26f58b2f097cf347",
+      "seq": "s-05061e2a7215",
+      "reset_source": "traces/fuzz_seed13.jsonl:115",
+      "recorded_at": "2026-10-10T22:57:45.332471+00:00",
+      "method": "POST",
+      "path": "/msg",
+      "request_headers": [
+        [
+          "Authorization",
+          "Bearer <TOKEN>"
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "request_body_b64": "eyJtIjogIlRSQU5TRkVSO0FDLTAwMDE7QUMtMDAwMjs0Mjk0OTY3Nzk2OzUyIn0=",
+      "response_body_b64": "eyJzdGF0dXMiOiJyZWNpZXZlZCIsIm9wZXJhY2lvbklkIjoiT1AtMDAwNSJ9",
+      "hypothesis_recorded": true,
+      "infra": false,
+      "failure": null,
+      "raw_seq": "fuzz_seed13-1791673061992369000"
     }
   ],
   "summary": {
-    "original_exchanges": 3069,
+    "original_exchanges": 3195,
     "missing_hypotheses": 29,
-    "missing_x_req": 449,
+    "missing_x_req": 463,
     "missing_responses": 0,
     "before_first_recorded_reset": 1
   }
