@@ -33,6 +33,15 @@ def smoke(target: Target) -> int:
     check("invalid reset preserves state",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps(balance_probe["request"]).encode()),200,balance_probe["response"])
     check("reset",Request("POST","/__reset",auth(target.token)),200,{"ok":True})
     check("reset clears state",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],b'{"m":"CONSULTA;AC-0002;11"}'),404,{"error":"E401","mensaje":"cuenta inexistente"})
+    check("health with query string",Request("GET","/health?probe=1",auth(target.token)),200,{"ok":True})
+    check("health trailing slash",Request("GET","/health/",auth(target.token)),404,{"error":"E404","mensaje":"ruta desconocida"})
+    check("reset with query string",Request("POST","/__reset?probe=1",auth(target.token)),200,{"ok":True})
+    from rubrica.rules.v2.checksum import control
+    check("same-owner alta 1",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps({"m":f"ALTA;Ana;{control('ALTA;Ana')}"}).encode()),201,{"cuentaId":"AC-0001"})
+    check("same-owner alta 2",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps({"m":f"ALTA;Ana;{control('ALTA;Ana')}"}).encode()),201,{"cuentaId":"AC-0002"})
+    check("same-owner deposit",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps({"m":f"DEPOSITO;AC-0001;60000;{control('DEPOSITO;AC-0001;60000')}"}).encode()),200,{"status":"recieved","operacionId":"OP-0001"})
+    check("same-owner transfer >50k",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps({"m":f"TRANSFER;AC-0001;AC-0002;60000;{control('TRANSFER;AC-0001;AC-0002;60000')}"}).encode()),200,{"status":"recieved","operacionId":"OP-0002"})
+    check("final cleanup reset",Request("POST","/__reset",auth(target.token)),200,{"ok":True})
     print("Smoke gate:","PASS" if not failures else "FAIL")
     return 1 if failures else 0
 
