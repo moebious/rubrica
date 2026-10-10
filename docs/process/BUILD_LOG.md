@@ -134,3 +134,11 @@ probe. Two runs remain. Details and the working agreement: `docs/process/WORKFLO
   traces and the log; `tools/coverage.py` quarantines steps 12+ of that sequence, by name.
   Watcher stopped by design on the alert, confirmed transient, restarted.
 - Replica deployed on Fly is still the pre-fix image until Kevin redeploys.
+
+## Hidden-set validation #2 (2026-10-10, 18:22 Bogotá)
+
+Owner-run, on Fly release v15 (live 18:13; includes routing, same-owner, ASCII-uppercase and
+first-Authorization-header fixes; excludes the later E301 tie fix). Score **91/100** (was 88): easy 39/40,
+regular 36/40, hard 16/20. Failures: 6 status, 3 body; 4 on the first request, 5 later. Median 510 ms.
+Fresh held-out seed 9 against the current code: 278/278 steps match. Remaining budget about 2,300
+original requests. Run #3 is reserved for the frozen candidate.

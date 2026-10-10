@@ -16,9 +16,11 @@ Status: adopted 2026-10-10, after validation #1. Complements `AGENTS.md` (rules)
 | # | Time (Bogotá) | Commit | Score | Easy / Regular / Hard | Status ≠ / Body ≠ | Fail at 1st request / later | Median |
 |---|---|---|---|---|---|---|---|
 | 1 | 16:57 | `9714e88` or earlier; runtime code identical to `690e213` (last `rubrica/` change) | **88/100** | 39/40 · 36/40 · 13/20 | 9 / 3 | 5 / 7 | 511 ms |
+| 2 | 18:22 | `85b2c88` (Fly release v15, live 18:13) | **91/100** | 39/40 · 36/40 · 16/20 | 6 / 3 | 4 / 5 | 510 ms |
 
 Entrypoint check at 16:56: `/health` 200 in 226 ms, `/__reset` ok, public example 02 matched.
-2 of 3 runs remain. Run #2 is for Kevin to schedule.
+1 of 3 runs remains: it is reserved for the frozen final candidate.
+Run #2 changed vs #1: hard 13 to 16, status mismatches 9 to 6, first-request failures 5 to 4, later 7 to 5; easy and regular unchanged. The platform shows counts only, so attribution to individual fixes is a hypothesis.
 
 ## 2. Failure-first loop (no original requests until step 3)
 1. **Locate.** From the counts, list the replica behaviors that could produce the failure
