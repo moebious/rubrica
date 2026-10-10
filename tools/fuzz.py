@@ -23,7 +23,9 @@ from rubrica.rules.current import initial_state
 from rubrica.rules.v2.checksum import control
 from tools.difftest import Seq, msg, predict, run, summarize, write_report
 
-NAMES = ("Lucia", "Mateo", "A", "Ana María", "José", "x y", "名前", "O'Brien", "a;b"[:1], "Zoë", "   ", "N" * 40)
+NAMES = ("Lucia", "Mateo", "A", "Ana María", "José", "x y", "名前", "O'Brien", "Zoë", "   ", "N" * 40,
+         "lucia", "LUCIA", "Lucia ", " Lucia", "AC-0001", "OP-0001", "123", "0", "é", "e\u0301", "😊", "İ", "ß", "SS",
+         "a" * 200, "PING", "ALTA", "null", "true", "{}", "\\", '"', "<b>")
 FAULTS = ("bad_control", "bad_format", "arity_plus", "arity_minus", "unknown_command", "lower_command",
           "missing_account", "missing_op", "zero_amount", "big_amount", "neg_amount", "decimal_amount",
           "same_account", "empty_arg", "padded_amount", "ping")
@@ -53,17 +55,19 @@ class Builder:
 
     def amount_for(self, source: str) -> int:
         balance = self.state.balance(source) or 0
-        choices = [1, 2, 100, 49999, 50000, 50001, 10, 777, 1000]
+        choices = [1, 2, 100, 49999, 50000, 50001, 10, 777, 1000, 99, 101, 999999, 9999999999]
         if balance > 0:
             choices += [balance, balance + 1, max(1, balance - 1), max(1, balance // 2)] * 3
         return self.rng.choice(choices)
 
     # --- actions -------------------------------------------------------------------------------
     def alta(self):
-        self.add(c(f"ALTA;{self.rng.choice(NAMES)}"), "open an account")
+        used = [name for _, name, _ in self.state.accounts]
+        name = self.rng.choice(used) if used and self.rng.random() < 0.45 else self.rng.choice(NAMES)
+        self.add(c(f"ALTA;{name}"), "open an account")
 
     def deposit(self):
-        self.add(c(f"DEPOSITO;{self.pick_account()};{self.rng.choice((1, 100, 1000, 25000, 50000, 120000, 9999999999))}"),
+        self.add(c(f"DEPOSITO;{self.pick_account()};{self.rng.choice((1, 100, 1000, 25000, 50000, 50001, 120000, 99999, 100001, 9999999999, 5000000000, 4294967296, 2147483648))}"),
                  "deposit")
 
     def transfer(self):
@@ -83,6 +87,41 @@ class Builder:
         amount = self.rng.choice((50001, 60000, balance + 1 if balance < 50000 else 50001))
         for _ in range(self.rng.randint(1, 4)):
             self.add(c(f"TRANSFER;{src};{dst};{amount}"), "repeat a failing transfer (lockout counter)")
+
+    def drain(self):
+        """Deposit, spend it, then cancel the deposit: aims at negative balances and currency format."""
+        key = self.pick_account()
+        amount = self.rng.choice((100, 1000, 12345))
+        self.add(c(f"DEPOSITO;{key};{amount}"), "deposit that will be cancelled after spending")
+        accounts = [a for a in self.accounts() if a != key]
+        if accounts:
+            self.add(c(f"TRANSFER;{key};{accounts[0]};{amount}"), "spend the deposit")
+        ops = self.ops()
+        dep = next((op.id for op in reversed(self.state.operations) if op.kind == "deposit" and op.destination is None and not op.cancelled), None)
+        if dep:
+            self.add(c(f"ANULA;{dep}"), "cancel the spent deposit (negative balance?)")
+        self.add(c(f"CONSULTA;{key}"), "read the balance after cancel")
+
+    def lock_two(self):
+        """Lock two different sources, then try each."""
+        accounts = self.accounts()
+        if len(accounts) < 3:
+            return self.alta()
+        a, b, d = accounts[0], accounts[1], accounts[2]
+        for src in (a, b):
+            for _ in range(3):
+                self.add(c(f"TRANSFER;{src};{d};60000"), "fail transfer to lock a source")
+        self.add(c(f"TRANSFER;{a};{b};1"), "locked source A")
+        self.add(c(f"TRANSFER;{b};{a};1"), "locked source B")
+        self.add(c(f"TRANSFER;{d};{a};1"), "healthy source into locked destination")
+
+    def case_command(self):
+        cmd = self.rng.choice(("consulta", "Consulta", "deposito", "Transfer", "anula", "AnUlA", "alta", "ping"))
+        key = self.pick_account()
+        text = {"consulta": f"{cmd};{key}", "Consulta": f"{cmd};{key}", "deposito": f"{cmd};{key};10",
+                "Transfer": f"{cmd};{key};{key};1", "anula": f"{cmd};OP-0001", "AnUlA": f"{cmd};OP-0001",
+                "alta": f"{cmd};Zed", "ping": "ping"}[cmd]
+        self.add("ping;64" if cmd == "ping" else c(text), f"mixed-case command {cmd}")
 
     def consulta(self):
         self.add(c(f"CONSULTA;{self.pick_account()}"), "query balance")
@@ -129,7 +168,8 @@ def one(rng: random.Random, index: int) -> Seq:
         if rng.random() < 0.8:
             b.add(c(f"DEPOSITO;{key};{rng.choice((500, 1000, 20000, 50000, 80000))}"), "fund an account")
     length = rng.randint(9, 12)
-    weights = (("deposit", 2), ("transfer", 6), ("burn", 3), ("consulta", 3), ("anula", 4), ("fault", 3), ("alta", 1))
+    weights = (("deposit", 2), ("transfer", 6), ("burn", 3), ("consulta", 3), ("anula", 4), ("fault", 3), ("alta", 1),
+               ("drain", 2), ("lock_two", 1), ("case_command", 1))
     names, w = zip(*weights)
     while len(b.steps) < length:
         getattr(b, rng.choices(names, w)[0])()

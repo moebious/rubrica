@@ -50,6 +50,11 @@ def distance(left: str, right: str) -> int:
     return previous[-1]
 
 
+def ascii_upper(text: str) -> str:
+    """Uppercase ASCII letters only; the original does not fold U+017F, U+0131 etc. (traces/probe_unicode_command.jsonl)."""
+    return "".join(chr(ord(c) - 32) if "a" <= c <= "z" else c for c in text)
+
+
 def decode(req: Request) -> Parsed:
     if len(req.body) > 8192:
         return Parsed(problem=Problem("E101", 413))
@@ -66,7 +71,7 @@ def decode(req: Request) -> Parsed:
         return Parsed(problem=Problem("E103"))
     if any(part == "" for part in parts):
         return Parsed(problem=Problem("E104"))
-    command, args, supplied = parts[0].upper(), tuple(parts[1:-1]), parts[-1]
+    command, args, supplied = ascii_upper(parts[0]), tuple(parts[1:-1]), parts[-1]
     if command != "PING":
         if re.fullmatch(r"[0-9]{1,2}", supplied) is None:
             return Parsed(problem=Problem("E201"))
