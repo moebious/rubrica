@@ -26,3 +26,13 @@ Build hiring-loop-grade, production-ready software evaluated against **hidden te
 - Keep the pure core free of I/O; perform original-service requests only through recorded discovery tools.
 - Keep credentials out of Git, logs and Docker images. Preserve frozen design and diagram artifacts.
 - Verify changes with `python3 -m unittest discover -s tests -v`; replay the corpus before deployment and smoke-test the public endpoint afterward.
+
+## Git and evidence hygiene
+- Raw traces are evidence: the log, spec, coverage audit and tests are built from `traces/*.jsonl`. Never gitignore, truncate, reformat or rewrite them.
+- The canary appends to `traces/canary*.jsonl` every ~10 minutes. Do not commit per cycle. Commit canary traces only together with a regenerated log/spec (`python3 tools/finalize_artifacts.py`) or at milestones (drift response, validation, freeze), in a commit of their own.
+- Keep commits small and single-purpose, with conventional messages (`feat`, `fix`, `test`, `docs`). Do not mix canary traces with code changes.
+- Changes under `rubrica/rules/` go on a short branch. Merge only after the unit tests, `python3 tools/coverage.py` (zero mismatches) and the corpus replay pass.
+- Never force-push or rewrite published history. Never touch the frozen design remote.
+- Tag the submitted commit at freeze (`submission-20h00`).
+- Original-service access goes through `Harness.sequence()` only, with a recorded hypothesis and prediction. Never use the legacy `tools/req.py`, `tools/seq.py` or `tools/sweep.py` against the original.
+- Never trigger a platform hidden-set validation; only the owner does. Do not change Fly or DNS settings.
