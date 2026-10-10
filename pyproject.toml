@@ -1,0 +1,10 @@
+[project]
+name = "rubrica"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.pyright]
+include = ["rubrica"]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
