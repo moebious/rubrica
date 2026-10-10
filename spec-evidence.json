@@ -403,6 +403,37 @@
       ]
     },
     {
+      "id": "IT-ANULA-AC",
+      "section": 2,
+      "behavior": "ANULA con identificador de cuenta (AC-NNNN) en vez de operación responde 404 E402: \"operación inexistente\".",
+      "queries": [
+        {
+          "source": "probe_anula_ac",
+          "message": "ANULA;AC-0001;59",
+          "error": "E402",
+          "status": 404
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "probe_anula_ac",
+            "message": "ANULA;AC-0001;59",
+            "error": "E402",
+            "status": 404
+          },
+          "ids": [
+            1445
+          ]
+        }
+      ],
+      "evidence": [
+        1445
+      ]
+    },
+    {
       "id": "IT-CONTROL",
       "section": 2,
       "behavior": "Control = 98 − ((N × 100) mod 97): antes del control, mayúsculas, solo A–Z/0–9; letras A=1…Z=26 concatenadas, dígitos conservados. Se descartan los demás caracteres.",
@@ -978,6 +1009,51 @@
       ]
     },
     {
+      "id": "CMD-TRANSFER-OWNER",
+      "section": 3,
+      "behavior": "Transferencia entre cuentas con el mismo titular exacto (sensible a mayúsculas y espacios) no aplica el límite de 50000; solo valida fondos.",
+      "queries": [
+        {
+          "source": "probe_owner",
+          "prefix": "TRANSFER;AC-0001;AC-0002;60000;",
+          "status": 200
+        },
+        {
+          "source": "probe_owner",
+          "prefix": "TRANSFER;AC-0001;AC-0002;50001;",
+          "status": 200
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "TRANSFER",
+      "checks": [
+        {
+          "query": {
+            "source": "probe_owner",
+            "prefix": "TRANSFER;AC-0001;AC-0002;60000;",
+            "status": 200
+          },
+          "ids": [
+            2542
+          ]
+        },
+        {
+          "query": {
+            "source": "probe_owner",
+            "prefix": "TRANSFER;AC-0001;AC-0002;50001;",
+            "status": 200
+          },
+          "ids": [
+            2547
+          ]
+        }
+      ],
+      "evidence": [
+        2542,
+        2547
+      ]
+    },
+    {
       "id": "CMD-ANULA",
       "section": 3,
       "behavior": "ANULA;operacion;control revierte los deltas guardados y responde 200 con ok:true y anulada. No exige saldo para revertir.",
@@ -1358,6 +1434,84 @@
         1124,
         1134,
         1148
+      ]
+    },
+    {
+      "id": "MEM-LOCK-CONSULTA",
+      "section": 4,
+      "behavior": "CONSULTA sobre cuenta bloqueada por fallos sucesivos responde 200 con saldo exacto; no se bloquea ni reinicia el contador de intentos.",
+      "queries": [
+        {
+          "source": "probe_lock_consulta_2",
+          "prefix": "CONSULTA;AC-0001;",
+          "status": 200
+        },
+        {
+          "source": "probe_lock_consulta_2",
+          "error": "E510",
+          "contains": {
+            "intentos": 1
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "probe_lock_consulta_2",
+            "prefix": "CONSULTA;AC-0001;",
+            "status": 200
+          },
+          "ids": [
+            1458
+          ]
+        },
+        {
+          "query": {
+            "source": "probe_lock_consulta_2",
+            "error": "E510",
+            "contains": {
+              "intentos": 1
+            }
+          },
+          "ids": [
+            1459
+          ]
+        }
+      ],
+      "evidence": [
+        1458,
+        1459
+      ]
+    },
+    {
+      "id": "MEM-LOCK-DEST",
+      "section": 4,
+      "behavior": "Transferencia hacia cuenta destino bloqueada es aceptada con 200; el bloqueo solo restringe transferencias salientes del origen.",
+      "queries": [
+        {
+          "source": "probe_dest_lock",
+          "prefix": "TRANSFER;AC-0002;AC-0001;",
+          "status": 200
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "probe_dest_lock",
+            "prefix": "TRANSFER;AC-0002;AC-0001;",
+            "status": 200
+          },
+          "ids": [
+            1467
+          ]
+        }
+      ],
+      "evidence": [
+        1467
       ]
     },
     {

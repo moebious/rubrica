@@ -26,6 +26,7 @@ Los valores ausentes del registro no se inventan: X-Req ausente es null; hipóte
 | --- | --- | --- | --- |
 | IT-CASE | El comando no distingue mayúsculas/minúsculas: CONSULTa es aceptado. No se recorta whitespace del comando; " PING" es desconocido. | 1267, 1271 | probable |
 | IT-ID | Cuenta/operación se buscan con identificación exacta. ac-0001, op-0001 y OP-0001 con espacio no equivalen a los IDs existentes. | 1268, 1269, 1270, 1273 | probable |
+| IT-ANULA-AC | ANULA con identificador de cuenta (AC-NNNN) en vez de operación responde 404 E402: "operación inexistente". | 1445 | confirmado |
 | IT-CONTROL | Control = 98 − ((N × 100) mod 97): antes del control, mayúsculas, solo A–Z/0–9; letras A=1…Z=26 concatenadas, dígitos conservados. Se descartan los demás caracteres. | 774, 775, 1026, 1228 | probable |
 | IT-FORMAT | Fuera de PING, el control requiere uno o dos dígitos ASCII. El formato inválido es E201; valor incorrecto es E202. | 1227, 1228 | confirmado |
 | IT-PING | PING omite la validación de control no vacío: PING;XX responde pong. Segmentos vacíos siguen produciendo E104. | 1215, 1216 | probable |
@@ -64,6 +65,7 @@ Los valores ausentes del registro no se inventan: X-Req ausente es null; hipóte
 | ID | Comportamiento | Evidencia | Confianza |
 | --- | --- | --- | --- |
 | CMD-TRANSFER | TRANSFER;origen;destino;monto;control debita/acredita el monto y crea OP-NNNN; éxito 200 con "recieved". Máximo 50000 inclusive. | 1026, 1027, 1032 | confirmado |
+| CMD-TRANSFER-OWNER | Transferencia entre cuentas con el mismo titular exacto (sensible a mayúsculas y espacios) no aplica el límite de 50000; solo valida fondos. | 2542, 2547 | confirmado |
 
 ### ANULA
 
@@ -79,6 +81,8 @@ Los valores ausentes del registro no se inventan: X-Req ausente es null; hipóte
 | MEM-RESET | Reset elimina cuentas/operaciones anteriores y reinicia AC/OP en 0001. | 1232, 1233, 1234, 1235 | probable |
 | MEM-LOCK | Tres fallos E506/E507 bloquean el origen; transferencias posteriores válidas devuelven 423 E510 con intentos 1,2,…; el fallo no consume OP. | 1056, 1057, 1059, 1060, 1064, 1065, 1067, 1068 | confirmado |
 | MEM-UNLOCK | Depósito exitoso u otra transferencia saliente exitosa reinicia fallos del origen. Transferencia entrante y ANULA no desbloquean; E303/E304/E401/E202 no cuentan. | 1075, 1076, 1084, 1085, 1093, 1094, 1102, 1103, 1113, 1115, 1124, 1134, 1148 | confirmado |
+| MEM-LOCK-CONSULTA | CONSULTA sobre cuenta bloqueada por fallos sucesivos responde 200 con saldo exacto; no se bloquea ni reinicia el contador de intentos. | 1458, 1459 | confirmado |
+| MEM-LOCK-DEST | Transferencia hacia cuenta destino bloqueada es aceptada con 200; el bloqueo solo restringe transferencias salientes del origen. | 1467 | confirmado |
 
 ## 5. Errores
 
