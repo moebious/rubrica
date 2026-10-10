@@ -39,8 +39,20 @@ def cases(token):
 
 def run_cycle(harness, baseline=None):
     results = []
+    planned = cases(harness.target.token)
+    if baseline is not None:
+        if len(baseline["cases"]) != len(planned):
+            raise RuntimeError("canary case set changed; recapture baseline explicitly")
+        for (req, _, _), expected in zip(planned, baseline["cases"]):
+            if (req.method, req.path) != (expected["method"], expected["path"]):
+                raise RuntimeError("canary request order changed")
+            bytes.fromhex(expected["body_hex"])
     with harness.sequence():
-        for req, hypothesis, prediction in cases(harness.target.token):
+        for index, (req, hypothesis, prediction) in enumerate(planned):
+            if baseline is not None:
+                expected = baseline["cases"][index]
+                hypothesis = "Pinned " + baseline.get("version", "observed") + " behavior remains unchanged at case " + str(index + 1)
+                prediction = str(expected["status"]) + " " + bytes.fromhex(expected["body_hex"]).decode("utf-8", "backslashreplace")
             res = harness.probe(req, hypothesis, prediction)
             if any(k.lower() == "x-frontier-infra" for k, v in res.headers):
                 raise RuntimeError("infrastructure response; baseline is invalid")
