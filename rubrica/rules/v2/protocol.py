@@ -78,7 +78,8 @@ def decode(req: Request) -> Parsed:
         if int(supplied) != control(";".join(parts[:-1])):
             return Parsed(problem=Problem("E202"))
     if command not in ARITY:
-        nearest = min(COMMANDS, key=lambda candidate: distance(command, candidate))
+        # Ties go to the alphabetically first command (traces/probe_suggestions.jsonl: PITA -> ALTA, not PING).
+        nearest = min(sorted(COMMANDS), key=lambda candidate: distance(command, candidate))
         suggestion = nearest if distance(command, nearest) <= 2 else None
         return Parsed(problem=Problem("E301", suggestion=suggestion))
     if len(args) != ARITY[command]:
