@@ -26,8 +26,10 @@ def build_rules(team_token: str) -> RuleSet[LedgerState]:
     expected = ("Bearer " + team_token).encode("utf-8")
 
     def unauthorized(state: LedgerState, req: Request) -> bool:
+        # Observed (traces/probe_dup_auth.jsonl): with repeated Authorization headers only the FIRST one
+        # counts, on /health, /__reset and /msg, whatever the later values are.
         values = req.header_values("Authorization")
-        return len(values) != 1 or not hmac.compare_digest(values[0].encode("utf-8"), expected)
+        return not values or not hmac.compare_digest(values[0].encode("utf-8"), expected)
 
     def unchanged(response: Response):
         return lambda state, req: (state, response)
@@ -42,7 +44,7 @@ def build_rules(team_token: str) -> RuleSet[LedgerState]:
         Rule("bootstrap.auth", 10, unauthorized,
              unchanged(Response.json(401, {"error": "E001", "mensaje": "no autorizado"})), "probable",
              ("traces/canary.jsonl:26", "traces/canary.jsonl:27", "traces/contract.jsonl:3", "traces/contract.jsonl:5", "traces/contract.jsonl:6"),
-             "Missing/invalid/lowercase auth rejected on known routes; duplicate-header behavior unverified"),
+             "Missing/invalid/lowercase auth rejected on known routes; with repeated headers only the first counts (traces/probe_dup_auth.jsonl)"),
         Rule("bootstrap.health", 20, lambda state, req: req.method == "GET" and req.path == "/health",
              unchanged(Response.json(200, {"ok": True})), "probable",
              ("traces/E1.jsonl:1", "traces/canary.jsonl:2"),

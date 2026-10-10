@@ -39,12 +39,18 @@ class CoreTests(unittest.TestCase):
                 self.assertEqual(after, before)
                 self.assertTrue(rule.startswith("v2.E"))
 
-    def test_auth_variants_are_explicit_assumptions(self):
-        for headers in ((), (("Authorization", "bearer " + TOKEN),), AUTH + AUTH, (("Authorization", "Bearer wrong"),)):
+    def test_auth_variants(self):
+        wrong = (("Authorization", "Bearer wrong"),)
+        for headers in ((), (("Authorization", "bearer " + TOKEN),), wrong, wrong + AUTH, (("Authorization", ""),) + AUTH):
             with self.subTest(headers=headers):
                 _, response, rule = handle(initial_state(), Request("GET", "/health", headers), self.rules)
                 self.assertEqual(rule, "bootstrap.auth")
                 self.assertEqual(response.status, 401)
+        # Recorded: traces/probe_dup_auth.jsonl. Only the FIRST Authorization header counts.
+        for headers in (AUTH + AUTH, AUTH + wrong, AUTH + (("Authorization", ""),)):
+            with self.subTest(headers=headers):
+                _, response, rule = handle(initial_state(), Request("GET", "/health", headers), self.rules)
+                self.assertEqual((rule, response.status), ("bootstrap.health", 200))
 
     def test_order_reset_and_evaluation_failure(self):
         def fail(state, req):
