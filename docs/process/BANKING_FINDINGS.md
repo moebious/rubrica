@@ -35,8 +35,9 @@ Evidence: `traces/checksum_predictions.jsonl`, `traces/message_contract.jsonl`,
   9,999,999,999 is accepted; 10,000,000,000 is rejected with E303.
 - A transfer to the same ID returns E304, even when that ID is absent. Amount
   validation precedes that error; missing-account lookup precedes the limit.
-- Transfer amounts above 100,000 return E506. Otherwise insufficient balance
-  returns E507. Successful writes return the exact misspelling `recieved`.
+- Historical v1: transfer amounts above 100,000 returned E506 (99,999 and 100,000
+  were accepted). Current v2: the ceiling is 50,000 inclusive (see `INCIDENT.md`).
+  Otherwise insufficient balance returns E507. Successful writes return the exact misspelling `recieved`.
 - Successful deposits/transfers allocate OP IDs. Failed writes do not consume IDs;
   cancellation does not create an operation ID.
 - ANULA reverses the saved deltas without requiring funds for reversal. Balances
@@ -54,6 +55,7 @@ profile passes the twenty official requests against current-version recorded
 responses through HTTP. Pure-core replay matches historical and current incident
 corpora separately. Tests
 cover immutable state, reset isolation, malformed inputs, exact JSON semantics and
-no outbound network on exercised paths. Deployment/public latency verification,
-final log/spec export and public verification of the latest incident response
-remain pending. The historical absence of the lockout remains an evidence gap.
+no outbound network on exercised paths. Status update (2026-10-10, ~17:00 Bogotá): the replica is deployed at
+`https://rubrica-blackbox.fly.dev`; the read-only smoke check passes 20/20 with
+latency under 1.4 s per step, and the log/spec export was regenerated. The
+historical absence of the lockout remains an evidence gap.

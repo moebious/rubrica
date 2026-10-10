@@ -72,6 +72,7 @@ The current HTTP body limit is separately characterized at 8192 bytes inclusive:
 Active rules reproduce the current balance format, transfer ceiling and lockout.
 Historical policy remains available for old corpus replay. Local HTTP replay
 matches all twenty requests against newly recorded current-version responses.
-The deployment agent must build the latest verified code, use one machine and run
-`python3 tools/smoke.py --url https://rubrica-blackbox.fly.dev`. These smoke checks
+Deployment status (2026-10-10, ~17:00 Bogotá): `https://rubrica-blackbox.fly.dev`
+(one machine) passes `python3 tools/smoke.py --url https://rubrica-blackbox.fly.dev`:
+20/20 current-version examples plus auth, route and reset checks. These smoke checks
 never trigger the hackathon hidden set. No hidden validation was performed here.

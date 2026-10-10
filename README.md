@@ -8,7 +8,7 @@ Rubrica learns an undocumented, stateful HTTP service through experiments and de
 |---|---|
 | Design doc | [docs/DESIGN.pdf](docs/DESIGN.pdf) ([source](docs/DESIGN.md)) |
 | Architecture diagram | [site/diagram.png](site/diagram.png) |
-| Entrypoint | `https://blackbox.rubrica.dev` (live from 20:00) |
+| Entrypoint | `https://rubrica-blackbox.fly.dev` (Fly.io, one always-on machine) |
 | Specification | `SPEC.md` (generated from the service ontology) |
 | Experiment log | `experimentos.jsonl` (one line per request to the original) |
 

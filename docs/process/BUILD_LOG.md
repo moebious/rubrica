@@ -98,3 +98,14 @@ Verification: generated seven sections with fifty evidence-backed/assumed rows;
 exported 1274 original exchanges. Thirty-three tests pass. Full verification rejects
 stale exports, modified responses, bad IDs and edited claims. The whole pipeline
 uses the discovery lock so canary calls cannot interleave with the snapshot.
+
+## Delivery verification (2026-10-10, ~17:00 Bogotá)
+
+Regenerated the log and spec with `tools/finalize_artifacts.py` (no original-service
+requests; it only takes the shared sequence lock): 1382 original exchanges, 50
+claims, verifier passes. Canary watcher left running and its traces untouched.
+Gates: 35 tests pass; frozen design hashes match; read-only smoke check against
+`https://rubrica-blackbox.fly.dev` passes 20/20 current-version examples plus
+auth, routing and reset checks (max step latency 1.35 s). Documentation updated
+where deployment status and the transfer ceiling were stale. The lockout's absence
+in v1 remains unproved. No hidden validation was triggered; all attempts unused.
