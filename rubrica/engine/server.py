@@ -10,6 +10,10 @@ from .core import handle
 from .registry import RuleSet
 from .state import StateT
 
+def route_path(target: str) -> str:
+    """The original routes on the path only; a query string never changes the route."""
+    return target.split("?", 1)[0]
+
 class ReplicaServer(HTTPServer, Generic[StateT]):
     def __init__(self, address: tuple[str, int], rules: RuleSet[StateT], *,
                  socket_timeout: float = 2.0, max_body: int | None = None):
@@ -67,7 +71,7 @@ class Handler(BaseHTTPRequestHandler):
             if len(body) != size:
                 self._reply(Response.json(400, {"error": "incomplete_body"}), "transport.incomplete")
                 return
-            req = Request(self.command, self.path, tuple(self.headers.items()), body)
+            req = Request(self.command, route_path(self.path), tuple(self.headers.items()), body)
             next_state, response, rule_id = handle(self.server.state, req, self.server.rules)
             # State effects commit even if the client disconnects during delivery.
             self.server.state = next_state
