@@ -23,8 +23,8 @@ implement only confirmed v2 behavior. Track any unexplored behavior explicitly.
 
 ## Platform acknowledgement
 
-Reading and recording this ticket locally does not acknowledge it to the staff.
-The platform's “Recibido” action has not been performed by this agent.
+Kevin confirmed that he clicked “Recibido” on the platform. Ticket receipt is
+acknowledged; discovering and documenting the three changes remains unfinished.
 
 ## Initial observations
 
