@@ -97,3 +97,27 @@ Fly app: `rubrica-blackbox`. Deploy with
 Use one machine and keep auto-stop disabled. The configuration has no unauthenticated HTTP health check. Verify
 authenticated readiness and behavior with `python3 tools/smoke.py --url https://rubrica-blackbox.fly.dev`.
 A successful smoke check does not invoke the hackathon hidden set.
+
+## Specification and experiment log
+
+`SPEC.md` contains the seven required sections and cites integer IDs in
+`experimentos.jsonl`. `experimentos.index.json` preserves raw HTTP provenance,
+reset boundaries, stable IDs and hashes. `spec-evidence.json` records the curated
+checks behind each table row.
+
+```bash
+python3 tools/finalize_artifacts.py
+python3 tools/verify_spec.py
+```
+
+Export includes every recorded original exchange, including resets and failed
+HTTP responses; replica replays are excluded. Missing X-Req is null. Older calls
+without a recorded hypothesis are marked as missing rather than reconstructed.
+Empty bodies are null; non-JSON bodies use `_raw_body_b64`; the provenance index
+retains exact bytes and distinguishes empty bodies from JSON null. One health
+call precedes the first recorded reset. These historical gaps remain explicit.
+
+The verifier checks schema, immutable raw evidence, references and structured
+observations; it does not prove every natural-language generalization. Run this
+pipeline again before submission to include the latest canary observations while
+preserving existing IDs.

@@ -81,3 +81,20 @@ formatting, observed 8192-byte limit and updated local HTTP smoke expectations.
 Historical and current evidence are tested separately. Twenty-two tests pass;
 all twenty current-version example requests match through the local HTTP adapter.
 Fly deployment remains the other agent's responsibility. No hidden set invoked.
+
+## Required log and specification artifacts
+
+Added stable-ID export of all original exchanges with raw HTTP provenance, reset
+anchors and immutable record hashes. Generated all seven specification sections
+with curated evidence checks and explicitly labeled assumptions. Missing legacy
+hypotheses, missing X-Req headers and the pre-reset health request remain visible;
+no historical values were invented. Added adversarial tests for malformed records,
+ID stability, Unicode, false claims, invalid references and modified evidence.
+Current-service confirmations support reset, identifiers, parser behavior,
+negative currency strings, duplicate names and suggestions. Deployment and hidden
+validation are untouched by this artifact pipeline.
+
+Verification: generated seven sections with fifty evidence-backed/assumed rows;
+exported 1274 original exchanges. Thirty-three tests pass. Full verification rejects
+stale exports, modified responses, bad IDs and edited claims. The whole pipeline
+uses the discovery lock so canary calls cannot interleave with the snapshot.

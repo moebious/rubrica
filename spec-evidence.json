@@ -1,0 +1,2211 @@
+{
+  "claims": [
+    {
+      "id": "IN-HEALTH",
+      "section": 1,
+      "behavior": "GET /health autenticado responde 200 con {\"ok\":true}.",
+      "queries": [
+        {
+          "current": true,
+          "method": "GET",
+          "path": "/health",
+          "status": 200,
+          "body": {
+            "ok": true
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "method": "GET",
+            "path": "/health",
+            "status": 200,
+            "body": {
+              "ok": true
+            }
+          },
+          "ids": [
+            1156
+          ]
+        }
+      ],
+      "evidence": [
+        1156
+      ]
+    },
+    {
+      "id": "IN-RESET",
+      "section": 1,
+      "behavior": "POST /__reset autenticado responde 200 con {\"ok\":true}.",
+      "queries": [
+        {
+          "current": true,
+          "method": "POST",
+          "path": "/__reset",
+          "status": 200,
+          "body": {
+            "ok": true
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "method": "POST",
+            "path": "/__reset",
+            "status": 200,
+            "body": {
+              "ok": true
+            }
+          },
+          "ids": [
+            993,
+            1016
+          ]
+        }
+      ],
+      "evidence": [
+        993,
+        1016
+      ]
+    },
+    {
+      "id": "IN-AUTH",
+      "section": 1,
+      "behavior": "En las rutas conocidas probadas, token ausente/incorrecto devuelve 401 E001: \"no autorizado\".",
+      "queries": [
+        {
+          "current": true,
+          "status": 401,
+          "error": "E001"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "status": 401,
+            "error": "E001"
+          },
+          "ids": [
+            1180,
+            1181
+          ]
+        }
+      ],
+      "evidence": [
+        1180,
+        1181
+      ]
+    },
+    {
+      "id": "IN-ROUTE",
+      "section": 1,
+      "behavior": "Las rutas y métodos desconocidos probados devuelven 404 E404: \"ruta desconocida\", también sin autenticación.",
+      "queries": [
+        {
+          "current": true,
+          "path": "/rubrica-missing",
+          "status": 404,
+          "error": "E404"
+        },
+        {
+          "current": true,
+          "method": "GET",
+          "path": "/msg",
+          "status": 404,
+          "error": "E404"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "path": "/rubrica-missing",
+            "status": 404,
+            "error": "E404"
+          },
+          "ids": [
+            1177
+          ]
+        },
+        {
+          "query": {
+            "current": true,
+            "method": "GET",
+            "path": "/msg",
+            "status": 404,
+            "error": "E404"
+          },
+          "ids": [
+            1179
+          ]
+        }
+      ],
+      "evidence": [
+        1177,
+        1179
+      ]
+    },
+    {
+      "id": "IN-BODY",
+      "section": 1,
+      "behavior": "Límite observado: 8192 bytes de cuerpo aceptados; 8193 devuelve 413 E101: \"cuerpo demasiado grande\".",
+      "queries": [
+        {
+          "source": "incident_body_boundary",
+          "size": 8192,
+          "status": 201
+        },
+        {
+          "source": "incident_body_boundary",
+          "size": 8193,
+          "status": 413,
+          "error": "E101"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "incident_body_boundary",
+            "size": 8192,
+            "status": 201
+          },
+          "ids": [
+            1153
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_body_boundary",
+            "size": 8193,
+            "status": 413,
+            "error": "E101"
+          },
+          "ids": [
+            1154
+          ]
+        }
+      ],
+      "evidence": [
+        1153,
+        1154
+      ]
+    },
+    {
+      "id": "IN-SUP-TIMEOUT",
+      "section": 1,
+      "behavior": "Supuesto de réplica: timeout de lectura de cuerpo 2 s; 408 {\"error\":\"request_timeout\"}. No se probó esa política en el original.",
+      "queries": [],
+      "confidence": "supuesto",
+      "command": null,
+      "checks": [],
+      "evidence": []
+    },
+    {
+      "id": "IN-SUP-FRAMING",
+      "section": 1,
+      "behavior": "Supuesto de réplica: Transfer-Encoding o Content-Length duplicado → 400 {\"error\":\"unsupported_framing\"}; longitud inválida → 400 {\"error\":\"invalid_length\"}; cuerpo truncado → 400 {\"error\":\"incomplete_body\"}.",
+      "queries": [],
+      "confidence": "supuesto",
+      "command": null,
+      "checks": [],
+      "evidence": []
+    },
+    {
+      "id": "IN-SUP-AUTH",
+      "section": 1,
+      "behavior": "Supuesto de réplica: Authorization duplicado en una ruta conocida se rechaza con E001; fallback interno no ejercitado es 501 {\"error\":\"unimplemented\"}.",
+      "queries": [],
+      "confidence": "supuesto",
+      "command": null,
+      "checks": [],
+      "evidence": []
+    },
+    {
+      "id": "IN-JSON",
+      "section": 1,
+      "behavior": "JSON malformado/vacío produce E100; JSON sin m string produce E102. Otros campos JSON no son necesarios.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "error": "E100"
+        },
+        {
+          "source": "spec_confirmations",
+          "error": "E102"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E100"
+          },
+          "ids": [
+            1210,
+            1211
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E102"
+          },
+          "ids": [
+            1212,
+            1213
+          ]
+        }
+      ],
+      "evidence": [
+        1210,
+        1211,
+        1212,
+        1213
+      ]
+    },
+    {
+      "id": "IT-CASE",
+      "section": 2,
+      "behavior": "El comando no distingue mayúsculas/minúsculas: CONSULTa es aceptado. No se recorta whitespace del comando; \" PING\" es desconocido.",
+      "queries": [
+        {
+          "source": "spec_text_edges",
+          "prefix": "CONSULTa;",
+          "status": 200
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": " PING;",
+          "error": "E301"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "CONSULTa;",
+            "status": 200
+          },
+          "ids": [
+            1267
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": " PING;",
+            "error": "E301"
+          },
+          "ids": [
+            1271
+          ]
+        }
+      ],
+      "evidence": [
+        1267,
+        1271
+      ]
+    },
+    {
+      "id": "IT-ID",
+      "section": 2,
+      "behavior": "Cuenta/operación se buscan con identificación exacta. ac-0001, op-0001 y OP-0001 con espacio no equivalen a los IDs existentes.",
+      "queries": [
+        {
+          "source": "spec_text_edges",
+          "prefix": "CONSULTA;ac-0001;",
+          "error": "E401"
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": "ANULA;op-0001;",
+          "error": "E402"
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": "ANULA;OP-0001 ;",
+          "error": "E402"
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": "ANULA;OP-0001;",
+          "status": 200
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "CONSULTA;ac-0001;",
+            "error": "E401"
+          },
+          "ids": [
+            1268
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "ANULA;op-0001;",
+            "error": "E402"
+          },
+          "ids": [
+            1269
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "ANULA;OP-0001 ;",
+            "error": "E402"
+          },
+          "ids": [
+            1270
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "ANULA;OP-0001;",
+            "status": 200
+          },
+          "ids": [
+            1273
+          ]
+        }
+      ],
+      "evidence": [
+        1268,
+        1269,
+        1270,
+        1273
+      ]
+    },
+    {
+      "id": "IT-CONTROL",
+      "section": 2,
+      "behavior": "Control = 98 − ((N × 100) mod 97): antes del control, mayúsculas, solo A–Z/0–9; letras A=1…Z=26 concatenadas, dígitos conservados. Se descartan los demás caracteres.",
+      "queries": [
+        {
+          "source": "checksum_predictions",
+          "status": 201
+        },
+        {
+          "current": true,
+          "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+          "status": 200
+        },
+        {
+          "source": "spec_confirmations",
+          "message": "CONSULTA;AC-0001;0",
+          "error": "E202"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "checksum_predictions",
+            "status": 201
+          },
+          "ids": [
+            774,
+            775
+          ]
+        },
+        {
+          "query": {
+            "current": true,
+            "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+            "status": 200
+          },
+          "ids": [
+            1026
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "message": "CONSULTA;AC-0001;0",
+            "error": "E202"
+          },
+          "ids": [
+            1228
+          ]
+        }
+      ],
+      "evidence": [
+        774,
+        775,
+        1026,
+        1228
+      ]
+    },
+    {
+      "id": "IT-FORMAT",
+      "section": 2,
+      "behavior": "Fuera de PING, el control requiere uno o dos dígitos ASCII. El formato inválido es E201; valor incorrecto es E202.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "error": "E201"
+        },
+        {
+          "source": "spec_confirmations",
+          "error": "E202"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E201"
+          },
+          "ids": [
+            1227
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E202"
+          },
+          "ids": [
+            1228
+          ]
+        }
+      ],
+      "evidence": [
+        1227,
+        1228
+      ]
+    },
+    {
+      "id": "IT-PING",
+      "section": 2,
+      "behavior": "PING omite la validación de control no vacío: PING;XX responde pong. Segmentos vacíos siguen produciendo E104.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "message": "PING;XX",
+          "status": 200
+        },
+        {
+          "source": "spec_confirmations",
+          "error": "E104"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "message": "PING;XX",
+            "status": 200
+          },
+          "ids": [
+            1216
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E104"
+          },
+          "ids": [
+            1215
+          ]
+        }
+      ],
+      "evidence": [
+        1215,
+        1216
+      ]
+    },
+    {
+      "id": "CMD-PING",
+      "section": 3,
+      "behavior": "PING;control, cero argumentos: 200 {\"pong\":true}; no modifica el ledger.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "message": "PING;XX",
+          "status": 200,
+          "body": {
+            "pong": true
+          }
+        }
+      ],
+      "confidence": "probable",
+      "command": "PING",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "message": "PING;XX",
+            "status": 200,
+            "body": {
+              "pong": true
+            }
+          },
+          "ids": [
+            1216
+          ]
+        }
+      ],
+      "evidence": [
+        1216
+      ]
+    },
+    {
+      "id": "CMD-ALTA",
+      "section": 3,
+      "behavior": "ALTA;nombre;control crea cuenta en cero y devuelve 201 {\"cuentaId\":\"AC-NNNN\"}. IDs comienzan en AC-0001.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "prefix": "ALTA;Spec;",
+          "status": 201
+        },
+        {
+          "source": "spec_confirmations",
+          "prefix": "ALTA;Fresh;",
+          "contains": {
+            "cuentaId": "AC-0001"
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "ALTA",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ALTA;Spec;",
+            "status": 201
+          },
+          "ids": [
+            1217,
+            1218
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ALTA;Fresh;",
+            "contains": {
+              "cuentaId": "AC-0001"
+            }
+          },
+          "ids": [
+            1234
+          ]
+        }
+      ],
+      "evidence": [
+        1217,
+        1218,
+        1234
+      ]
+    },
+    {
+      "id": "CMD-DUP",
+      "section": 3,
+      "behavior": "Dos ALTA consecutivos con el mismo nombre crean cuentas diferentes; no deduplican.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "prefix": "ALTA;Spec;",
+          "contains": {
+            "cuentaId": "AC-0001"
+          }
+        },
+        {
+          "source": "spec_confirmations",
+          "prefix": "ALTA;Spec;",
+          "contains": {
+            "cuentaId": "AC-0002"
+          }
+        }
+      ],
+      "confidence": "probable",
+      "command": "ALTA",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ALTA;Spec;",
+            "contains": {
+              "cuentaId": "AC-0001"
+            }
+          },
+          "ids": [
+            1217
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ALTA;Spec;",
+            "contains": {
+              "cuentaId": "AC-0002"
+            }
+          },
+          "ids": [
+            1218
+          ]
+        }
+      ],
+      "evidence": [
+        1217,
+        1218
+      ]
+    },
+    {
+      "id": "CMD-NAME",
+      "section": 3,
+      "behavior": "ALTA admite nombre compuesto solo de espacios; segmento realmente vacío produce E104.",
+      "queries": [
+        {
+          "source": "spec_text_edges",
+          "prefix": "ALTA;   ;",
+          "status": 201
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": "ALTA;;",
+          "error": "E104"
+        }
+      ],
+      "confidence": "probable",
+      "command": "ALTA",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "ALTA;   ;",
+            "status": 201
+          },
+          "ids": [
+            1265
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "ALTA;;",
+            "error": "E104"
+          },
+          "ids": [
+            1274
+          ]
+        }
+      ],
+      "evidence": [
+        1265,
+        1274
+      ]
+    },
+    {
+      "id": "CMD-CONSULTA",
+      "section": 3,
+      "behavior": "CONSULTA;cuenta;control responde 200 con cuenta_id exacto y saldo string de dos decimales (unidades almacenadas / 100). Cuenta ausente: E401.",
+      "queries": [
+        {
+          "current": true,
+          "prefix": "CONSULTA;AC-0002;",
+          "contains": {
+            "saldo": "500.00"
+          }
+        },
+        {
+          "source": "spec_confirmations",
+          "negative": true
+        },
+        {
+          "source": "spec_confirmations",
+          "error": "E401"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "CONSULTA",
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "prefix": "CONSULTA;AC-0002;",
+            "contains": {
+              "saldo": "500.00"
+            }
+          },
+          "ids": [
+            1027
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "negative": true
+          },
+          "ids": [
+            1223,
+            1226
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E401"
+          },
+          "ids": [
+            1232
+          ]
+        }
+      ],
+      "evidence": [
+        1027,
+        1223,
+        1226,
+        1232
+      ]
+    },
+    {
+      "id": "CMD-DEPOSITO",
+      "section": 3,
+      "behavior": "DEPOSITO;cuenta;monto;control suma monto y crea OP-NNNN; 200 con status exacto \"recieved\" y operacionId.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "prefix": "DEPOSITO;AC-0001;100;",
+          "status": 200,
+          "contains": {
+            "status": "recieved"
+          }
+        },
+        {
+          "source": "spec_confirmations",
+          "prefix": "DEPOSITO;AC-0001;1;",
+          "contains": {
+            "operacionId": "OP-0001"
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "DEPOSITO",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "DEPOSITO;AC-0001;100;",
+            "status": 200,
+            "contains": {
+              "status": "recieved"
+            }
+          },
+          "ids": [
+            1219
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "DEPOSITO;AC-0001;1;",
+            "contains": {
+              "operacionId": "OP-0001"
+            }
+          },
+          "ids": [
+            1235
+          ]
+        }
+      ],
+      "evidence": [
+        1219,
+        1235
+      ]
+    },
+    {
+      "id": "CMD-MONTO",
+      "section": 3,
+      "behavior": "Montos positivos ASCII de 1–10 dígitos, sin ceros iniciales/signos/espacios/decimales. 9999999999 aceptado; 10000000000 rechazado E303.",
+      "queries": [
+        {
+          "source": "incident_uncovered_limits",
+          "prefix": "DEPOSITO;AC-0001;9999999999;",
+          "status": 200
+        },
+        {
+          "source": "bank_edges",
+          "prefix": "DEPOSITO;AC-0001;10000000000;",
+          "error": "E303"
+        },
+        {
+          "current": true,
+          "prefix": "TRANSFER;AC-0001;AC-0002;0;",
+          "error": "E303"
+        }
+      ],
+      "confidence": "probable",
+      "command": "DEPOSITO",
+      "checks": [
+        {
+          "query": {
+            "source": "incident_uncovered_limits",
+            "prefix": "DEPOSITO;AC-0001;9999999999;",
+            "status": 200
+          },
+          "ids": [
+            1001
+          ]
+        },
+        {
+          "query": {
+            "source": "bank_edges",
+            "prefix": "DEPOSITO;AC-0001;10000000000;",
+            "error": "E303"
+          },
+          "ids": [
+            892
+          ]
+        },
+        {
+          "query": {
+            "current": true,
+            "prefix": "TRANSFER;AC-0001;AC-0002;0;",
+            "error": "E303"
+          },
+          "ids": [
+            1075,
+            1076
+          ]
+        }
+      ],
+      "evidence": [
+        892,
+        1001,
+        1075,
+        1076
+      ]
+    },
+    {
+      "id": "CMD-TRANSFER",
+      "section": 3,
+      "behavior": "TRANSFER;origen;destino;monto;control debita/acredita el monto y crea OP-NNNN; éxito 200 con \"recieved\". Máximo 50000 inclusive.",
+      "queries": [
+        {
+          "source": "incident_transfer_limit",
+          "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+          "status": 200
+        },
+        {
+          "source": "incident_transfer_limit",
+          "prefix": "TRANSFER;AC-0001;AC-0002;50001;",
+          "error": "E506"
+        },
+        {
+          "source": "incident_transfer_limit",
+          "prefix": "CONSULTA;AC-0002;",
+          "contains": {
+            "saldo": "500.00"
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "TRANSFER",
+      "checks": [
+        {
+          "query": {
+            "source": "incident_transfer_limit",
+            "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+            "status": 200
+          },
+          "ids": [
+            1026
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_transfer_limit",
+            "prefix": "TRANSFER;AC-0001;AC-0002;50001;",
+            "error": "E506"
+          },
+          "ids": [
+            1032
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_transfer_limit",
+            "prefix": "CONSULTA;AC-0002;",
+            "contains": {
+              "saldo": "500.00"
+            }
+          },
+          "ids": [
+            1027
+          ]
+        }
+      ],
+      "evidence": [
+        1026,
+        1027,
+        1032
+      ]
+    },
+    {
+      "id": "CMD-ANULA",
+      "section": 3,
+      "behavior": "ANULA;operacion;control revierte los deltas guardados y responde 200 con ok:true y anulada. No exige saldo para revertir.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "prefix": "ANULA;OP-0001;",
+          "contains": {
+            "ok": true,
+            "anulada": "OP-0001"
+          }
+        },
+        {
+          "source": "spec_confirmations",
+          "negative": true
+        }
+      ],
+      "confidence": "confirmado",
+      "command": "ANULA",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ANULA;OP-0001;",
+            "contains": {
+              "ok": true,
+              "anulada": "OP-0001"
+            }
+          },
+          "ids": [
+            1222
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "negative": true
+          },
+          "ids": [
+            1223,
+            1226
+          ]
+        }
+      ],
+      "evidence": [
+        1222,
+        1223,
+        1226
+      ]
+    },
+    {
+      "id": "CMD-IDEMPOTENT",
+      "section": 3,
+      "behavior": "Anular de nuevo la misma operación responde 200 {\"ok\":false,\"motivo\":\"ya anulada\"}; no repite los deltas.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "prefix": "ANULA;OP-0001;",
+          "body": {
+            "ok": false,
+            "motivo": "ya anulada"
+          }
+        }
+      ],
+      "confidence": "probable",
+      "command": "ANULA",
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "prefix": "ANULA;OP-0001;",
+            "body": {
+              "ok": false,
+              "motivo": "ya anulada"
+            }
+          },
+          "ids": [
+            1224
+          ]
+        }
+      ],
+      "evidence": [
+        1224
+      ]
+    },
+    {
+      "id": "MEM-RESET",
+      "section": 4,
+      "behavior": "Reset elimina cuentas/operaciones anteriores y reinicia AC/OP en 0001.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "error": "E401"
+        },
+        {
+          "source": "spec_confirmations",
+          "error": "E402"
+        },
+        {
+          "source": "spec_confirmations",
+          "contains": {
+            "cuentaId": "AC-0001"
+          },
+          "prefix": "ALTA;Fresh;"
+        },
+        {
+          "source": "spec_confirmations",
+          "contains": {
+            "operacionId": "OP-0001"
+          },
+          "prefix": "DEPOSITO;AC-0001;1;"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E401"
+          },
+          "ids": [
+            1232
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "error": "E402"
+          },
+          "ids": [
+            1233
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "contains": {
+              "cuentaId": "AC-0001"
+            },
+            "prefix": "ALTA;Fresh;"
+          },
+          "ids": [
+            1234
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "contains": {
+              "operacionId": "OP-0001"
+            },
+            "prefix": "DEPOSITO;AC-0001;1;"
+          },
+          "ids": [
+            1235
+          ]
+        }
+      ],
+      "evidence": [
+        1232,
+        1233,
+        1234,
+        1235
+      ]
+    },
+    {
+      "id": "MEM-LOCK",
+      "section": 4,
+      "behavior": "Tres fallos E506/E507 bloquean el origen; transferencias posteriores válidas devuelven 423 E510 con intentos 1,2,…; el fallo no consume OP.",
+      "queries": [
+        {
+          "source": "incident_lockout",
+          "error": "E506"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E507"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E510",
+          "contains": {
+            "intentos": 1
+          }
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E510",
+          "contains": {
+            "intentos": 2
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E506"
+          },
+          "ids": [
+            1056,
+            1057
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E507"
+          },
+          "ids": [
+            1064,
+            1065
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E510",
+            "contains": {
+              "intentos": 1
+            }
+          },
+          "ids": [
+            1059,
+            1067
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E510",
+            "contains": {
+              "intentos": 2
+            }
+          },
+          "ids": [
+            1060,
+            1068
+          ]
+        }
+      ],
+      "evidence": [
+        1056,
+        1057,
+        1059,
+        1060,
+        1064,
+        1065,
+        1067,
+        1068
+      ]
+    },
+    {
+      "id": "MEM-UNLOCK",
+      "section": 4,
+      "behavior": "Depósito exitoso u otra transferencia saliente exitosa reinicia fallos del origen. Transferencia entrante y ANULA no desbloquean; E303/E304/E401/E202 no cuentan.",
+      "queries": [
+        {
+          "source": "incident_lock_recovery",
+          "prefix": "DEPOSITO;AC-0001;1;",
+          "status": 200
+        },
+        {
+          "source": "incident_lock_recovery",
+          "prefix": "TRANSFER;AC-0001;AC-0002;1;",
+          "status": 200
+        },
+        {
+          "source": "incident_lock_recovery",
+          "error": "E510"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E303"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E304"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E401"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E202"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "incident_lock_recovery",
+            "prefix": "DEPOSITO;AC-0001;1;",
+            "status": 200
+          },
+          "ids": [
+            1148
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lock_recovery",
+            "prefix": "TRANSFER;AC-0001;AC-0002;1;",
+            "status": 200
+          },
+          "ids": [
+            1113,
+            1115
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lock_recovery",
+            "error": "E510"
+          },
+          "ids": [
+            1124,
+            1134
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E303"
+          },
+          "ids": [
+            1075,
+            1076
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E304"
+          },
+          "ids": [
+            1084,
+            1085
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E401"
+          },
+          "ids": [
+            1093,
+            1094
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E202"
+          },
+          "ids": [
+            1102,
+            1103
+          ]
+        }
+      ],
+      "evidence": [
+        1075,
+        1076,
+        1084,
+        1085,
+        1093,
+        1094,
+        1102,
+        1103,
+        1113,
+        1115,
+        1124,
+        1134,
+        1148
+      ]
+    },
+    {
+      "id": "ERR-E100",
+      "section": 5,
+      "behavior": "E100: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E100",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E100",
+            "status": 400
+          },
+          "ids": [
+            1210,
+            1211
+          ]
+        }
+      ],
+      "evidence": [
+        1210,
+        1211
+      ]
+    },
+    {
+      "id": "ERR-E101",
+      "section": 5,
+      "behavior": "E101: status 413; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E101",
+          "status": 413
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E101",
+            "status": 413
+          },
+          "ids": [
+            996,
+            997
+          ]
+        }
+      ],
+      "evidence": [
+        996,
+        997
+      ]
+    },
+    {
+      "id": "ERR-E102",
+      "section": 5,
+      "behavior": "E102: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E102",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E102",
+            "status": 400
+          },
+          "ids": [
+            1212,
+            1213
+          ]
+        }
+      ],
+      "evidence": [
+        1212,
+        1213
+      ]
+    },
+    {
+      "id": "ERR-E103",
+      "section": 5,
+      "behavior": "E103: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E103",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E103",
+            "status": 400
+          },
+          "ids": [
+            1214
+          ]
+        }
+      ],
+      "evidence": [
+        1214
+      ]
+    },
+    {
+      "id": "ERR-E104",
+      "section": 5,
+      "behavior": "E104: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E104",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E104",
+            "status": 400
+          },
+          "ids": [
+            1215,
+            1274
+          ]
+        }
+      ],
+      "evidence": [
+        1215,
+        1274
+      ]
+    },
+    {
+      "id": "ERR-E201",
+      "section": 5,
+      "behavior": "E201: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E201",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E201",
+            "status": 400
+          },
+          "ids": [
+            1173,
+            1227
+          ]
+        }
+      ],
+      "evidence": [
+        1173,
+        1227
+      ]
+    },
+    {
+      "id": "ERR-E202",
+      "section": 5,
+      "behavior": "E202: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E202",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E202",
+            "status": 400
+          },
+          "ids": [
+            1102,
+            1103
+          ]
+        }
+      ],
+      "evidence": [
+        1102,
+        1103
+      ]
+    },
+    {
+      "id": "ERR-E301",
+      "section": 5,
+      "behavior": "E301: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E301",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E301",
+            "status": 400
+          },
+          "ids": [
+            1168,
+            1229
+          ]
+        }
+      ],
+      "evidence": [
+        1168,
+        1229
+      ]
+    },
+    {
+      "id": "ERR-E302",
+      "section": 5,
+      "behavior": "E302: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E302",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E302",
+            "status": 400
+          },
+          "ids": [
+            1176,
+            1230
+          ]
+        }
+      ],
+      "evidence": [
+        1176,
+        1230
+      ]
+    },
+    {
+      "id": "ERR-E303",
+      "section": 5,
+      "behavior": "E303: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E303",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E303",
+            "status": 400
+          },
+          "ids": [
+            1075,
+            1076
+          ]
+        }
+      ],
+      "evidence": [
+        1075,
+        1076
+      ]
+    },
+    {
+      "id": "ERR-E304",
+      "section": 5,
+      "behavior": "E304: status 400; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E304",
+          "status": 400
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E304",
+            "status": 400
+          },
+          "ids": [
+            1084,
+            1085
+          ]
+        }
+      ],
+      "evidence": [
+        1084,
+        1085
+      ]
+    },
+    {
+      "id": "ERR-E401",
+      "section": 5,
+      "behavior": "E401: status 404; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E401",
+          "status": 404
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E401",
+            "status": 404
+          },
+          "ids": [
+            1093,
+            1094
+          ]
+        }
+      ],
+      "evidence": [
+        1093,
+        1094
+      ]
+    },
+    {
+      "id": "ERR-E402",
+      "section": 5,
+      "behavior": "E402: status 404; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E402",
+          "status": 404
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E402",
+            "status": 404
+          },
+          "ids": [
+            1169,
+            1170
+          ]
+        }
+      ],
+      "evidence": [
+        1169,
+        1170
+      ]
+    },
+    {
+      "id": "ERR-E506",
+      "section": 5,
+      "behavior": "E506: status 422; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E506",
+          "status": 422
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E506",
+            "status": 422
+          },
+          "ids": [
+            1002,
+            1003
+          ]
+        }
+      ],
+      "evidence": [
+        1002,
+        1003
+      ]
+    },
+    {
+      "id": "ERR-E507",
+      "section": 5,
+      "behavior": "E507: status 422; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E507",
+          "status": 422
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E507",
+            "status": 422
+          },
+          "ids": [
+            1064,
+            1065
+          ]
+        }
+      ],
+      "evidence": [
+        1064,
+        1065
+      ]
+    },
+    {
+      "id": "ERR-E510",
+      "section": 5,
+      "behavior": "E510: status 423; cuerpo exacto indicado debajo. Se aplica en el orden observado del pipeline.",
+      "queries": [
+        {
+          "current": true,
+          "error": "E510",
+          "status": 423
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "current": true,
+            "error": "E510",
+            "status": 423
+          },
+          "ids": [
+            1005,
+            1006
+          ]
+        }
+      ],
+      "evidence": [
+        1005,
+        1006
+      ]
+    },
+    {
+      "id": "ERR-SUGGEST",
+      "section": 5,
+      "behavior": "E301 puede incluir sugerencia: PIGN y \" PING\" sugieren PING. La réplica usa distancia de edición ≤2 como generalización probable; XYZ no recibe sugerencia.",
+      "queries": [
+        {
+          "source": "spec_text_edges",
+          "prefix": "PIGN;",
+          "contains": {
+            "sugerencia": "PING"
+          }
+        },
+        {
+          "source": "spec_text_edges",
+          "prefix": " PING;",
+          "contains": {
+            "sugerencia": "PING"
+          }
+        },
+        {
+          "source": "bank_edges",
+          "prefix": "XYZ;",
+          "body": {
+            "error": "E301",
+            "mensaje": "comando desconocido "
+          }
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": "PIGN;",
+            "contains": {
+              "sugerencia": "PING"
+            }
+          },
+          "ids": [
+            1272
+          ]
+        },
+        {
+          "query": {
+            "source": "spec_text_edges",
+            "prefix": " PING;",
+            "contains": {
+              "sugerencia": "PING"
+            }
+          },
+          "ids": [
+            1271
+          ]
+        },
+        {
+          "query": {
+            "source": "bank_edges",
+            "prefix": "XYZ;",
+            "body": {
+              "error": "E301",
+              "mensaje": "comando desconocido "
+            }
+          },
+          "ids": [
+            913
+          ]
+        }
+      ],
+      "evidence": [
+        913,
+        1271,
+        1272
+      ]
+    },
+    {
+      "id": "CHANGE-BALANCE",
+      "section": 6,
+      "behavior": "Cambio directo v1→v2: saldo numérico pasa a string decimal /100, por ejemplo 40000→\"400.00\".",
+      "queries": [
+        {
+          "source": "E1",
+          "contains": {
+            "saldo": 40000
+          }
+        },
+        {
+          "source": "incident_confirm",
+          "contains": {
+            "saldo": "400.00"
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "E1",
+            "contains": {
+              "saldo": 40000
+            }
+          },
+          "ids": [
+            11
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_confirm",
+            "contains": {
+              "saldo": "400.00"
+            }
+          },
+          "ids": [
+            1164
+          ]
+        }
+      ],
+      "evidence": [
+        11,
+        1164
+      ]
+    },
+    {
+      "id": "CHANGE-LIMIT",
+      "section": 6,
+      "behavior": "Cambio directo v1→v2: transferencia 100000 antes aceptada ahora devuelve E506; límite actual confirmado 50000.",
+      "queries": [
+        {
+          "source": "E1",
+          "prefix": "TRANSFER;AC-0001;AC-0002;100000;",
+          "status": 200
+        },
+        {
+          "source": "incident_transfer_limit",
+          "prefix": "TRANSFER;AC-0001;AC-0002;100000;",
+          "error": "E506"
+        },
+        {
+          "source": "incident_transfer_limit",
+          "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+          "status": 200
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "E1",
+            "prefix": "TRANSFER;AC-0001;AC-0002;100000;",
+            "status": 200
+          },
+          "ids": [
+            13
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_transfer_limit",
+            "prefix": "TRANSFER;AC-0001;AC-0002;100000;",
+            "error": "E506"
+          },
+          "ids": [
+            1050
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_transfer_limit",
+            "prefix": "TRANSFER;AC-0001;AC-0002;50000;",
+            "status": 200
+          },
+          "ids": [
+            1026
+          ]
+        }
+      ],
+      "evidence": [
+        13,
+        1026,
+        1050
+      ]
+    },
+    {
+      "id": "CHANGE-LOCK",
+      "section": 6,
+      "behavior": "Candidato al tercer cambio: bloqueo por tres E506/E507 confirmado en v2. Su ausencia en v1 no fue probada; no se inventa evidencia histórica.",
+      "queries": [
+        {
+          "source": "incident_lockout",
+          "error": "E510"
+        }
+      ],
+      "confidence": "probable",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E510"
+          },
+          "ids": [
+            1059,
+            1060
+          ]
+        }
+      ],
+      "evidence": [
+        1059,
+        1060
+      ]
+    },
+    {
+      "id": "RISK-NEGATIVE",
+      "section": 7,
+      "behavior": "Las anulaciones pueden producir saldo negativo. Un cliente nuevo debería validar fondos de reversión; la réplica conserva el comportamiento observado.",
+      "queries": [
+        {
+          "source": "spec_confirmations",
+          "negative": true
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "spec_confirmations",
+            "negative": true
+          },
+          "ids": [
+            1223,
+            1226
+          ]
+        }
+      ],
+      "evidence": [
+        1223,
+        1226
+      ]
+    },
+    {
+      "id": "RISK-RETRY",
+      "section": 7,
+      "behavior": "Reintentar ciegamente E506/E507 altera estado y bloquea cuentas. Un cliente nuevo debe distinguir errores de negocio de fallos de transporte.",
+      "queries": [
+        {
+          "source": "incident_lockout",
+          "error": "E506"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E507"
+        },
+        {
+          "source": "incident_lockout",
+          "error": "E510"
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E506"
+          },
+          "ids": [
+            1056,
+            1057
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E507"
+          },
+          "ids": [
+            1064,
+            1065
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_lockout",
+            "error": "E510"
+          },
+          "ids": [
+            1059,
+            1060
+          ]
+        }
+      ],
+      "evidence": [
+        1056,
+        1057,
+        1059,
+        1060,
+        1064,
+        1065
+      ]
+    },
+    {
+      "id": "RISK-SCHEMA",
+      "section": 7,
+      "behavior": "El tipo de saldo cambia entre versiones. Un cliente nuevo debería negociar/versionar su contrato y documentar unidades.",
+      "queries": [
+        {
+          "source": "E1",
+          "contains": {
+            "saldo": 40000
+          }
+        },
+        {
+          "source": "incident_confirm",
+          "contains": {
+            "saldo": "400.00"
+          }
+        }
+      ],
+      "confidence": "confirmado",
+      "command": null,
+      "checks": [
+        {
+          "query": {
+            "source": "E1",
+            "contains": {
+              "saldo": 40000
+            }
+          },
+          "ids": [
+            11
+          ]
+        },
+        {
+          "query": {
+            "source": "incident_confirm",
+            "contains": {
+              "saldo": "400.00"
+            }
+          },
+          "ids": [
+            1164
+          ]
+        }
+      ],
+      "evidence": [
+        11,
+        1164
+      ]
+    }
+  ]
+}
