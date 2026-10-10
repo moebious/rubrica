@@ -12,7 +12,7 @@ from rubrica.engine.core import handle
 from rubrica.engine.registry import Rule, RuleSet
 from rubrica.engine.server import ReplicaServer
 from rubrica.rules.current import build_rules
-from rubrica.rules.v1.state import initial_state
+from rubrica.rules.v2.state import initial_state
 
 TOKEN = "test-token"
 AUTH = (("Authorization", "Bearer " + TOKEN),)
@@ -29,7 +29,7 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(response.status, example["status"])
         self.assertEqual(json.loads(response.body), example["response"])
         self.assertEqual(state, initial_state())
-        self.assertEqual(rule, "v1.ping.observed")
+        self.assertEqual(rule, "v2.PING")
 
     def test_bad_inputs_do_not_mutate_state(self):
         for body in (b"", b'{"m":', b"null", b"[]", b'{"m":null}', b'{"m":1}', b"\xff\xfe", b"[" * 2000):
@@ -37,7 +37,7 @@ class CoreTests(unittest.TestCase):
                 before = initial_state()
                 after, response, rule = handle(before, Request("POST", "/msg", AUTH, body), self.rules)
                 self.assertEqual(after, before)
-                self.assertEqual(rule, "bootstrap.unmatched")
+                self.assertTrue(rule.startswith("v2.E"))
 
     def test_auth_variants_are_explicit_assumptions(self):
         for headers in ((), (("Authorization", "bearer " + TOKEN),), AUTH + AUTH, (("Authorization", "Bearer wrong"),)):
@@ -60,7 +60,7 @@ class CoreTests(unittest.TestCase):
             Rule("bad\r\nheader", 0, lambda s, r: True, fail, "supuesto")
         with self.assertRaises(ValueError):
             RuleSet("test", lambda: 0, (rules.rules[0],), rules.rules[0])
-        from rubrica.rules.v1.state import LedgerState
+        from rubrica.rules.v2.state import LedgerState
         before = LedgerState((("AC-0001", "Name", 10),), 2, 4)
         after, _, rule = handle(before, Request("POST", "/__reset", AUTH), self.rules)
         self.assertEqual(after, initial_state())
@@ -93,7 +93,7 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request("HEAD", "/health")[1], b"")
         for method in ("GET", "PUT", "OPTIONS", "CUSTOM"):
             self.assertEqual(self.request(method, "/missing")[2], "v1.route")
-        self.assertEqual(self.request("POST", "/msg", b'{"m":"PING;64"}')[2], "v1.ping.observed")
+        self.assertEqual(self.request("POST", "/msg", b'{"m":"PING;64"}')[2], "v2.PING")
 
     def test_size_bad_length_and_recovery(self):
         self.assertEqual(self.request("POST", "/msg", b"x" * 129)[0], 413)

@@ -49,3 +49,20 @@ original history in a local backup reference and verified Git bundle, with a
 snapshot of pending workspace files. The submitted-design remote stays untouched.
 Discovery and replica commits were tested from independent archived checkouts:
 four discovery tests and fourteen combined tests pass respectively.
+
+## Checksum and banking implementation
+
+Discovered a control formula fitting all recorded valid controls: uppercase ASCII
+alphanumerics, letters A=1 through Z=26, retain digits, append 00, then 98 minus
+modulo 97. Unseen-input predictions succeeded across names, Unicode, IDs, operations
+and amounts. Implemented incremental reduction and saved an offline fitter.
+
+Implemented versioned observed rules for all six commands, syntax/integrity errors,
+positive ten-digit amounts, transfer constraints, ID allocation and reversible
+operations. Recorded probes established that PING bypasses checksum checks, duplicate
+names are allowed and cancellations can yield negative balances. Unknown commands
+may suggest a nearby command; this remains a probable generalization.
+
+Verification: twenty tests pass, including all twenty official examples through
+HTTP and independent recorded-corpus replay. No hidden evaluation was used and no
+deployment was performed. Identifying all three incident changes remains pending.

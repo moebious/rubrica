@@ -6,7 +6,7 @@ import unittest
 from rubrica.engine.contract import Request
 from rubrica.engine.core import handle
 from rubrica.rules.current import build_rules
-from rubrica.rules.v1.state import LedgerState
+from rubrica.rules.v2.state import LedgerState
 
 class ContractEvidenceTests(unittest.TestCase):
     def test_recorded_health_reset_auth_and_routes(self):

@@ -38,15 +38,16 @@ cp .env.example .env    # then set ORIGINAL_TOKEN; .env is git-ignored
 git config core.hooksPath .githooks   # blocks committed secrets
 ```
 
-## Bootstrap scaffold
+## Replica implementation
 
-The runtime scaffold currently implements only the observed `PING;64` example.
-Health/reset, common route errors and missing/invalid/lowercase auth responses
-now have recorded evidence. Unimplemented message responses and transport
-safeguards remain **unverified assumptions**; this is not a faithful replacement yet. No hidden-set
-validation should be spent on this bootstrap.
+The active `v2-observed` rules implement PING, ALTA, CONSULTA, DEPOSITO,
+TRANSFER and ANULA, including the discovered control formula and observed
+validation order. The official sequence passes **20/20 through the local HTTP
+server**. Additional recorded boundary and state-transition experiments are
+replayed independently in tests. This is evidence for covered behavior, not a
+claim of complete hidden-test equivalence or incident resolution.
 
-Run locally (the server reads the process environment, not `.env` automatically):
+Run locally (the server reads the process environment):
 
 ```bash
 set -a
@@ -59,12 +60,14 @@ Verify:
 
 ```bash
 python3 -m unittest discover -s tests -v
-python3 tools/seq.py bootstrap material/pruebas/ejemplos.jsonl --target replica
+python3 tools/solve_checksum.py
+python3 tools/diff.py --url http://127.0.0.1:8080
 ```
 
-The second command records a local replica replay and exposes unimplemented
-cases. It is not expected to pass all 20 examples yet. The bootstrap uses an
-explicit 501 default rather than pretending unknown behavior is confirmed.
+`diff.py` targets the replica, checks exact status/body and per-step latency,
+and exits nonzero on divergence. Use the recorded harness for original access.
+HTTP transport limits, duplicate auth headers and broader unobserved protocol
+behavior still require evidence. The three incident changes remain unresolved.
 
 The Docker image copies only `rubrica/` and runs as a non-root user. Supply
 `TEAM_TOKEN` at runtime. Rule versions are selected at startup in
