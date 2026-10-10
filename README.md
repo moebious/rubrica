@@ -25,10 +25,14 @@ The design doc and diagram are identical to the versions submitted at 12:00; `py
 
 | Path | Contents |
 |---|---|
-| `docs/` | Design doc; `docs/process/` holds the working plan and notes |
-| `site/` | Architecture diagram |
-| `tools/` | Harness: recorder, sequence runner, design check |
+| `rubrica/` | The replica: `engine/` (HTTP adapter, pure core, registry) and `rules/` (versioned service behavior, `v1` and `v2`) |
+| `tests/` | Unit, adversarial and recorded-corpus replay tests |
+| `tools/` | Harness (budgeted, locked access to the original), canary, differential runner, fuzzer, held-out generator, coverage audit, log/spec pipeline, smoke and design checks |
+| `tools/probes/` | The targeted probe scripts behind each discovered behavior |
 | `traces/` | Raw record of every request sent to the original (tokens redacted) |
+| `SPEC.md`, `experimentos.jsonl`, `experimentos.index.json`, `spec-evidence.json` | Delivered specification, experiment log, and their provenance |
+| `docs/` | Frozen design doc; `docs/process/` holds the roadmap, workflow, incident notes and build log |
+| `site/` | Architecture diagram |
 | `material/` | The challenge brief and its 20 example requests |
 
 ## Setup

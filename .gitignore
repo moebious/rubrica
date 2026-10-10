@@ -7,3 +7,6 @@ __pycache__/
 .DS_Store
 
 .runtime/
+.mypy_cache/
+.claude/
+.pytest_cache/
