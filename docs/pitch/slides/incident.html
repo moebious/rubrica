@@ -1,0 +1,14 @@
+<section id="incident" data-transition="fade" style="background:#F7F6F1;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#B4501A;letter-spacing:2px">INCIDENT FR-0153 · SERVICE V2</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1">The incident became three data fields</h2>
+<table style="font-size:30px;color:#14213D">
+<tr><th style="width:34%">Change</th><th style="width:20%">V1</th><th style="width:20%">V2</th><th style="width:26%">Confidence</th></tr>
+<tr><td>Balance format</td><td>40000</td><td>"400.00"</td><td>confirmado (11, 1164)</td></tr>
+<tr><td>Transfer limit</td><td>100000</td><td>50000</td><td>confirmado (13, 1026)</td></tr>
+<tr><td>Lockout after failures</td><td>not tested</td><td>3 → 423 E510</td><td>probable change (1059, 1060)</td></tr>
+</table>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;background:#14213D;color:#F7F6F1;padding:28px 36px;border-radius:12px;line-height:1.5">V1 = Policy("v1-observed", 100000, False, None)<br>V2 = Policy("v2-observed", 50000, True, 3)</p>
+<p style="font-size:28px;color:#4A5568">Canary matched at 15:50, differed at 16:00. Lockout absence in v1 was never tested, so we do not claim it.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">Sources: SPEC.md §6 (log IDs in parentheses) · rubrica/rules/v2/policy.py · docs/process/INCIDENT.md</p>
+<aside>1:05–1:35. Our canary matched at fifteen fifty and differed at sixteen hundred. Balances became decimal strings, and the transfer limit dropped from one hundred thousand to fifty thousand: both with before-and-after evidence. A lockout after three failures is confirmed now, but we never tested its absence before, so we call that change probable. In code: three data fields. (If asked: 15:50–16:00 is an observation window, not the deploy time; V1 is kept so historical recordings still replay.)</aside>
+</section>

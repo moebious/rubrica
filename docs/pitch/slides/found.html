@@ -1,0 +1,15 @@
+<section id="found" data-transition="fade" style="background:#F7F6F1;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#B4501A;letter-spacing:2px">THE DESIGN AT WORK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1">Each part of the diagram caught something</h2>
+<table style="font-size:28px;color:#14213D">
+<tr><th style="width:27%">Design component</th><th style="width:47%">What it caught</th><th style="width:26%">Status</th></tr>
+<tr><td>Drift canary</td><td>Service v2 between 15:50 and 16:00: balance format, transfer limit, lockout</td><td>3 rule changes, v1 kept</td></tr>
+<tr><td>Held-out set (anti-Goodhart)</td><td>Two Authorization headers: the first one decides; replica said 401</td><td>18 probes, fixed</td></tr>
+<tr><td>Probe gate: hypothesis + prediction</td><td>Hidden HALT command, suggested by the service itself: 409 E520</td><td>Confirmation never sent</td></tr>
+<tr><td>Probe gate: targeted words</td><td>Suggestion ties: PITA gets ALTA, not PING (alphabetical)</td><td>38 probes, fixed</td></tr>
+<tr><td>Coverage gaps</td><td>/msg?test=1 is 200 on the original; replica routed it to 404</td><td>Fixed</td></tr>
+</table>
+<p style="font-size:28px;color:#4A5568">Open gap: the spec is still a curated claims list, not generated from the rule registry.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">Sources: docs/DESIGN.md §3–4 · git log (4b4d92e, 595b955, 8fb0d47, 2de693f) · docs/process/INCIDENT.md</p>
+<aside>0:45–1:05. Each part of this diagram caught something. The canary caught the incident. The held-out set caught a header bug our own tests never showed. And the service itself suggested a hidden HALT command: we recorded its answer, but never sent the confirmation, because it could stop the shared service. (If asked: fuzz seeds 7, 15 and 16 match on every step, 361, 433 and 435 steps; we do not claim which hidden tests each fix recovered, the platform gives counts only.)</aside>
+</section>

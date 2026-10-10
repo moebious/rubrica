@@ -1,0 +1,23 @@
+<section id="approach" data-transition="fade" style="background:#F7F6F1;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#B4501A;letter-spacing:2px">THE APPROACH</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1">Discover slowly, run fast, keep one source of truth</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border-top:8px solid #2F6FB0;border-radius:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#2F6FB0">OFFLINE</p>
+<h3 style="font-size:44px;font-weight:600">System 2</h3>
+<p style="font-size:30px;color:#4A5568;line-height:1.4">A person and a reasoning model probe the original through a harness. Every request is recorded with its hypothesis and prediction.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border-top:8px solid #B4501A;border-radius:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#B4501A">MEMORY</p>
+<h3 style="font-size:44px;font-weight:600">Ontology</h3>
+<p style="font-size:30px;color:#4A5568;line-height:1.4">Versioned rules with evidence and confidence: confirmado, probable, supuesto.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:40px;border-top:8px solid #14213D;border-radius:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#14213D">RUNTIME</p>
+<h3 style="font-size:44px;font-weight:600">System 1</h3>
+<p style="font-size:30px;color:#4A5568;line-height:1.4">The replica: a compiled rule table. The first matching rule decides. No model at runtime.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">Source: docs/DESIGN.md §3</p>
+<aside>Kahneman's terms. System 2 is the slow, deliberate discovery loop. System 1 is the fast replica. The exact judge for every probed behavior is the original service itself, so we never need an LLM judge.</aside>
+</section>

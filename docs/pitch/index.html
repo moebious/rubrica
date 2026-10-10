@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubrica: learning a black box</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #0B1222; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+  section { position: absolute !important; inset: 0; width: 1920px; height: 1080px; }
+  section:not(.on) { display: none !important; }
+  h1, h2, h3, p { font-weight: inherit; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { padding: 0.35em 0.6em; border-bottom: 1px solid #DAD7CC; text-align: left; }
+  th { font-weight: 600; }
+  aside { display: none; }
+  body.notes aside { display: block; position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 24px 128px; font: 26px/1.4 'IBM Plex Sans', Arial, sans-serif;
+    background: rgba(11, 18, 34, 0.92); color: #F7F6F1; }
+  #count { position: fixed; right: 16px; bottom: 12px; font: 14px monospace; color: #8E9BB5; }
+  @page { size: 1920px 1080px; margin: 0; }
+  @media print {
+    html, body { height: auto; overflow: visible; background: none; }
+    #stage { position: static; transform: none !important; width: 1920px; height: auto; }
+    section { position: relative !important; display: flex !important; break-after: page; overflow: hidden; }
+    section:not(.on) { display: flex !important; }
+    aside, #count, body.notes aside { display: none !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+<section id="cover" data-transition="fade" style="background:#14213D;color:#F7F6F1;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#F0A35E;letter-spacing:2px">FRONTIER · BOGOTÁ 26 · RETO 2 · LA CAJA NEGRA</p>
+<h1 style="font-size:160px;font-weight:700;line-height:1.0">Rubrica</h1>
+<p style="font-size:48px;color:#C9D3E6;line-height:1.3">Learning a black box, one proven rule at a time.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8E9BB5">Kevin Vicent · github.com/moebious/rubrica · blackbox.rubrica.dev</p>
+<aside>0:00–0:15. A service has run for ten years without documentation. Rubrica learns its behavior through experiments and builds a replacement, live at blackbox.rubrica.dev. The target is exact: the same status and body, errors included.</aside>
+</section>
+<section id="architecture" data-transition="fade" style="background:#ECEAE2;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:96px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="position:absolute;left:128px;top:208px;width:1664px;height:720px;background:#FFFFFF;border-radius:16px"></div>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1">Architecture: reason offline, execute exactly</h2>
+<img src="assets/diagram.png" alt="Rubrica architecture: System 2 discovery harness, service ontology, System 1 replica, differential test and drift canary" style="position:absolute;left:152px;top:224px;width:1616px;height:688px;object-fit:contain">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">site/diagram.png (submitted 12:00) · replica live at blackbox.rubrica.dev</p>
+<aside>0:15–0:45. We split reasoning from execution. Offline, a person and a model propose hypotheses. The harness requires a prediction and records every request. At runtime, a serial server applies versioned rules. The first match decides; no model call, and no call to the original. (If asked: the diagram is the submitted design; the spec still comes from a separate curated claims list.)</aside>
+</section>
+<section id="found" data-transition="fade" style="background:#F7F6F1;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#B4501A;letter-spacing:2px">THE DESIGN AT WORK</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.1">Each part of the diagram caught something</h2>
+<table style="font-size:28px;color:#14213D">
+<tr><th style="width:27%">Design component</th><th style="width:47%">What it caught</th><th style="width:26%">Status</th></tr>
+<tr><td>Drift canary</td><td>Service v2 between 15:50 and 16:00: balance format, transfer limit, lockout</td><td>3 rule changes, v1 kept</td></tr>
+<tr><td>Held-out set (anti-Goodhart)</td><td>Two Authorization headers: the first one decides; replica said 401</td><td>18 probes, fixed</td></tr>
+<tr><td>Probe gate: hypothesis + prediction</td><td>Hidden HALT command, suggested by the service itself: 409 E520</td><td>Confirmation never sent</td></tr>
+<tr><td>Probe gate: targeted words</td><td>Suggestion ties: PITA gets ALTA, not PING (alphabetical)</td><td>38 probes, fixed</td></tr>
+<tr><td>Coverage gaps</td><td>/msg?test=1 is 200 on the original; replica routed it to 404</td><td>Fixed</td></tr>
+</table>
+<p style="font-size:28px;color:#4A5568">Open gap: the spec is still a curated claims list, not generated from the rule registry.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">Sources: docs/DESIGN.md §3–4 · git log (4b4d92e, 595b955, 8fb0d47, 2de693f) · docs/process/INCIDENT.md</p>
+<aside>0:45–1:05. Each part of this diagram caught something. The canary caught the incident. The held-out set caught a header bug our own tests never showed. And the service itself suggested a hidden HALT command: we recorded its answer, but never sent the confirmation, because it could stop the shared service. (If asked: fuzz seeds 7, 15 and 16 match on every step, 361, 433 and 435 steps; we do not claim which hidden tests each fix recovered, the platform gives counts only.)</aside>
+</section>
+<section id="incident" data-transition="fade" style="background:#F7F6F1;color:#14213D;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#B4501A;letter-spacing:2px">INCIDENT FR-0153 · SERVICE V2</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1">The incident became three data fields</h2>
+<table style="font-size:30px;color:#14213D">
+<tr><th style="width:34%">Change</th><th style="width:20%">V1</th><th style="width:20%">V2</th><th style="width:26%">Confidence</th></tr>
+<tr><td>Balance format</td><td>40000</td><td>"400.00"</td><td>confirmado (11, 1164)</td></tr>
+<tr><td>Transfer limit</td><td>100000</td><td>50000</td><td>confirmado (13, 1026)</td></tr>
+<tr><td>Lockout after failures</td><td>not tested</td><td>3 → 423 E510</td><td>probable change (1059, 1060)</td></tr>
+</table>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;background:#14213D;color:#F7F6F1;padding:28px 36px;border-radius:12px;line-height:1.5">V1 = Policy("v1-observed", 100000, False, None)<br>V2 = Policy("v2-observed", 50000, True, 3)</p>
+<p style="font-size:28px;color:#4A5568">Canary matched at 15:50, differed at 16:00. Lockout absence in v1 was never tested, so we do not claim it.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6A7179">Sources: SPEC.md §6 (log IDs in parentheses) · rubrica/rules/v2/policy.py · docs/process/INCIDENT.md</p>
+<aside>1:05–1:35. Our canary matched at fifteen fifty and differed at sixteen hundred. Balances became decimal strings, and the transfer limit dropped from one hundred thousand to fifty thousand: both with before-and-after evidence. A lockout after three failures is confirmed now, but we never tested its absence before, so we call that change probable. In code: three data fields. (If asked: 15:50–16:00 is an observation window, not the deploy time; V1 is kept so historical recordings still replay.)</aside>
+</section>
+<section id="results" data-transition="fade" style="background:#14213D;color:#F7F6F1;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;color:#F0A35E;letter-spacing:2px">HIDDEN SET · RUN 3 OF 3 · 18:50</p>
+<div style="display:flex;gap:96px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:200px;font-weight:700;line-height:1.0">96<span style="color:#8E9BB5">/100</span></p>
+<p style="font-size:32px;color:#C9D3E6">88 → 91 → 96 across our three runs</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:120px;font-weight:700;line-height:1.0">520 ms</p>
+<p style="font-size:32px;color:#C9D3E6">median per case (limit 5 s per step)</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#22325A;padding:32px;border-radius:16px">
+<p style="font-size:56px;font-weight:700">40/40</p><p style="font-size:28px;color:#C9D3E6">easy · all pass</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#22325A;padding:32px;border-radius:16px">
+<p style="font-size:56px;font-weight:700">38/40</p><p style="font-size:28px;color:#C9D3E6">regular · up from 36</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#22325A;padding:32px;border-radius:16px">
+<p style="font-size:56px;font-weight:700">18/20</p><p style="font-size:28px;color:#C9D3E6">hard · up from 13</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8E9BB5">4 failures: 2 status, 2 body · 2 at the first request, 2 later · Source: /evento/resultados, run 3 (18:50)</p>
+<aside>1:35–1:55. Our last hidden-set validation scored ninety-six of a hundred, up from eighty-eight and ninety-one. Every easy test passes; four tests still fail. Median about half a second. The lesson: reason to discover, exact code to execute, evidence to say what you know. (If asked: this is our last validation run at 18:50; the official score is the platform's run after 20:00 on the entrypoint we submitted.)</aside>
+</section>
+</div>
+<div id="count"></div>
+<script>
+  const slides = [...document.querySelectorAll('section')];
+  const stage = document.getElementById('stage');
+  let i = Math.max(0, slides.findIndex(s => '#' + s.id === location.hash));
+  function show(n) {
+    i = Math.min(slides.length - 1, Math.max(0, n));
+    slides.forEach((s, k) => s.classList.toggle('on', k === i));
+    history.replaceState(null, '', '#' + slides[i].id);
+    document.getElementById('count').textContent = (i + 1) + ' / ' + slides.length + '  ·  N notes';
+  }
+  function fit() {
+    const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    stage.style.transform = `translate(${(innerWidth - 1920 * s) / 2}px, ${(innerHeight - 1080 * s) / 2}px) scale(${s})`;
+  }
+  addEventListener('keydown', e => {
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) show(i + 1);
+    else if (['ArrowLeft', 'PageUp'].includes(e.key)) show(i - 1);
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(slides.length - 1);
+    else if (e.key.toLowerCase() === 'n') document.body.classList.toggle('notes');
+    else if (e.key.toLowerCase() === 'f') document.documentElement.requestFullscreen?.();
+  });
+  addEventListener('click', e => show(i + (e.clientX > innerWidth / 3 ? 1 : -1)));
+  addEventListener('resize', fit);
+  fit(); show(i);
+</script>
+</body>
+</html>
