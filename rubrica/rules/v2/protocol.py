@@ -76,7 +76,8 @@ def decode(req: Request) -> Parsed:
     if command != "PING":
         if re.fullmatch(r"[0-9]{1,2}", supplied) is None:
             return Parsed(problem=Problem("E201"))
-        if int(supplied) != control(";".join(parts[:-1])):
+        # Compared as text (traces/probe_final_gaps.jsonl): ALTA;Mateo;03 is E202 although 3 is the control.
+        if supplied != str(control(";".join(parts[:-1]))):
             return Parsed(problem=Problem("E202"))
     if command not in ARITY:
         # Ties go to the alphabetically first command (traces/probe_suggestions.jsonl: PITA -> ALTA, not PING).

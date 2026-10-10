@@ -29,7 +29,9 @@ def build_rules(team_token: str) -> RuleSet[LedgerState]:
         # Observed (traces/probe_dup_auth.jsonl): with repeated Authorization headers only the FIRST one
         # counts, on /health, /__reset and /msg, whatever the later values are.
         values = req.header_values("Authorization")
-        return not values or not hmac.compare_digest(values[0].encode("utf-8"), expected)
+        # Surrounding spaces/tabs are optional whitespace around a header value: the original accepts the
+        # team token with a trailing space (traces/probe_final_gaps.jsonl).
+        return not values or not hmac.compare_digest(values[0].strip(" \t").encode("utf-8"), expected)
 
     def unchanged(response: Response):
         return lambda state, req: (state, response)
