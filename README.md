@@ -94,7 +94,6 @@ Deployment still requires account access, app configuration and runtime secrets.
 
 Fly app: `rubrica-blackbox`. Deploy with
 `flyctl deploy --remote-only --ha=false --strategy immediate`.
-Use one machine and keep auto-stop disabled. The platform TCP check tests the
-listener without exposing the team token. Verify authenticated readiness and
-behavior with `python3 tools/smoke.py --url https://rubrica-blackbox.fly.dev`.
+Use one machine and keep auto-stop disabled. The configuration has no unauthenticated HTTP health check. Verify
+authenticated readiness and behavior with `python3 tools/smoke.py --url https://rubrica-blackbox.fly.dev`.
 A successful smoke check does not invoke the hackathon hidden set.
