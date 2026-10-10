@@ -68,6 +68,7 @@ def run_cycle(harness, baseline=None):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--capture", action="store_true")
+    parser.add_argument("--baseline", type=Path, default=BASELINE)
     parser.add_argument("--watch", action="store_true")
     parser.add_argument("--interval", type=float, default=600)
     parser.add_argument("--budget", type=int, default=820)
@@ -76,14 +77,14 @@ def main():
         parser.error("interval must be positive")
     harness = Harness("canary", "canary", args.budget)
     if args.capture:
-        if BASELINE.exists():
+        if args.baseline.exists():
             parser.error("baseline already exists; preserve it before recapture")
         data, _ = run_cycle(harness)
-        BASELINE.write_text(json.dumps({"captured": datetime.now(timezone.utc).isoformat(),
+        args.baseline.write_text(json.dumps({"captured": datetime.now(timezone.utc).isoformat(),
                                        "version": "observed-baseline", "cases": data}, indent=2) + "\n")
         print("Baseline captured.", flush=True)
     if args.watch:
-        baseline = json.loads(BASELINE.read_text())
+        baseline = json.loads(args.baseline.read_text())
         captured = datetime.fromisoformat(baseline["captured"])
         cutoff = captured.replace(hour=1, minute=0, second=0, microsecond=0) + timedelta(days=1)
         while datetime.now(timezone.utc) < cutoff:
@@ -97,7 +98,7 @@ def main():
                 raise
             time.sleep(args.interval)
     elif not args.capture:
-        run_cycle(harness, json.loads(BASELINE.read_text()))
+        run_cycle(harness, json.loads(args.baseline.read_text()))
 
 if __name__ == "__main__":
     main()

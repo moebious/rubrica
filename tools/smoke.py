@@ -21,13 +21,16 @@ def smoke(target: Target) -> int:
         print(f"{label}: {'PASS' if ok else 'FAIL'} status={response.status} latency={response.elapsed_ms}ms")
         failures+=not ok
     check("health",Request("GET","/health",auth(target.token)),200,{"ok":True})
-    failures+=replay(target,Path("material/pruebas/ejemplos.jsonl"))
+    corpus=Path("traces/current-examples.jsonl")
+    failures+=replay(target,corpus)
+    rows=[json.loads(line) for line in corpus.read_text().splitlines()]
+    balance_probe=next(row for row in reversed(rows) if row["request"]["m"].startswith("CONSULTA;AC-0002;"))
     for label,headers in (("missing auth",[]),("invalid auth",auth("invalid-token")),("lowercase scheme",auth(target.token,"bearer"))):
         check(label,Request("GET","/health",headers),401,{"error":"E001","mensaje":"no autorizado"})
     check("unknown route",Request("GET","/rubrica-missing",auth(target.token)),404,{"error":"E404","mensaje":"ruta desconocida"})
     check("unknown route without auth",Request("GET","/rubrica-missing"),404,{"error":"E404","mensaje":"ruta desconocida"})
     check("invalid reset token",Request("POST","/__reset",auth("invalid-token")),401,{"error":"E001","mensaje":"no autorizado"})
-    check("invalid reset preserves state",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],b'{"m":"CONSULTA;AC-0002;11"}'),200,{"cuenta_id":"AC-0002","saldo":40700})
+    check("invalid reset preserves state",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],json.dumps(balance_probe["request"]).encode()),200,balance_probe["response"])
     check("reset",Request("POST","/__reset",auth(target.token)),200,{"ok":True})
     check("reset clears state",Request("POST","/msg",auth(target.token)+[("Content-Type","application/json")],b'{"m":"CONSULTA;AC-0002;11"}'),404,{"error":"E401","mensaje":"cuenta inexistente"})
     print("Smoke gate:","PASS" if not failures else "FAIL")

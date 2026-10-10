@@ -4,6 +4,7 @@ import re
 from rubrica.engine.contract import Response
 from .protocol import Parsed, Problem
 from .state import LedgerState, Operation
+from .policy import Policy, V2
 
 
 def amount(text: str) -> int | None:
@@ -12,7 +13,7 @@ def amount(text: str) -> int | None:
     return int(text)
 
 
-def validate(state: LedgerState, parsed: Parsed) -> Problem | None:
+def validate(state: LedgerState, parsed: Parsed, policy: Policy = V2) -> Problem | None:
     command, args = parsed.command, parsed.args
     if command in ("DEPOSITO", "TRANSFER"):
         value = amount(args[-1])
@@ -27,7 +28,10 @@ def validate(state: LedgerState, parsed: Parsed) -> Problem | None:
     if command == "TRANSFER":
         value = amount(args[-1])
         assert value is not None
-        if value > 100000:
+        count = state.failure_count(args[0])
+        if policy.lock_after_failures is not None and count >= policy.lock_after_failures:
+            return Problem("E510", 423, attempts=count - policy.lock_after_failures + 1)
+        if value > policy.transfer_limit:
             return Problem("E506", 422)
         balance = state.balance(args[0])
         assert balance is not None
@@ -43,10 +47,28 @@ def apply_deltas(state: LedgerState, deltas: dict[str, int]) -> LedgerState:
                                         for key, name, balance in state.accounts))
 
 
-def execute(state: LedgerState, parsed: Parsed) -> tuple[LedgerState, Response]:
-    problem = validate(state, parsed)
+def update_failures(state: LedgerState, account_id: str, count: int) -> LedgerState:
+    failures = dict(state.transfer_failures)
+    if count:
+        failures[account_id] = count
+    else:
+        failures.pop(account_id, None)
+    return replace(state, transfer_failures=tuple(sorted(failures.items())))
+
+
+def currency(balance: int) -> str:
+    magnitude = abs(balance)
+    sign = "-" if balance < 0 else ""
+    return f"{sign}{magnitude // 100}.{magnitude % 100:02d}"
+
+
+def execute(state: LedgerState, parsed: Parsed, policy: Policy = V2) -> tuple[LedgerState, Response]:
+    problem = validate(state, parsed, policy)
     if problem:
-        return state, problem.response()
+        updated = state
+        if policy.lock_after_failures is not None and problem.code in ("E506", "E507", "E510"):
+            updated = update_failures(state, parsed.args[0], state.failure_count(parsed.args[0]) + 1)
+        return updated, problem.response()
     command, args = parsed.command, parsed.args
     if command == "PING":
         return state, Response.json(200, {"pong": True})
@@ -55,7 +77,9 @@ def execute(state: LedgerState, parsed: Parsed) -> tuple[LedgerState, Response]:
         return replace(state, accounts=state.accounts + ((key, args[0], 0),),
                        next_account=state.next_account + 1), Response.json(201, {"cuentaId": key})
     if command == "CONSULTA":
-        return state, Response.json(200, {"cuenta_id": args[0], "saldo": state.balance(args[0])})
+        balance = state.balance(args[0])
+        assert balance is not None
+        return state, Response.json(200, {"cuenta_id": args[0], "saldo": currency(balance) if policy.currency_balance else balance})
     if command in ("DEPOSITO", "TRANSFER"):
         value = amount(args[-1])
         assert value is not None
@@ -66,6 +90,8 @@ def execute(state: LedgerState, parsed: Parsed) -> tuple[LedgerState, Response]:
         else:
             operation = Operation(key, "transfer", args[0], args[1], value)
             updated = apply_deltas(state, {args[0]: -value, args[1]: value})
+        if policy.lock_after_failures is not None:
+            updated = update_failures(updated, args[0], 0)
         return replace(updated, operations=state.operations + (operation,),
                        next_operation=state.next_operation + 1), Response.json(
                            200, {"status": "recieved", "operacionId": key})

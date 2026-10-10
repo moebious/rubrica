@@ -12,7 +12,8 @@ from .state import StateT
 
 class ReplicaServer(HTTPServer, Generic[StateT]):
     def __init__(self, address: tuple[str, int], rules: RuleSet[StateT], *,
-                 socket_timeout: float = 2.0, max_body: int = 65536):
+                 socket_timeout: float = 2.0, max_body: int | None = None):
+        max_body = rules.body_limit if max_body is None else max_body
         if socket_timeout <= 0 or max_body <= 0:
             raise ValueError("transport limits must be positive")
         self.rules = rules
@@ -60,7 +61,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             size = int(raw_length)
             if size > self.server.max_body:
-                self._reply(Response.json(413, {"error": "body_too_large"}), "transport.limit")
+                self._reply(self.server.rules.body_limit_response, "transport.limit")
                 return
             body = self.rfile.read(size)
             if len(body) != size:

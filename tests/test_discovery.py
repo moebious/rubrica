@@ -27,6 +27,16 @@ class HarnessTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
+    def test_budget_day_does_not_roll_over_at_utc_midnight(self):
+        from datetime import datetime, timezone
+        class FrozenDateTime(datetime):
+            @classmethod
+            def now(cls, tz=None):
+                current=cls(2026,10,11,0,30,tzinfo=timezone.utc)
+                return current.astimezone(tz) if tz is not None else current
+        with patch("tools.harness.datetime",FrozenDateTime):
+            self.assertEqual(self.harness._ledger()["day"],"2026-10-10")
+
     def test_gate_and_budget_fail_before_network(self):
         with patch("tools.hb.send", return_value=self.response) as send:
             with self.assertRaises(RuntimeError):

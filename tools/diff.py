@@ -38,7 +38,7 @@ def main():
     load_env()
     parser=argparse.ArgumentParser()
     parser.add_argument("--url",default=os.environ.get("REPLICA_URL","http://127.0.0.1:8080"))
-    parser.add_argument("--corpus",type=Path,default=Path("material/pruebas/ejemplos.jsonl"))
+    parser.add_argument("--corpus",type=Path,default=Path("traces/current-examples.jsonl"))
     args=parser.parse_args()
     if urlsplit(args.url).hostname == "caja-negra-production-c64f.up.railway.app":
         parser.error("diff targets the replica; use the coordinated harness for original requests")

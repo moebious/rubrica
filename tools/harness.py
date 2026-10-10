@@ -5,7 +5,7 @@ is implemented: live state transitions are never skipped. Legacy req/seq/sweep
 tools must not run concurrently with this discovery session.
 """
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import fcntl
 import hashlib
 import json
@@ -15,6 +15,9 @@ import time
 from urllib.parse import urlsplit
 
 from tools import hb
+
+# Budget is tied to the event day, which continues after UTC midnight.
+BUDGET_ZONE = timezone(timedelta(hours=-5))
 
 class Harness:
     def __init__(self, experiment: str, phase: str, phase_budget: int,
@@ -58,7 +61,7 @@ class Harness:
     def _ledger(self):
         if self.ledger_path.exists():
             ledger = json.loads(self.ledger_path.read_text())
-            if ledger["day"] != datetime.now(timezone.utc).strftime("%Y-%m-%d"):
+            if ledger["day"] != datetime.now(BUDGET_ZONE).strftime("%Y-%m-%d"):
                 raise RuntimeError("daily budget ledger requires explicit reconciliation")
             return ledger
         # Reconcile historical original exchanges, including resets and failures.
@@ -67,7 +70,7 @@ class Harness:
             for line in path.read_text().splitlines():
                 record = json.loads(line)
                 count += record.get("target") == "original"
-        return {"day": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "total": count,
+        return {"day": datetime.now(BUDGET_ZONE).strftime("%Y-%m-%d"), "total": count,
                 "phases": {}, "last_call": 0.0}
 
     def _save(self, ledger):

@@ -14,13 +14,16 @@ class BankingReplayTests(unittest.TestCase):
     def setUp(self):
         self.rules = build_rules("test-token")
 
-    def test_official_sequence_all_twenty(self):
+    def test_official_historical_sequence_all_twenty(self):
+        from rubrica.rules.v2.rules import build_rules
+        from rubrica.rules.v2.policy import V1
+        historical_rules=build_rules("test-token", V1)
         state=initial_state()
         with patch("socket.create_connection", side_effect=AssertionError("outbound forbidden")):
             for sample in map(json.loads, Path("material/pruebas/ejemplos.jsonl").read_text().splitlines()):
                 req=Request("POST", "/msg", (("Authorization", "Bearer test-token"),),json.dumps(sample["request"]).encode())
                 with self.subTest(step=sample["n"]):
-                    state,response,rule=handle(state,req,self.rules)
+                    state,response,rule=handle(state,req,historical_rules)
                     self.assertEqual(response.status,sample["status"])
                     self.assertTrue(bodies_equal(response.body,json.dumps(sample["response"],ensure_ascii=False).encode()))
         self.assertEqual(state.balance("AC-0001"),210000)
@@ -28,6 +31,9 @@ class BankingReplayTests(unittest.TestCase):
         self.assertEqual(state.next_operation,5)
 
     def test_recorded_banking_and_parser_corpus(self):
+        from rubrica.rules.v2.rules import build_rules
+        from rubrica.rules.v2.policy import V1
+        historical_rules=build_rules("test-token", V1)
         names=("checksum_predictions", "bank_boundaries", "message_contract", "bank_limits", "bank_edges", "bank_final_edges")
         for name in names:
             state=initial_state()
@@ -38,10 +44,30 @@ class BankingReplayTests(unittest.TestCase):
                 req=Request(row["req"]["method"],row["req"]["path"],headers,base64.b64decode(row["req"]["body_b64"]))
                 before=state
                 with self.subTest(corpus=name,line=index):
-                    state,response,rule=handle(state,req,self.rules)
+                    state,response,rule=handle(state,req,historical_rules)
                     self.assertEqual(response.status,row["res"]["status"])
                     self.assertTrue(bodies_equal(response.body,base64.b64decode(row["res"]["body_b64"])),(rule,response.body,row["res"]["body_text"]))
                     if response.status>=400:self.assertEqual(state,before)
+
+    def test_current_version_incident_corpus(self):
+        names=("incident_uncovered_limits", "incident_transfer_limit", "incident_lockout",
+               "incident_lock_recovery", "incident_body_boundary", "incident_confirm")
+        for name in names:
+            state=initial_state()
+            for index,line in enumerate(Path("traces",name+".jsonl").read_text().splitlines(),1):
+                row=json.loads(line)
+                if row.get("infra") or "res" not in row:continue
+                headers=tuple((key,value.replace("<TOKEN>","test-token")) for key,value in row["req"]["headers"])
+                req=Request(row["req"]["method"],row["req"]["path"],headers,base64.b64decode(row["req"]["body_b64"]))
+                before=state
+                with self.subTest(corpus=name,line=index):
+                    state,response,rule=handle(state,req,self.rules)
+                    self.assertEqual(response.status,row["res"]["status"])
+                    self.assertTrue(bodies_equal(response.body,base64.b64decode(row["res"]["body_b64"])),(rule,response.body,row["res"]["body_text"]))
+                    if response.status>=400:
+                        self.assertEqual(state.accounts,before.accounts)
+                        self.assertEqual(state.operations,before.operations)
+                        self.assertEqual(state.next_operation,before.next_operation)
 
     def test_no_mutation_and_reset_isolation(self):
         from rubrica.rules.v2.checksum import control
@@ -70,7 +96,7 @@ class HTTPBankingTests(unittest.TestCase):
         thread=threading.Thread(target=server.serve_forever,kwargs={"poll_interval":0.01})
         thread.start()
         try:
-            self.assertEqual(replay(Target("replica",f"http://127.0.0.1:{server.server_port}","test-token"),Path("material/pruebas/ejemplos.jsonl")),0)
+            self.assertEqual(replay(Target("replica",f"http://127.0.0.1:{server.server_port}","test-token"),Path("traces/current-examples.jsonl")),0)
         finally:
             server.shutdown()
             server.server_close()

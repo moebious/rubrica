@@ -8,11 +8,11 @@ from .checksum import control
 COMMANDS = ("PING", "ALTA", "CONSULTA", "DEPOSITO", "TRANSFER", "ANULA")
 ARITY = {"PING": 0, "ALTA": 1, "CONSULTA": 1, "DEPOSITO": 2, "TRANSFER": 3, "ANULA": 1}
 MESSAGES = {
-    "E100": "json inválido", "E102": "falta m", "E103": "falta control",
+    "E100": "json inválido", "E101": "cuerpo demasiado grande", "E102": "falta m", "E103": "falta control",
     "E104": "segmento vacío", "E201": "control mal formado", "E202": "control inválido",
     "E301": "comando desconocido ", "E302": "aridad inválida", "E303": "monto inválido",
     "E304": "origen y destino iguales", "E401": "cuenta inexistente",
-    "E402": "operación inexistente", "E506": "límite excedido", "E507": "saldo insuficiente",
+    "E402": "operación inexistente", "E510": "cuenta bloqueada", "E506": "límite excedido", "E507": "saldo insuficiente",
 }
 
 @dataclass(frozen=True)
@@ -20,11 +20,14 @@ class Problem:
     code: str
     status: int = 400
     suggestion: str | None = None
+    attempts: int | None = None
 
     def response(self) -> Response:
-        payload = {"error": self.code, "mensaje": MESSAGES[self.code]}
+        payload: dict[str, str | int] = {"error": self.code, "mensaje": MESSAGES[self.code]}
         if self.suggestion is not None:
             payload["sugerencia"] = self.suggestion
+        if self.attempts is not None:
+            payload["intentos"] = self.attempts
         return Response.json(self.status, payload)
 
 @dataclass(frozen=True)
@@ -48,6 +51,8 @@ def distance(left: str, right: str) -> int:
 
 
 def decode(req: Request) -> Parsed:
+    if len(req.body) > 8192:
+        return Parsed(problem=Problem("E101", 413))
     def invalid_constant(value: str):
         raise ValueError("invalid JSON constant")
     try:

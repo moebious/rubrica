@@ -66,3 +66,18 @@ may suggest a nearby command; this remains a probable generalization.
 Verification: twenty tests pass, including all twenty official examples through
 HTTP and independent recorded-corpus replay. No hidden evaluation was used and no
 deployment was performed. Identifying all three incident changes remains pending.
+
+## Incident behavior transition and response
+
+The canary detected changed responses after an earlier matching cycle. Confirmed
+current currency-string balances and a 50000 transfer ceiling with direct
+historical comparisons. Characterized three-failure source lockout, E510 attempt
+counts and recovery; historical absence of lockout was not covered, so its role
+as the third change is probable rather than a fabricated v1 claim. Independently
+replayed the changed official sequence and captured current-version expectations.
+
+Implemented versioned policy, stateful failure counters, integer-based currency
+formatting, observed 8192-byte limit and updated local HTTP smoke expectations.
+Historical and current evidence are tested separately. Twenty-two tests pass;
+all twenty current-version example requests match through the local HTTP adapter.
+Fly deployment remains the other agent's responsibility. No hidden set invoked.

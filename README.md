@@ -42,10 +42,12 @@ git config core.hooksPath .githooks   # blocks committed secrets
 
 The active `v2-observed` rules implement PING, ALTA, CONSULTA, DEPOSITO,
 TRANSFER and ANULA, including the discovered control formula and observed
-validation order. The official sequence passes **20/20 through the local HTTP
-server**. Additional recorded boundary and state-transition experiments are
+validation order. The official requests pass **20/20 through the local HTTP server against
+current-version recorded answers**. The historical responses are preserved and
+verified using the earlier policy. Additional recorded boundary and state-transition experiments are
 replayed independently in tests. This is evidence for covered behavior, not a
-claim of complete hidden-test equivalence or incident resolution.
+claim of complete hidden-test equivalence. The incident findings and historical
+evidence gap are documented in `docs/process/INCIDENT.md`.
 
 Run locally (the server reads the process environment):
 
@@ -66,8 +68,9 @@ python3 tools/diff.py --url http://127.0.0.1:8080
 
 `diff.py` targets the replica, checks exact status/body and per-step latency,
 and exits nonzero on divergence. Use the recorded harness for original access.
-HTTP transport limits, duplicate auth headers and broader unobserved protocol
-behavior still require evidence. The three incident changes remain unresolved.
+The observed body limit is 8192 bytes. Duplicate auth headers and broader
+unobserved protocol behavior still require evidence. Current rules include the
+50,000 transfer ceiling, currency-string balances and source-account lockout.
 
 The Docker image copies only `rubrica/` and runs as a non-root user. Supply
 `TEAM_TOKEN` at runtime. Rule versions are selected at startup in
@@ -76,7 +79,8 @@ The Docker image copies only `rubrica/` and runs as a non-root user. Supply
 ## Recorded discovery and drift detection
 
 Use `python3 -m tools.canary --capture` once to establish a reset-based baseline.
-Use `python3 -m tools.canary --watch` to compare it periodically. The monitor
+Use `python3 -m tools.canary --watch --baseline traces/current-canary-baseline.json`
+to monitor the current version. The historical baseline remains intact. The monitor
 records every call, enforces rate/phase/daily budgets and locks complete sequences
 against other callers using `tools.harness.Harness`. Results are in
 `traces/canary-results.jsonl`; the watcher stops on a mismatch or failure for

@@ -17,6 +17,10 @@ class LedgerState:
     next_account: int = 1
     next_operation: int = 1
     operations: tuple[Operation, ...] = ()
+    transfer_failures: tuple[tuple[str, int], ...] = ()
+
+    def failure_count(self, account_id: str) -> int:
+        return next((count for key, count in self.transfer_failures if key == account_id), 0)
 
     def balance(self, account_id: str) -> int | None:
         for key, name, balance in self.accounts:

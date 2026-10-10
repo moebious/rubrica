@@ -33,8 +33,12 @@ class RuleSet(Generic[StateT]):
     rules: tuple[Rule[StateT], ...]
     fallback: Rule[StateT]
     reset_rule_ids: frozenset[str] = frozenset()
+    body_limit: int = 65536
+    body_limit_response: Response = Response.json(413, {"error": "body_too_large"})
 
     def __post_init__(self) -> None:
+        if type(self.body_limit) is not int or self.body_limit <= 0:
+            raise ValueError("body limit must be a positive integer")
         all_rules = (*self.rules, self.fallback)
         ids = [rule.id for rule in all_rules]
         if len(set(ids)) != len(ids):

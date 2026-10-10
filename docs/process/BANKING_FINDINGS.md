@@ -1,8 +1,10 @@
-# Banking discovery: current observed service
+# Banking discovery: historical profile and current changes
 
-These findings describe observations after the v2 announcement. They do not
-establish which three behaviors changed from v1. Raw evidence below must be
-mapped to stable exported experiment IDs before the final specification.
+The initial findings below were recorded after the announcement but before the
+canary observed the behavioral transition. Keep them as historical observations.
+The active policy now reflects the confirmed current behavior documented in
+`INCIDENT.md`. Raw evidence must be mapped to exported experiment IDs before
+the final specification.
 
 ## Integrity and syntax
 
@@ -47,8 +49,11 @@ Evidence: `traces/bank_boundaries.jsonl`, `traces/bank_limits.jsonl`,
 
 ## Verification and remaining scope
 
-The replica passes the twenty official requests in order through its HTTP adapter,
-and pure-core replay matches all newly recorded banking/parser sequences. Tests
+The replica retains a historical profile for the morning responses. Its active
+profile passes the twenty official requests against current-version recorded
+responses through HTTP. Pure-core replay matches historical and current incident
+corpora separately. Tests
 cover immutable state, reset isolation, malformed inputs, exact JSON semantics and
 no outbound network on exercised paths. Deployment/public latency verification,
-final log/spec export and identifying the three incident changes remain pending.
+final log/spec export and public verification of the latest incident response
+remain pending. The historical absence of the lockout remains an evidence gap.
