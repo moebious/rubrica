@@ -42,7 +42,7 @@ def build_rules(team_token: str, policy: Policy = V2) -> RuleSet[LedgerState]:
         return matches
     def domain_response(state, req):
         return execute(state, decode(req), policy)
-    for index, code in enumerate(("E303", "E304", "E401", "E402", "E510", "E506", "E507")):
+    for index, code in enumerate(("E303", "E304", "E401", "E402", "E510", "E506", "E507", "E520")):
         rules.append(Rule("v2." + code, 60 + index, domain_error(code), domain_response,
                           "probable", EVIDENCE, "Observed business error; policy may update transfer-failure counters"))
     for index, command in enumerate(COMMANDS):

@@ -15,6 +15,10 @@ def amount(text: str) -> int | None:
 
 def validate(state: LedgerState, parsed: Parsed, policy: Policy = V2) -> Problem | None:
     command, args = parsed.command, parsed.args
+    if command == "HALT":
+        # Observed (traces/probe_hidden_commands.jsonl): one argument of any kind, before any lookup.
+        # The confirmation that would let it proceed is unknown and is NOT implemented (supuesto).
+        return Problem("E520", 409)
     if command in ("DEPOSITO", "TRANSFER"):
         value = amount(args[-1])
         if value is None:
