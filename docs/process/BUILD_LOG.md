@@ -109,3 +109,13 @@ Gates: 35 tests pass; frozen design hashes match; read-only smoke check against
 auth, routing and reset checks (max step latency 1.35 s). Documentation updated
 where deployment status and the transfer ceiling were stale. The lockout's absence
 in v1 remains unproved. No hidden validation was triggered; all attempts unused.
+
+## Hidden-set validation #1 (2026-10-10, 16:57 Bogotá)
+
+Owner-run. Score **88/100**: easy 39/40, regular 36/40, hard 13/20. Failures: 9 with a
+different status, 3 with a different body; 5 failed on the first request, 7 later in the
+sequence. Median 511 ms per case (limit 5 s). Entrypoint check at 16:56: health 200 in
+226 ms, reset ok, public example 02 matched. The platform shows counts only. Runtime code
+(`rubrica/`) was unchanged since commit `690e213`. Next: locate the failures from the
+coverage gaps (never-observed cells, thin v2 cells, 6–12-step sequences) before any new
+probe. Two runs remain. Details and the working agreement: `docs/process/WORKFLOW.md`.

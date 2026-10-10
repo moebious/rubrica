@@ -36,3 +36,4 @@ Build hiring-loop-grade, production-ready software evaluated against **hidden te
 - Tag the submitted commit at freeze (`submission-20h00`).
 - Original-service access goes through `Harness.sequence()` only, with a recorded hypothesis and prediction. Never use the legacy `tools/req.py`, `tools/seq.py` or `tools/sweep.py` against the original.
 - Never trigger a platform hidden-set validation; only the owner does. Do not change Fly or DNS settings.
+- Validation discipline: log each run in the `docs/process/WORKFLOW.md` ledger before starting the next change. The platform shows counts only, so reproduce locally and use `tools/coverage.py` gaps before spending original requests. Never claim a score that is not in the ledger.
