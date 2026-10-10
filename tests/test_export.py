@@ -73,7 +73,16 @@ class SpecVerificationTests(unittest.TestCase):
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
         for name in ("experimentos.jsonl","experimentos.index.json","SPEC.md","spec-evidence.json"):
             shutil.copyfile(name,self.root/name)
-        shutil.copytree("traces",self.root/"traces")
+        # Copy exactly the indexed evidence snapshot, not newer live canary rows.
+        index=json.loads((self.root/"experimentos.index.json").read_text())
+        limits={}
+        for entry in index["entries"]:
+            source,number=entry["source"].rsplit(":",1)
+            limits[source]=max(limits.get(source,0),int(number))
+        (self.root/"traces").mkdir()
+        for source,limit in limits.items():
+            lines=Path(source).read_text().splitlines()
+            (self.root/source).write_text("\n".join(lines[:limit])+"\n")
     def tearDown(self):self.temp.cleanup()
     def test_full_artifacts_verify(self):
         self.assertGreater(verify(self.root)["claims"],30)
